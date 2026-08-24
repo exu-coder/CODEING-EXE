@@ -1,0 +1,171 @@
+{
+  "level": 24,
+  "level_name": "Level 24",
+  "level_name_id": "Level 24",
+  "difficulty": "intermediate",
+  "required_score": 70,
+  "total_exercises": 10,
+  "exercises": [
+    {
+      "id": "L24-E1",
+      "type": "command",
+      "category": "typescript",
+      "instruction": "Check version of scrapy",
+      "instruction_id": "Cek versi scrapy",
+      "shadow_text": "scrapy --version",
+      "expected_output": [
+        "scrapy version 1.0.0"
+      ],
+      "hint": "Practice typing this command accurately",
+      "hint_id": "Latih ketik command ini dengan akurat",
+      "time_limit": 25,
+      "xp": 25,
+      "penalty_per_error": 2
+    },
+    {
+      "id": "L24-E2",
+      "type": "code",
+      "category": "typescript",
+      "instruction": "Define function 'greet()'",
+      "instruction_id": "Definisikan fungsi 'greet()'",
+      "shadow_text": "def greet():\n    return 'Success!'\nprint(greet())",
+      "expected_output": [
+        "Success!"
+      ],
+      "hint": "Practice typing this code accurately",
+      "hint_id": "Latih ketik code ini dengan akurat",
+      "time_limit": 25,
+      "xp": 20,
+      "penalty_per_error": 4
+    },
+    {
+      "id": "L24-E3",
+      "type": "command",
+      "category": "typescript",
+      "instruction": "Create containers called 'client'",
+      "instruction_id": "Buat containers bernama 'client'",
+      "shadow_text": "kubectl create client",
+      "expected_output": [
+        "Created client successfully."
+      ],
+      "hint": "Practice typing this command accurately",
+      "hint_id": "Latih ketik command ini dengan akurat",
+      "time_limit": 12,
+      "xp": 20,
+      "penalty_per_error": 2
+    },
+    {
+      "id": "L24-E4",
+      "type": "command",
+      "category": "typescript",
+      "instruction": "Check version of pandas",
+      "instruction_id": "Cek versi pandas",
+      "shadow_text": "pandas --version",
+      "expected_output": [
+        "pandas version 1.0.0"
+      ],
+      "hint": "Practice typing this command accurately",
+      "hint_id": "Latih ketik command ini dengan akurat",
+      "time_limit": 18,
+      "xp": 20,
+      "penalty_per_error": 4
+    },
+    {
+      "id": "L24-E5",
+      "type": "command",
+      "category": "typescript",
+      "instruction": "Remove containers 'db'",
+      "instruction_id": "Hapus containers 'db'",
+      "shadow_text": "rm db",
+      "expected_output": [
+        "Removed 'db'."
+      ],
+      "hint": "Practice typing this command accurately",
+      "hint_id": "Latih ketik command ini dengan akurat",
+      "time_limit": 12,
+      "xp": 20,
+      "penalty_per_error": 2
+    },
+    {
+      "id": "L24-E6",
+      "type": "code",
+      "category": "typescript",
+      "instruction": "Use async/await to process data",
+      "instruction_id": "Gunakan async/await untuk process data",
+      "shadow_text": "# async/await example\nprint('Done')",
+      "expected_output": [
+        "Done"
+      ],
+      "hint": "Practice typing this code accurately",
+      "hint_id": "Latih ketik code ini dengan akurat",
+      "time_limit": 20,
+      "xp": 30,
+      "penalty_per_error": 4
+    },
+    {
+      "id": "L24-E7",
+      "type": "code",
+      "category": "typescript",
+      "instruction": "Import sys and use it",
+      "instruction_id": "Import sys dan gunakan",
+      "shadow_text": "import sys\nprint('sys loaded')",
+      "expected_output": [
+        "sys loaded"
+      ],
+      "hint": "Practice typing this code accurately",
+      "hint_id": "Latih ketik code ini dengan akurat",
+      "time_limit": 20,
+      "xp": 20,
+      "penalty_per_error": 3
+    },
+    {
+      "id": "L24-E8",
+      "type": "command",
+      "category": "typescript",
+      "instruction": "Create routes called 'cache'",
+      "instruction_id": "Buat routes bernama 'cache'",
+      "shadow_text": "kubectl create cache",
+      "expected_output": [
+        "Created cache successfully."
+      ],
+      "hint": "Practice typing this command accurately",
+      "hint_id": "Latih ketik command ini dengan akurat",
+      "time_limit": 20,
+      "xp": 15,
+      "penalty_per_error": 2
+    },
+    {
+      "id": "L24-E9",
+      "type": "command",
+      "category": "typescript",
+      "instruction": "Check version of pandas",
+      "instruction_id": "Cek versi pandas",
+      "shadow_text": "pandas --version",
+      "expected_output": [
+        "pandas version 1.0.0"
+      ],
+      "hint": "Practice typing this command accurately",
+      "hint_id": "Latih ketik command ini dengan akurat",
+      "time_limit": 20,
+      "xp": 25,
+      "penalty_per_error": 2
+    },
+    {
+      "id": "L24-E10",
+      "type": "command",
+      "category": "typescript",
+      "instruction": "Install pygame",
+      "instruction_id": "Instal pygame",
+      "shadow_text": "pkg install pygame",
+      "expected_output": [
+        "Setting up pygame...",
+        "pygame installed."
+      ],
+      "hint": "Practice typing this command accurately",
+      "hint_id": "Latih ketik command ini dengan akurat",
+      "time_limit": 15,
+      "xp": 20,
+      "penalty_per_error": 2
+    }
+  ]
+}

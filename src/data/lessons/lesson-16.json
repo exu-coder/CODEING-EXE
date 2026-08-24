@@ -1,0 +1,178 @@
+{
+  "level": 16,
+  "level_name": "Level 16",
+  "level_name_id": "Level 16",
+  "difficulty": "intermediate",
+  "required_score": 70,
+  "total_exercises": 10,
+  "exercises": [
+    {
+      "id": "L16-E1",
+      "type": "code",
+      "category": "python",
+      "instruction": "Create a decorator that logs function calls",
+      "instruction_id": "Buat decorator yang log pemanggilan fungsi",
+      "shadow_text": "def logger(func):\n    def wrapper(*args):\n        print(f'Calling {func.__name__}')\n        return func(*args)\n    return wrapper\n\n@logger\ndef greet(name):\n    return f'Hi {name}'\n\nprint(greet('Alice'))",
+      "expected_output": [
+        "Calling greet",
+        "Hi Alice"
+      ],
+      "hint": "@decorator is syntactic sugar for func = decorator(func)",
+      "hint_id": "@decorator adalah syntactic sugar untuk func = decorator(func)",
+      "time_limit": 45,
+      "xp": 35,
+      "penalty_per_error": 5
+    },
+    {
+      "id": "L16-E2",
+      "type": "code",
+      "category": "python",
+      "instruction": "Use threading to run two functions concurrently",
+      "instruction_id": "Gunakan threading untuk jalankan dua fungsi bersamaan",
+      "shadow_text": "import threading\n\ndef task(n):\n    print(f'Task {n} started')\n\nt1 = threading.Thread(target=task, args=(1,))\nt2 = threading.Thread(target=task, args=(2,))\nt1.start()\nt2.start()\nt1.join()\nt2.join()",
+      "expected_output": [
+        "Task 1 started",
+        "Task 2 started"
+      ],
+      "hint": "start() begins thread, join() waits for completion",
+      "hint_id": "start() mulai thread, join() tunggu selesai",
+      "time_limit": 35,
+      "xp": 30,
+      "penalty_per_error": 4
+    },
+    {
+      "id": "L16-E3",
+      "type": "code",
+      "category": "python",
+      "instruction": "Use argparse to create a CLI tool with --name argument",
+      "instruction_id": "Gunakan argparse untuk buat CLI tool dengan argumen --name",
+      "shadow_text": "import argparse\nparser = argparse.ArgumentParser()\nparser.add_argument('--name', default='World')\nargs = parser.parse_args()\nprint(f'Hello, {args.name}!')",
+      "expected_output": [
+        "Hello, World!"
+      ],
+      "hint": "argparse builds command-line interfaces easily",
+      "hint_id": "argparse membangun command-line interface dengan mudah",
+      "time_limit": 35,
+      "xp": 30,
+      "penalty_per_error": 4
+    },
+    {
+      "id": "L16-E4",
+      "type": "code",
+      "category": "python",
+      "instruction": "Use subprocess to run a shell command from Python",
+      "instruction_id": "Gunakan subprocess untuk jalankan perintah shell dari Python",
+      "shadow_text": "import subprocess\nresult = subprocess.run(['ls', '-la'], capture_output=True, text=True)\nprint(result.stdout[:50])",
+      "expected_output": [
+        "total 24"
+      ],
+      "hint": "subprocess.run() executes commands and captures output",
+      "hint_id": "subprocess.run() mengeksekusi perintah dan menangkap output",
+      "time_limit": 30,
+      "xp": 30,
+      "penalty_per_error": 4
+    },
+    {
+      "id": "L16-E5",
+      "type": "code",
+      "category": "python",
+      "instruction": "Create a generator function that yields squares",
+      "instruction_id": "Buat fungsi generator yang yield kuadrat",
+      "shadow_text": "def square_gen(n):\n    for i in range(n):\n        yield i ** 2\n\nfor sq in square_gen(5):\n    print(sq)",
+      "expected_output": [
+        "0",
+        "1",
+        "4",
+        "9",
+        "16"
+      ],
+      "hint": "yield creates a generator (memory efficient)",
+      "hint_id": "yield membuat generator (efisien memori)",
+      "time_limit": 30,
+      "xp": 30,
+      "penalty_per_error": 4
+    },
+    {
+      "id": "L16-E6",
+      "type": "code",
+      "category": "python",
+      "instruction": "Use contextlib to create a custom context manager",
+      "instruction_id": "Gunakan contextlib untuk buat context manager custom",
+      "shadow_text": "from contextlib import contextmanager\n\n@contextmanager\ndef timer():\n    import time\n    start = time.time()\n    yield\n    print(f'Took {time.time() - start:.2f}s')\n\nwith timer():\n    print('Working...')",
+      "expected_output": [
+        "Working...",
+        "Took 0.00s"
+      ],
+      "hint": "Context managers handle setup and cleanup automatically",
+      "hint_id": "Context manager menangani setup dan cleanup otomatis",
+      "time_limit": 35,
+      "xp": 35,
+      "penalty_per_error": 5
+    },
+    {
+      "id": "L16-E7",
+      "type": "code",
+      "category": "python",
+      "instruction": "Use itertools to create combinations of a list",
+      "instruction_id": "Gunakan itertools untuk buat kombinasi dari list",
+      "shadow_text": "from itertools import combinations\nitems = ['a', 'b', 'c']\nfor combo in combinations(items, 2):\n    print(combo)",
+      "expected_output": [
+        "('a', 'b')",
+        "('a', 'c')",
+        "('b', 'c')"
+      ],
+      "hint": "combinations(iterable, r) gives all r-length combinations",
+      "hint_id": "combinations(iterable, r) memberikan semua kombinasi panjang r",
+      "time_limit": 30,
+      "xp": 30,
+      "penalty_per_error": 4
+    },
+    {
+      "id": "L16-E8",
+      "type": "code",
+      "category": "python",
+      "instruction": "Use collections.Counter to count word frequency",
+      "instruction_id": "Gunakan collections.Counter untuk hitung frekuensi kata",
+      "shadow_text": "from collections import Counter\nwords = ['apple', 'banana', 'apple', 'cherry', 'banana', 'apple']\ncounts = Counter(words)\nprint(counts.most_common(2))",
+      "expected_output": [
+        "[('apple', 3), ('banana', 2)]"
+      ],
+      "hint": "Counter is a dict subclass for counting hashable objects",
+      "hint_id": "Counter adalah subclass dict untuk menghitung objek hashable",
+      "time_limit": 30,
+      "xp": 30,
+      "penalty_per_error": 4
+    },
+    {
+      "id": "L16-E9",
+      "type": "code",
+      "category": "python",
+      "instruction": "Create a simple SQLite database and query it",
+      "instruction_id": "Buat database SQLite sederhana dan query",
+      "shadow_text": "import sqlite3\nconn = sqlite3.connect(':memory:')\nc = conn.cursor()\nc.execute('CREATE TABLE users (name TEXT, age INTEGER)')\nc.execute(\"INSERT INTO users VALUES ('Alice', 25)\")\nc.execute('SELECT * FROM users')\nprint(c.fetchall())",
+      "expected_output": "[[('Alice', 25)]]",
+      "hint": ":memory: creates a temporary in-memory database",
+      "hint_id": ":memory: membuat database sementara di memori",
+      "time_limit": 45,
+      "xp": 40,
+      "penalty_per_error": 5
+    },
+    {
+      "id": "L16-E10",
+      "type": "code",
+      "category": "python",
+      "instruction": "Use asyncio to run tasks concurrently",
+      "instruction_id": "Gunakan asyncio untuk jalankan tugas bersamaan",
+      "shadow_text": "import asyncio\n\nasync def say_hello(name, delay):\n    await asyncio.sleep(delay)\n    print(f'Hello {name}!')\n\nasync def main():\n    await asyncio.gather(\n        say_hello('Alice', 1),\n        say_hello('Bob', 2)\n    )\n\nasyncio.run(main())",
+      "expected_output": [
+        "Hello Alice!",
+        "Hello Bob!"
+      ],
+      "hint": "async/await is Python's way of writing async code",
+      "hint_id": "async/await adalah cara Python menulis kode async",
+      "time_limit": 40,
+      "xp": 40,
+      "penalty_per_error": 5
+    }
+  ]
+}

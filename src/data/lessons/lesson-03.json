@@ -1,0 +1,171 @@
+{
+  "level": 3,
+  "level_name": "Level 3",
+  "level_name_id": "Level 3",
+  "difficulty": "beginner",
+  "required_score": 70,
+  "total_exercises": 10,
+  "exercises": [
+    {
+      "id": "L3-E1",
+      "type": "command",
+      "category": "filesystem",
+      "instruction": "Display contents of 'greeting.txt'",
+      "instruction_id": "Tampilkan isi 'greeting.txt'",
+      "shadow_text": "cat greeting.txt",
+      "expected_output": [
+        "Welcome to Termux! Enjoy coding on your smartphone."
+      ],
+      "hint": "cat = concatenate and display",
+      "hint_id": "cat = gabungkan dan tampilkan",
+      "time_limit": 12,
+      "xp": 10,
+      "penalty_per_error": 2
+    },
+    {
+      "id": "L3-E2",
+      "type": "command",
+      "category": "filesystem",
+      "instruction": "Display contents with line numbers",
+      "instruction_id": "Tampilkan isi dengan nomor baris",
+      "shadow_text": "cat -n greeting.txt",
+      "expected_output": [
+        "     1  Welcome to Termux!",
+        "     2  Enjoy coding on your smartphone."
+      ],
+      "hint": "-n adds line numbers",
+      "hint_id": "-n menambahkan nomor baris",
+      "time_limit": 14,
+      "xp": 15,
+      "penalty_per_error": 2
+    },
+    {
+      "id": "L3-E3",
+      "type": "command",
+      "category": "filesystem",
+      "instruction": "Create a file and write 'Hello World' to it",
+      "instruction_id": "Buat file dan tulis 'Hello World' ke dalamnya",
+      "shadow_text": "echo 'Hello World' > hello.txt",
+      "expected_output": [
+        "Created hello.txt with content: Hello World"
+      ],
+      "hint": "> redirects output to a file (overwrites)",
+      "hint_id": "> redirect output ke file (timpa)",
+      "time_limit": 18,
+      "xp": 20,
+      "penalty_per_error": 3
+    },
+    {
+      "id": "L3-E4",
+      "type": "command",
+      "category": "filesystem",
+      "instruction": "Append 'Goodbye!' to hello.txt",
+      "instruction_id": "Tambahkan 'Goodbye!' ke hello.txt",
+      "shadow_text": "echo 'Goodbye!' >> hello.txt",
+      "expected_output": [
+        "Appended to hello.txt"
+      ],
+      "hint": ">> appends (adds to end), > overwrites",
+      "hint_id": ">> menambahkan (ke akhir), > menimpa",
+      "time_limit": 16,
+      "xp": 20,
+      "penalty_per_error": 3
+    },
+    {
+      "id": "L3-E5",
+      "type": "command",
+      "category": "filesystem",
+      "instruction": "Copy 'script.py' to backup folder",
+      "instruction_id": "Salin 'script.py' ke folder backup",
+      "shadow_text": "cp script.py backup/",
+      "expected_output": [
+        "Copied 'script.py' to 'backup/script.py'."
+      ],
+      "hint": "cp = copy, last argument is destination",
+      "hint_id": "cp = salin, argumen terakhir adalah tujuan",
+      "time_limit": 14,
+      "xp": 15,
+      "penalty_per_error": 2
+    },
+    {
+      "id": "L3-E6",
+      "type": "command",
+      "category": "filesystem",
+      "instruction": "Copy directory 'src' recursively to 'backup'",
+      "instruction_id": "Salin direktori 'src' secara rekursif ke 'backup'",
+      "shadow_text": "cp -r src backup/",
+      "expected_output": [
+        "Copied directory 'src' to 'backup/src' recursively."
+      ],
+      "hint": "-r = recursive (for directories)",
+      "hint_id": "-r = rekursif (untuk direktori)",
+      "time_limit": 16,
+      "xp": 20,
+      "penalty_per_error": 3
+    },
+    {
+      "id": "L3-E7",
+      "type": "command",
+      "category": "filesystem",
+      "instruction": "Copy with confirmation before overwriting",
+      "instruction_id": "Salin dengan konfirmasi sebelum menimpa",
+      "shadow_text": "cp -i script.py backup/",
+      "expected_output": [
+        "cp: overwrite 'backup/script.py'? (y/n)"
+      ],
+      "hint": "-i = interactive mode, asks before overwrite",
+      "hint_id": "-i = mode interaktif, tanya sebelum timpa",
+      "time_limit": 16,
+      "xp": 20,
+      "penalty_per_error": 3
+    },
+    {
+      "id": "L3-E8",
+      "type": "command",
+      "category": "filesystem",
+      "instruction": "Move 'old_name.txt' to 'new_name.txt' (rename)",
+      "instruction_id": "Pindah 'old_name.txt' ke 'new_name.txt' (rename)",
+      "shadow_text": "mv old_name.txt new_name.txt",
+      "expected_output": [
+        "Renamed 'old_name.txt' to 'new_name.txt'."
+      ],
+      "hint": "mv is used for both moving AND renaming",
+      "hint_id": "mv digunakan untuk memindah DAN rename",
+      "time_limit": 16,
+      "xp": 15,
+      "penalty_per_error": 2
+    },
+    {
+      "id": "L3-E9",
+      "type": "command",
+      "category": "filesystem",
+      "instruction": "Move 'file.txt' into 'documents' folder",
+      "instruction_id": "Pindah 'file.txt' ke folder 'documents'",
+      "shadow_text": "mv file.txt documents/",
+      "expected_output": [
+        "Moved 'file.txt' to 'documents/file.txt'."
+      ],
+      "hint": "Last argument is always the destination",
+      "hint_id": "Argumen terakhir selalu tujuan",
+      "time_limit": 14,
+      "xp": 15,
+      "penalty_per_error": 2
+    },
+    {
+      "id": "L3-E10",
+      "type": "command",
+      "category": "filesystem",
+      "instruction": "Remove file 'temp.txt' permanently",
+      "instruction_id": "Hapus file 'temp.txt' secara permanen",
+      "shadow_text": "rm temp.txt",
+      "expected_output": [
+        "Removed 'temp.txt'."
+      ],
+      "hint": "WARNING: No recycle bin in Termux!",
+      "hint_id": "PERINGATAN: Tidak ada tempat sampah di Termux!",
+      "time_limit": 12,
+      "xp": 15,
+      "penalty_per_error": 2
+    }
+  ]
+}

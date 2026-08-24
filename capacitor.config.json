@@ -16,10 +16,10 @@
   },
   "android": {
     "buildOptions": {
-      "keystorePath": "release.keystore",
+      "keystorePath": "android/app/release.keystore",
       "keystoreAlias": "termuxlearn",
-      "keystorePassword": "${KEYSTORE_PASSWORD}",
-      "keystoreAliasPassword": "${KEYSTORE_PASSWORD}"
+      "keystorePassword": "termuxlearn123",
+      "keystoreAliasPassword": "termuxlearn123"
     }
   }
 }

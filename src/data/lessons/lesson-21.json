@@ -1,0 +1,172 @@
+{
+  "level": 21,
+  "level_name": "Level 21",
+  "level_name_id": "Level 21",
+  "difficulty": "intermediate",
+  "required_score": 70,
+  "total_exercises": 10,
+  "exercises": [
+    {
+      "id": "L21-E1",
+      "type": "code",
+      "category": "react",
+      "instruction": "Print 'Loaded'",
+      "instruction_id": "Print 'Loaded'",
+      "shadow_text": "print('Loaded')",
+      "expected_output": [
+        "Loaded"
+      ],
+      "hint": "Practice typing this code accurately",
+      "hint_id": "Latih ketik code ini dengan akurat",
+      "time_limit": 12,
+      "xp": 15,
+      "penalty_per_error": 2
+    },
+    {
+      "id": "L21-E2",
+      "type": "code",
+      "category": "react",
+      "instruction": "Import matplotlib and use it",
+      "instruction_id": "Import matplotlib dan gunakan",
+      "shadow_text": "import matplotlib\nprint('matplotlib loaded')",
+      "expected_output": [
+        "matplotlib loaded"
+      ],
+      "hint": "Practice typing this code accurately",
+      "hint_id": "Latih ketik code ini dengan akurat",
+      "time_limit": 15,
+      "xp": 30,
+      "penalty_per_error": 3
+    },
+    {
+      "id": "L21-E3",
+      "type": "command",
+      "category": "react",
+      "instruction": "Check version of redis",
+      "instruction_id": "Cek versi redis",
+      "shadow_text": "redis --version",
+      "expected_output": [
+        "redis version 1.0.0"
+      ],
+      "hint": "Practice typing this command accurately",
+      "hint_id": "Latih ketik command ini dengan akurat",
+      "time_limit": 20,
+      "xp": 15,
+      "penalty_per_error": 3
+    },
+    {
+      "id": "L21-E4",
+      "type": "code",
+      "category": "react",
+      "instruction": "Import matplotlib and use it",
+      "instruction_id": "Import matplotlib dan gunakan",
+      "shadow_text": "import matplotlib\nprint('matplotlib loaded')",
+      "expected_output": [
+        "matplotlib loaded"
+      ],
+      "hint": "Practice typing this code accurately",
+      "hint_id": "Latih ketik code ini dengan akurat",
+      "time_limit": 12,
+      "xp": 30,
+      "penalty_per_error": 3
+    },
+    {
+      "id": "L21-E5",
+      "type": "command",
+      "category": "react",
+      "instruction": "List all services",
+      "instruction_id": "Daftar semua services",
+      "shadow_text": "ls -la /tmp",
+      "expected_output": [
+        "total 24",
+        "drwxr-xr-x 3 u0_a241"
+      ],
+      "hint": "Practice typing this command accurately",
+      "hint_id": "Latih ketik command ini dengan akurat",
+      "time_limit": 15,
+      "xp": 20,
+      "penalty_per_error": 3
+    },
+    {
+      "id": "L21-E6",
+      "type": "command",
+      "category": "react",
+      "instruction": "List all containers",
+      "instruction_id": "Daftar semua containers",
+      "shadow_text": "ls -la ~/apps",
+      "expected_output": [
+        "total 24",
+        "drwxr-xr-x 3 u0_a241"
+      ],
+      "hint": "Practice typing this command accurately",
+      "hint_id": "Latih ketik command ini dengan akurat",
+      "time_limit": 25,
+      "xp": 25,
+      "penalty_per_error": 2
+    },
+    {
+      "id": "L21-E7",
+      "type": "command",
+      "category": "react",
+      "instruction": "Create packages called 'db'",
+      "instruction_id": "Buat packages bernama 'db'",
+      "shadow_text": "touch db",
+      "expected_output": [
+        "Created db successfully."
+      ],
+      "hint": "Practice typing this command accurately",
+      "hint_id": "Latih ketik command ini dengan akurat",
+      "time_limit": 20,
+      "xp": 25,
+      "penalty_per_error": 2
+    },
+    {
+      "id": "L21-E8",
+      "type": "code",
+      "category": "react",
+      "instruction": "Import requests and use it",
+      "instruction_id": "Import requests dan gunakan",
+      "shadow_text": "import requests\nprint('requests loaded')",
+      "expected_output": [
+        "requests loaded"
+      ],
+      "hint": "Practice typing this code accurately",
+      "hint_id": "Latih ketik code ini dengan akurat",
+      "time_limit": 20,
+      "xp": 30,
+      "penalty_per_error": 4
+    },
+    {
+      "id": "L21-E9",
+      "type": "command",
+      "category": "react",
+      "instruction": "Remove directories 'proxy'",
+      "instruction_id": "Hapus directories 'proxy'",
+      "shadow_text": "rm proxy",
+      "expected_output": [
+        "Removed 'proxy'."
+      ],
+      "hint": "Practice typing this command accurately",
+      "hint_id": "Latih ketik command ini dengan akurat",
+      "time_limit": 18,
+      "xp": 20,
+      "penalty_per_error": 4
+    },
+    {
+      "id": "L21-E10",
+      "type": "code",
+      "category": "react",
+      "instruction": "Define function 'greet()'",
+      "instruction_id": "Definisikan fungsi 'greet()'",
+      "shadow_text": "def greet():\n    return 'Connected!'\nprint(greet())",
+      "expected_output": [
+        "Connected!"
+      ],
+      "hint": "Practice typing this code accurately",
+      "hint_id": "Latih ketik code ini dengan akurat",
+      "time_limit": 12,
+      "xp": 15,
+      "penalty_per_error": 3
+    }
+  ]
+}

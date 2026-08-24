@@ -73,28 +73,17 @@ jobs:
         run: npx cap add android
         continue-on-error: true
 
-      - name: Verify capacitor/android exists
-        run: |
-          if [ ! -d "capacitor/android" ]; then
-            echo "ERROR: capacitor/android directory not found after 'npx cap add android'"
-            echo "Directory listing:"
-            ls -la
-            echo "capacitor/ contents (if exists):"
-            ls -la capacitor/ 2>/dev/null || echo "capacitor/ does not exist"
-            exit 1
-          fi
-
       - name: Sync Capacitor Android
         run: npx cap sync android
 
       - name: Build Android APK (Debug)
         run: |
-          cd capacitor/android
+          cd android
           ./gradlew assembleDebug
 
       - name: Build Android APK (Release)
         run: |
-          cd capacitor/android
+          cd android
           ./gradlew assembleRelease
         env:
           KEYSTORE_PASSWORD: ${{ secrets.KEYSTORE_PASSWORD }}
@@ -104,8 +93,8 @@ jobs:
         with:
           name: android-apk
           path: |
-            capacitor/android/app/build/outputs/apk/debug/*.apk
-            capacitor/android/app/build/outputs/apk/release/*.apk
+            android/app/build/outputs/apk/debug/*.apk
+            android/app/build/outputs/apk/release/*.apk
           retention-days: 30
 
   # ═══════════════════════════════════════
@@ -135,18 +124,18 @@ jobs:
           name: Release v${{ github.run_number }}
           body: |
             ## Termux Coding Learn v${{ github.run_number }}
-            
+
             ### Downloads
             - **Windows EXE**: `Termux Coding Learn Setup.exe`
             - **Android APK**: `app-debug.apk` / `app-release.apk`
-            
+
             ### Features
             - 400+ typing lessons across 40 levels
             - Offline-first learning
             - Shadow text typing engine
             - Terminal simulator
             - Code playground
-            
+
             Built with ❤️ by Iminthisera Team
           files: |
             artifacts/windows/*.exe

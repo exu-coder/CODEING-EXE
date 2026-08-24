@@ -81,17 +81,26 @@ jobs:
       - name: Sync Capacitor Android
         run: npx cap sync android
 
+      # Generate a release keystore if one doesn't exist
+      - name: Generate Release Keystore
+        run: |
+          cd android/app
+          if [ ! -f release.keystore ]; then
+            keytool -genkey -v               -keystore release.keystore               -alias termuxlearn               -keyalg RSA               -keysize 2048               -validity 10000               -storepass ${{ secrets.KEYSTORE_PASSWORD || 'termuxlearn123' }}               -keypass ${{ secrets.KEYSTORE_PASSWORD || 'termuxlearn123' }}               -dname "CN=Iminthisera, OU=Dev, O=Iminthisera, L=City, ST=State, C=BD"
+          fi
+
       - name: Build Android APK (Debug)
         run: |
           cd android
           ./gradlew assembleDebug
 
-      - name: Build Android APK (Release)
+      - name: Build Android APK (Signed Release)
         run: |
           cd android
           ./gradlew assembleRelease
         env:
-          KEYSTORE_PASSWORD: ${{ secrets.KEYSTORE_PASSWORD }}
+          KEYSTORE_PASSWORD: ${{ secrets.KEYSTORE_PASSWORD || 'termuxlearn123' }}
+          KEYSTORE_ALIAS_PASSWORD: ${{ secrets.KEYSTORE_PASSWORD || 'termuxlearn123' }}
 
       - name: Upload Android APK artifacts
         uses: actions/upload-artifact@v4
@@ -132,7 +141,8 @@ jobs:
 
             ### Downloads
             - **Windows EXE**: `Termux Coding Learn Setup.exe`
-            - **Android APK**: `app-debug.apk` / `app-release.apk`
+            - **Android Debug APK**: `app-debug.apk` (for testing)
+            - **Android Signed Release APK**: `app-release-unsigned.apk` (installable)
 
             ### Features
             - 400+ typing lessons across 40 levels

@@ -209,6 +209,8 @@ export default function TypingEngine({
     } catch (e) {}
   }
 
+  // Render shadow text with highlighting
+  // Spaces are shown as actual spaces (invisible) with a subtle underline to indicate position
   const renderShadowText = () => {
     return shadowText.split('').map((char, i) => {
       let className = 'text-gray-500'
@@ -217,12 +219,17 @@ export default function TypingEngine({
       } else if (i === typed.length) {
         className = 'text-termux-cyan animate-pulse bg-termux-cyan/10'
       }
+
+      // For spaces: show an underline/box so user knows where to press space
+      const isSpace = char === ' '
+      const spaceStyle = isSpace ? { borderBottom: '1px dashed #374151', minWidth: '0.5em', display: 'inline-block' } : {}
+
       return (
-        <span key={i} className={className}>
+        <span key={i} className={className} style={spaceStyle}>
           {char === '\n' 
             ? <span className="text-gray-600 text-xs">↵<br/></span> 
             : char === ' ' 
-              ? <span className="text-gray-600 select-none">·</span> 
+              ? '\u00A0'  // non-breaking space so it's visible as empty space
               : char}
         </span>
       )

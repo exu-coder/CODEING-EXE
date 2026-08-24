@@ -1,0 +1,172 @@
+{
+  "level": 9,
+  "level_name": "Level 9",
+  "level_name_id": "Level 9",
+  "difficulty": "beginner",
+  "required_score": 70,
+  "total_exercises": 10,
+  "exercises": [
+    {
+      "id": "L9-E1",
+      "type": "command",
+      "category": "environment",
+      "instruction": "Print all environment variables",
+      "instruction_id": "Print semua variabel environment",
+      "shadow_text": "env",
+      "expected_output": [
+        "SHELL=/data/data/com.termux/files/usr/bin/bash",
+        "HOME=/data/data/com.termux/files/home",
+        "PATH=/data/data/com.termux/files/usr/bin"
+      ],
+      "hint": "env shows all environment variables",
+      "hint_id": "env menunjukkan semua variabel environment",
+      "time_limit": 10,
+      "xp": 15,
+      "penalty_per_error": 2
+    },
+    {
+      "id": "L9-E2",
+      "type": "command",
+      "category": "environment",
+      "instruction": "Print value of PATH variable",
+      "instruction_id": "Print nilai variabel PATH",
+      "shadow_text": "echo $PATH",
+      "expected_output": [
+        "/data/data/com.termux/files/usr/bin:/data/data/com.termux/files/usr/bin/applets"
+      ],
+      "hint": "$VARIABLE accesses the value of a variable",
+      "hint_id": "$VARIABLE mengakses nilai variabel",
+      "time_limit": 12,
+      "xp": 15,
+      "penalty_per_error": 2
+    },
+    {
+      "id": "L9-E3",
+      "type": "command",
+      "category": "environment",
+      "instruction": "Create a variable 'name' with value 'Termux' and echo it",
+      "instruction_id": "Buat variabel 'name' dengan nilai 'Termux' dan echo",
+      "shadow_text": "name='Termux'\necho $name",
+      "expected_output": [
+        "Termux"
+      ],
+      "hint": "No spaces around = when setting variables in Bash",
+      "hint_id": "Tidak ada spasi di sekitar = saat set variabel di Bash",
+      "time_limit": 16,
+      "xp": 20,
+      "penalty_per_error": 3
+    },
+    {
+      "id": "L9-E4",
+      "type": "command",
+      "category": "environment",
+      "instruction": "Add '~/scripts' to PATH permanently",
+      "instruction_id": "Tambahkan '~/scripts' ke PATH secara permanen",
+      "shadow_text": "echo 'export PATH=$PATH:~/scripts' >> ~/.bashrc",
+      "expected_output": [
+        "Added ~/scripts to PATH in .bashrc"
+      ],
+      "hint": ".bashrc runs every time a new shell starts",
+      "hint_id": ".bashrc berjalan setiap shell baru dimulai",
+      "time_limit": 25,
+      "xp": 30,
+      "penalty_per_error": 4
+    },
+    {
+      "id": "L9-E5",
+      "type": "command",
+      "category": "environment",
+      "instruction": "Reload .bashrc to apply changes",
+      "instruction_id": "Reload .bashrc untuk menerapkan perubahan",
+      "shadow_text": "source ~/.bashrc",
+      "expected_output": [
+        "Reloaded .bashrc configuration."
+      ],
+      "hint": "source runs the file in current shell (not a new one)",
+      "hint_id": "source menjalankan file di shell saat ini (bukan yang baru)",
+      "time_limit": 14,
+      "xp": 20,
+      "penalty_per_error": 3
+    },
+    {
+      "id": "L9-E6",
+      "type": "command",
+      "category": "environment",
+      "instruction": "Create an alias 'll' for 'ls -la'",
+      "instruction_id": "Buat alias 'll' untuk 'ls -la'",
+      "shadow_text": "alias ll='ls -la'",
+      "expected_output": [
+        "Alias 'll' created for 'ls -la'."
+      ],
+      "hint": "Aliases are shortcuts for longer commands",
+      "hint_id": "Alias adalah shortcut untuk perintah lebih panjang",
+      "time_limit": 16,
+      "xp": 20,
+      "penalty_per_error": 3
+    },
+    {
+      "id": "L9-E7",
+      "type": "command",
+      "category": "environment",
+      "instruction": "Make alias permanent by adding to .bashrc",
+      "instruction_id": "Jadikan alias permanen dengan menambah ke .bashrc",
+      "shadow_text": "echo \"alias ll='ls -la'\" >> ~/.bashrc",
+      "expected_output": [
+        "Added alias to .bashrc"
+      ],
+      "hint": "Use double quotes when the value contains single quotes",
+      "hint_id": "Gunakan tanda kutip ganda jika nilai berisi kutip tunggal",
+      "time_limit": 22,
+      "xp": 25,
+      "penalty_per_error": 3
+    },
+    {
+      "id": "L9-E8",
+      "type": "command",
+      "category": "environment",
+      "instruction": "View current shell being used",
+      "instruction_id": "Lihat shell yang digunakan saat ini",
+      "shadow_text": "echo $SHELL",
+      "expected_output": [
+        "/data/data/com.termux/files/usr/bin/bash"
+      ],
+      "hint": "Common shells: bash, zsh, fish",
+      "hint_id": "Shell umum: bash, zsh, fish",
+      "time_limit": 12,
+      "xp": 15,
+      "penalty_per_error": 2
+    },
+    {
+      "id": "L9-E9",
+      "type": "command",
+      "category": "environment",
+      "instruction": "Check which Python executable is being used",
+      "instruction_id": "Cek executable Python mana yang digunakan",
+      "shadow_text": "which python",
+      "expected_output": [
+        "/data/data/com.termux/files/usr/bin/python"
+      ],
+      "hint": "which shows the path to an executable",
+      "hint_id": "which menunjukkan jalur ke executable",
+      "time_limit": 12,
+      "xp": 15,
+      "penalty_per_error": 2
+    },
+    {
+      "id": "L9-E10",
+      "type": "command",
+      "category": "environment",
+      "instruction": "Create a function 'mkcd' that mkdirs and cds into it",
+      "instruction_id": "Buat fungsi 'mkcd' yang mkdir lalu cd ke dalamnya",
+      "shadow_text": "mkcd() { mkdir -p \"$1\" && cd \"$1\"; }",
+      "expected_output": [
+        "Function 'mkcd' defined."
+      ],
+      "hint": "$1 is the first argument passed to the function",
+      "hint_id": "$1 adalah argumen pertama yang diberikan ke fungsi",
+      "time_limit": 28,
+      "xp": 35,
+      "penalty_per_error": 4
+    }
+  ]
+}

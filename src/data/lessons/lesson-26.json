@@ -1,0 +1,174 @@
+{
+  "level": 26,
+  "level_name": "Level 26",
+  "level_name_id": "Level 26",
+  "difficulty": "intermediate",
+  "required_score": 70,
+  "total_exercises": 10,
+  "exercises": [
+    {
+      "id": "L26-E1",
+      "type": "command",
+      "category": "testing",
+      "instruction": "Install redis",
+      "instruction_id": "Instal redis",
+      "shadow_text": "pkg install redis",
+      "expected_output": [
+        "Setting up redis...",
+        "redis installed."
+      ],
+      "hint": "Practice typing this command accurately",
+      "hint_id": "Latih ketik command ini dengan akurat",
+      "time_limit": 20,
+      "xp": 25,
+      "penalty_per_error": 4
+    },
+    {
+      "id": "L26-E2",
+      "type": "command",
+      "category": "testing",
+      "instruction": "List all files",
+      "instruction_id": "Daftar semua files",
+      "shadow_text": "ls -la ~/projects",
+      "expected_output": [
+        "total 24",
+        "drwxr-xr-x 3 u0_a241"
+      ],
+      "hint": "Practice typing this command accurately",
+      "hint_id": "Latih ketik command ini dengan akurat",
+      "time_limit": 15,
+      "xp": 15,
+      "penalty_per_error": 2
+    },
+    {
+      "id": "L26-E3",
+      "type": "code",
+      "category": "testing",
+      "instruction": "Use decorator to handle errors",
+      "instruction_id": "Gunakan decorator untuk handle errors",
+      "shadow_text": "# decorator example\nprint('Done')",
+      "expected_output": [
+        "Done"
+      ],
+      "hint": "Practice typing this code accurately",
+      "hint_id": "Latih ketik code ini dengan akurat",
+      "time_limit": 15,
+      "xp": 25,
+      "penalty_per_error": 4
+    },
+    {
+      "id": "L26-E4",
+      "type": "code",
+      "category": "testing",
+      "instruction": "Use generator to validate input",
+      "instruction_id": "Gunakan generator untuk validate input",
+      "shadow_text": "# generator example\nprint('Done')",
+      "expected_output": [
+        "Done"
+      ],
+      "hint": "Practice typing this code accurately",
+      "hint_id": "Latih ketik code ini dengan akurat",
+      "time_limit": 20,
+      "xp": 15,
+      "penalty_per_error": 3
+    },
+    {
+      "id": "L26-E5",
+      "type": "command",
+      "category": "testing",
+      "instruction": "Create models called 'queue'",
+      "instruction_id": "Buat models bernama 'queue'",
+      "shadow_text": "mkdir queue",
+      "expected_output": [
+        "Created queue successfully."
+      ],
+      "hint": "Practice typing this command accurately",
+      "hint_id": "Latih ketik command ini dengan akurat",
+      "time_limit": 12,
+      "xp": 20,
+      "penalty_per_error": 4
+    },
+    {
+      "id": "L26-E6",
+      "type": "code",
+      "category": "testing",
+      "instruction": "Define function 'calc()'",
+      "instruction_id": "Definisikan fungsi 'calc()'",
+      "shadow_text": "def calc():\n    return 'Loaded'\nprint(calc())",
+      "expected_output": [
+        "Loaded"
+      ],
+      "hint": "Practice typing this code accurately",
+      "hint_id": "Latih ketik code ini dengan akurat",
+      "time_limit": 20,
+      "xp": 15,
+      "penalty_per_error": 3
+    },
+    {
+      "id": "L26-E7",
+      "type": "command",
+      "category": "testing",
+      "instruction": "Create services called 'server'",
+      "instruction_id": "Buat services bernama 'server'",
+      "shadow_text": "touch server",
+      "expected_output": [
+        "Created server successfully."
+      ],
+      "hint": "Practice typing this command accurately",
+      "hint_id": "Latih ketik command ini dengan akurat",
+      "time_limit": 20,
+      "xp": 15,
+      "penalty_per_error": 3
+    },
+    {
+      "id": "L26-E8",
+      "type": "command",
+      "category": "testing",
+      "instruction": "List all routes",
+      "instruction_id": "Daftar semua routes",
+      "shadow_text": "ls -la ./dist",
+      "expected_output": [
+        "total 24",
+        "drwxr-xr-x 3 u0_a241"
+      ],
+      "hint": "Practice typing this command accurately",
+      "hint_id": "Latih ketik command ini dengan akurat",
+      "time_limit": 20,
+      "xp": 30,
+      "penalty_per_error": 2
+    },
+    {
+      "id": "L26-E9",
+      "type": "code",
+      "category": "testing",
+      "instruction": "Define function 'handle()'",
+      "instruction_id": "Definisikan fungsi 'handle()'",
+      "shadow_text": "def handle():\n    return 'Hello World'\nprint(handle())",
+      "expected_output": [
+        "Hello World"
+      ],
+      "hint": "Practice typing this code accurately",
+      "hint_id": "Latih ketik code ini dengan akurat",
+      "time_limit": 25,
+      "xp": 15,
+      "penalty_per_error": 4
+    },
+    {
+      "id": "L26-E10",
+      "type": "command",
+      "category": "testing",
+      "instruction": "Install redis",
+      "instruction_id": "Instal redis",
+      "shadow_text": "pkg install redis",
+      "expected_output": [
+        "Setting up redis...",
+        "redis installed."
+      ],
+      "hint": "Practice typing this command accurately",
+      "hint_id": "Latih ketik command ini dengan akurat",
+      "time_limit": 20,
+      "xp": 30,
+      "penalty_per_error": 2
+    }
+  ]
+}

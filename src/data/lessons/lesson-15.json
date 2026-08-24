@@ -1,0 +1,185 @@
+{
+  "level": 15,
+  "level_name": "Level 15",
+  "level_name_id": "Level 15",
+  "difficulty": "intermediate",
+  "required_score": 70,
+  "total_exercises": 10,
+  "exercises": [
+    {
+      "id": "L15-E1",
+      "type": "command",
+      "category": "network",
+      "instruction": "Check network connectivity to google.com",
+      "instruction_id": "Cek konektivitas jaringan ke google.com",
+      "shadow_text": "ping -c 4 google.com",
+      "expected_output": [
+        "PING google.com (142.250.80.46) 56(84) bytes of data.",
+        "64 bytes from ...: icmp_seq=1 ttl=117 time=25.3 ms"
+      ],
+      "hint": "-c 4 sends only 4 packets (stops automatically)",
+      "hint_id": "-c 4 kirim hanya 4 paket (berhenti otomatis)",
+      "time_limit": 18,
+      "xp": 20,
+      "penalty_per_error": 3
+    },
+    {
+      "id": "L15-E2",
+      "type": "command",
+      "category": "network",
+      "instruction": "Show network interface configuration",
+      "instruction_id": "Tampilkan konfigurasi interface jaringan",
+      "shadow_text": "ifconfig",
+      "expected_output": [
+        "wlan0: flags=4163<UP,BROADCAST,RUNNING> mtu 1500",
+        "inet 192.168.1.100 netmask 255.255.255.0"
+      ],
+      "hint": "Shows IP addresses, MAC addresses, and stats",
+      "hint_id": "Menunjukkan IP address, MAC address, dan statistik",
+      "time_limit": 12,
+      "xp": 15,
+      "penalty_per_error": 2
+    },
+    {
+      "id": "L15-E3",
+      "type": "command",
+      "category": "network",
+      "instruction": "Show IP address only (modern alternative)",
+      "instruction_id": "Tampilkan hanya IP address (alternatif modern)",
+      "shadow_text": "ip addr",
+      "expected_output": [
+        "1: lo: <LOOPBACK,UP> mtu 65536",
+        "2: wlan0: <BROADCAST,MULTICAST,UP> mtu 1500"
+      ],
+      "hint": "ip is the modern replacement for ifconfig",
+      "hint_id": "ip adalah pengganti modern untuk ifconfig",
+      "time_limit": 12,
+      "xp": 15,
+      "penalty_per_error": 2
+    },
+    {
+      "id": "L15-E4",
+      "type": "command",
+      "category": "network",
+      "instruction": "Download a file with curl",
+      "instruction_id": "Unduh file dengan curl",
+      "shadow_text": "curl -O https://example.com/file.zip",
+      "expected_output": [
+        "  % Total    % Received % Xferd  Average Speed",
+        "100  2048  100  2048    0     0   5000      0"
+      ],
+      "hint": "-O saves file with its original name",
+      "hint_id": "-O simpan file dengan nama aslinya",
+      "time_limit": 20,
+      "xp": 20,
+      "penalty_per_error": 3
+    },
+    {
+      "id": "L15-E5",
+      "type": "command",
+      "category": "network",
+      "instruction": "Download a file with wget",
+      "instruction_id": "Unduh file dengan wget",
+      "shadow_text": "wget https://example.com/file.zip",
+      "expected_output": [
+        "Resolving example.com... 93.184.216.34",
+        "HTTP request sent, awaiting response... 200 OK",
+        "Saving to: 'file.zip'"
+      ],
+      "hint": "wget shows progress bar by default",
+      "hint_id": "wget menunjukkan progress bar secara default",
+      "time_limit": 20,
+      "xp": 20,
+      "penalty_per_error": 3
+    },
+    {
+      "id": "L15-E6",
+      "type": "command",
+      "category": "network",
+      "instruction": "Resume a broken download with wget",
+      "instruction_id": "Lanjutkan unduhan terputus dengan wget",
+      "shadow_text": "wget -c https://example.com/large-file.zip",
+      "expected_output": [
+        "Resuming download at 50%",
+        "File 'large-file.zip' saved."
+      ],
+      "hint": "-c = continue (resume partial downloads)",
+      "hint_id": "-c = continue (lanjutkan unduhan parsial)",
+      "time_limit": 18,
+      "xp": 20,
+      "penalty_per_error": 3
+    },
+    {
+      "id": "L15-E7",
+      "type": "command",
+      "category": "network",
+      "instruction": "Check HTTP headers of a website",
+      "instruction_id": "Cek HTTP header dari website",
+      "shadow_text": "curl -I https://google.com",
+      "expected_output": [
+        "HTTP/2 200",
+        "content-type: text/html; charset=UTF-8",
+        "date: Mon, 12 Jul 2024 10:00:00 GMT"
+      ],
+      "hint": "-I fetches headers only (HEAD request)",
+      "hint_id": "-I ambil header saja (request HEAD)",
+      "time_limit": 16,
+      "xp": 20,
+      "penalty_per_error": 3
+    },
+    {
+      "id": "L15-E8",
+      "type": "command",
+      "category": "network",
+      "instruction": "Scan open ports on localhost",
+      "instruction_id": "Scan port terbuka di localhost",
+      "shadow_text": "nmap localhost",
+      "expected_output": [
+        "Starting Nmap 7.94",
+        "PORT   STATE SERVICE",
+        "22/tcp open  ssh",
+        "8080/tcp open  http-proxy"
+      ],
+      "hint": "nmap is a powerful network scanner (install with pkg install nmap)",
+      "hint_id": "nmap adalah scanner jaringan powerful (instal dengan pkg install nmap)",
+      "time_limit": 16,
+      "xp": 25,
+      "penalty_per_error": 3
+    },
+    {
+      "id": "L15-E9",
+      "type": "command",
+      "category": "network",
+      "instruction": "Show active network connections",
+      "instruction_id": "Tampilkan koneksi jaringan aktif",
+      "shadow_text": "netstat -tuln",
+      "expected_output": [
+        "Proto Recv-Q Send-Q Local Address           Foreign Address         State",
+        ""
+      ],
+      "hint": "-t = TCP, -u = UDP, -l = listening, -n = numeric",
+      "hint_id": "-t = TCP, -u = UDP, -l = listening, -n = numerik",
+      "time_limit": 16,
+      "xp": 20,
+      "penalty_per_error": 3
+    },
+    {
+      "id": "L15-E10",
+      "type": "command",
+      "category": "network",
+      "instruction": "Trace route to google.com",
+      "instruction_id": "Trace route ke google.com",
+      "shadow_text": "traceroute google.com",
+      "expected_output": [
+        "traceroute to google.com (142.250.80.46), 30 hops max",
+        " 1  192.168.1.1  2.1 ms",
+        " 2  10.0.0.1  5.3 ms"
+      ],
+      "hint": "Shows each router (hop) between you and destination",
+      "hint_id": "Menunjukkan setiap router (hop) antara Anda dan tujuan",
+      "time_limit": 18,
+      "xp": 25,
+      "penalty_per_error": 3
+    }
+  ]
+}

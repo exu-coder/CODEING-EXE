@@ -1,0 +1,170 @@
+{
+  "level": 8,
+  "level_name": "Level 8",
+  "level_name_id": "Level 8",
+  "difficulty": "beginner",
+  "required_score": 70,
+  "total_exercises": 10,
+  "exercises": [
+    {
+      "id": "L8-E1",
+      "type": "command",
+      "category": "permissions",
+      "instruction": "Make 'script.sh' executable",
+      "instruction_id": "Jadikan 'script.sh' dapat dieksekusi",
+      "shadow_text": "chmod +x script.sh",
+      "expected_output": [
+        "Changed permissions of 'script.sh' to executable."
+      ],
+      "hint": "+x adds execute permission",
+      "hint_id": "+x menambahkan izin eksekusi",
+      "time_limit": 16,
+      "xp": 20,
+      "penalty_per_error": 3
+    },
+    {
+      "id": "L8-E2",
+      "type": "command",
+      "category": "permissions",
+      "instruction": "Make a file readable, writable, and executable for owner only",
+      "instruction_id": "Jadikan file readable, writable, dan executable hanya untuk owner",
+      "shadow_text": "chmod 700 secret.txt",
+      "expected_output": [
+        "Changed permissions of 'secret.txt' to rwx------."
+      ],
+      "hint": "7=rwx, 6=rw-, 5=r-x, 4=r--, 0=---",
+      "hint_id": "7=rwx, 6=rw-, 5=r-x, 4=r--, 0=---",
+      "time_limit": 18,
+      "xp": 25,
+      "penalty_per_error": 3
+    },
+    {
+      "id": "L8-E3",
+      "type": "command",
+      "category": "permissions",
+      "instruction": "Give read permission to all users for 'data.txt'",
+      "instruction_id": "Beri izin baca untuk semua user pada 'data.txt'",
+      "shadow_text": "chmod +r data.txt",
+      "expected_output": [
+        "Added read permission for all users."
+      ],
+      "hint": "+r adds read, -r removes read",
+      "hint_id": "+r menambah baca, -r menghapus baca",
+      "time_limit": 14,
+      "xp": 15,
+      "penalty_per_error": 2
+    },
+    {
+      "id": "L8-E4",
+      "type": "command",
+      "category": "permissions",
+      "instruction": "View detailed file permissions with ls",
+      "instruction_id": "Lihat detail izin file dengan ls",
+      "shadow_text": "ls -l script.sh",
+      "expected_output": [
+        "-rwxr-xr-x 1 u0_a241 u0_a241 4096 Jul 12 10:20 script.sh"
+      ],
+      "hint": "Format: -[owner][group][others] = rwxr-xr-x",
+      "hint_id": "Format: -[owner][group][others] = rwxr-xr-x",
+      "time_limit": 14,
+      "xp": 15,
+      "penalty_per_error": 2
+    },
+    {
+      "id": "L8-E5",
+      "type": "command",
+      "category": "permissions",
+      "instruction": "Change file owner to root (requires root)",
+      "instruction_id": "Ubah owner file ke root (butuh root)",
+      "shadow_text": "chown root:root file.txt",
+      "expected_output": [
+        "Changed owner of 'file.txt' to root:root."
+      ],
+      "hint": "chown user:group filename",
+      "hint_id": "chown user:group namafile",
+      "time_limit": 18,
+      "xp": 25,
+      "penalty_per_error": 3
+    },
+    {
+      "id": "L8-E6",
+      "type": "command",
+      "category": "permissions",
+      "instruction": "Make all .sh files in current directory executable",
+      "instruction_id": "Jadikan semua file .sh di direktori ini executable",
+      "shadow_text": "chmod +x *.sh",
+      "expected_output": [
+        "Made 5 .sh files executable."
+      ],
+      "hint": "* is a wildcard that matches any characters",
+      "hint_id": "* adalah wildcard yang cocok dengan karakter apa saja",
+      "time_limit": 16,
+      "xp": 20,
+      "penalty_per_error": 3
+    },
+    {
+      "id": "L8-E7",
+      "type": "command",
+      "category": "permissions",
+      "instruction": "Set permissions to 644 (rw-r--r--) for 'config.json'",
+      "instruction_id": "Set izin ke 644 (rw-r--r--) untuk 'config.json'",
+      "shadow_text": "chmod 644 config.json",
+      "expected_output": [
+        "Changed permissions of 'config.json' to rw-r--r--."
+      ],
+      "hint": "6=rw-, 4=r--. Owner can read/write, others read only",
+      "hint_id": "6=rw-, 4=r--. Owner bisa baca/tulis, lainnya hanya baca",
+      "time_limit": 18,
+      "xp": 20,
+      "penalty_per_error": 3
+    },
+    {
+      "id": "L8-E8",
+      "type": "command",
+      "category": "permissions",
+      "instruction": "Remove write permission for group on 'data.csv'",
+      "instruction_id": "Hapus izin tulis untuk grup pada 'data.csv'",
+      "shadow_text": "chmod g-w data.csv",
+      "expected_output": [
+        "Removed write permission for group."
+      ],
+      "hint": "u=user, g=group, o=others, a=all",
+      "hint_id": "u=user, g=group, o=others, a=all",
+      "time_limit": 16,
+      "xp": 20,
+      "penalty_per_error": 3
+    },
+    {
+      "id": "L8-E9",
+      "type": "command",
+      "category": "permissions",
+      "instruction": "Recursively change permissions of 'project' directory to 755",
+      "instruction_id": "Ubah izin direktori 'project' secara rekursif ke 755",
+      "shadow_text": "chmod -R 755 project/",
+      "expected_output": [
+        "Recursively changed permissions of 'project/' to rwxr-xr-x."
+      ],
+      "hint": "-R = recursive, applies to all files and subdirectories",
+      "hint_id": "-R = rekursif, berlaku untuk semua file dan subdirektori",
+      "time_limit": 20,
+      "xp": 25,
+      "penalty_per_error": 3
+    },
+    {
+      "id": "L8-E10",
+      "type": "command",
+      "category": "permissions",
+      "instruction": "View permissions in numeric format for 'app.py'",
+      "instruction_id": "Lihat izin dalam format numerik untuk 'app.py'",
+      "shadow_text": "stat -c '%a %n' app.py",
+      "expected_output": [
+        "755 app.py"
+      ],
+      "hint": "stat shows detailed file statistics",
+      "hint_id": "stat menunjukkan statistik file detail",
+      "time_limit": 18,
+      "xp": 20,
+      "penalty_per_error": 3
+    }
+  ]
+}

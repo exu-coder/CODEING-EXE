@@ -1,0 +1,171 @@
+{
+  "level": 28,
+  "level_name": "Level 28",
+  "level_name_id": "Level 28",
+  "difficulty": "intermediate",
+  "required_score": 70,
+  "total_exercises": 10,
+  "exercises": [
+    {
+      "id": "L28-E1",
+      "type": "code",
+      "category": "graphql",
+      "instruction": "Import json and use it",
+      "instruction_id": "Import json dan gunakan",
+      "shadow_text": "import json\nprint('json loaded')",
+      "expected_output": [
+        "json loaded"
+      ],
+      "hint": "Practice typing this code accurately",
+      "hint_id": "Latih ketik code ini dengan akurat",
+      "time_limit": 25,
+      "xp": 25,
+      "penalty_per_error": 2
+    },
+    {
+      "id": "L28-E2",
+      "type": "command",
+      "category": "graphql",
+      "instruction": "Create services called 'server'",
+      "instruction_id": "Buat services bernama 'server'",
+      "shadow_text": "pip install server",
+      "expected_output": [
+        "Created server successfully."
+      ],
+      "hint": "Practice typing this command accurately",
+      "hint_id": "Latih ketik command ini dengan akurat",
+      "time_limit": 12,
+      "xp": 30,
+      "penalty_per_error": 2
+    },
+    {
+      "id": "L28-E3",
+      "type": "command",
+      "category": "graphql",
+      "instruction": "Remove models 'cache'",
+      "instruction_id": "Hapus models 'cache'",
+      "shadow_text": "rm cache",
+      "expected_output": [
+        "Removed 'cache'."
+      ],
+      "hint": "Practice typing this command accurately",
+      "hint_id": "Latih ketik command ini dengan akurat",
+      "time_limit": 12,
+      "xp": 25,
+      "penalty_per_error": 4
+    },
+    {
+      "id": "L28-E4",
+      "type": "code",
+      "category": "graphql",
+      "instruction": "Print 'Hello World'",
+      "instruction_id": "Print 'Hello World'",
+      "shadow_text": "print('Hello World')",
+      "expected_output": [
+        "Hello World"
+      ],
+      "hint": "Practice typing this code accurately",
+      "hint_id": "Latih ketik code ini dengan akurat",
+      "time_limit": 25,
+      "xp": 20,
+      "penalty_per_error": 3
+    },
+    {
+      "id": "L28-E5",
+      "type": "command",
+      "category": "graphql",
+      "instruction": "List all routes",
+      "instruction_id": "Daftar semua routes",
+      "shadow_text": "ls -la ~/apps",
+      "expected_output": [
+        "total 24",
+        "drwxr-xr-x 3 u0_a241"
+      ],
+      "hint": "Practice typing this command accurately",
+      "hint_id": "Latih ketik command ini dengan akurat",
+      "time_limit": 12,
+      "xp": 25,
+      "penalty_per_error": 2
+    },
+    {
+      "id": "L28-E6",
+      "type": "command",
+      "category": "graphql",
+      "instruction": "Create services called 'server'",
+      "instruction_id": "Buat services bernama 'server'",
+      "shadow_text": "kubectl create server",
+      "expected_output": [
+        "Created server successfully."
+      ],
+      "hint": "Practice typing this command accurately",
+      "hint_id": "Latih ketik command ini dengan akurat",
+      "time_limit": 12,
+      "xp": 30,
+      "penalty_per_error": 2
+    },
+    {
+      "id": "L28-E7",
+      "type": "code",
+      "category": "graphql",
+      "instruction": "Import sys and use it",
+      "instruction_id": "Import sys dan gunakan",
+      "shadow_text": "import sys\nprint('sys loaded')",
+      "expected_output": [
+        "sys loaded"
+      ],
+      "hint": "Practice typing this code accurately",
+      "hint_id": "Latih ketik code ini dengan akurat",
+      "time_limit": 15,
+      "xp": 25,
+      "penalty_per_error": 2
+    },
+    {
+      "id": "L28-E8",
+      "type": "code",
+      "category": "graphql",
+      "instruction": "Define function 'calc()'",
+      "instruction_id": "Definisikan fungsi 'calc()'",
+      "shadow_text": "def calc():\n    return 'Hello World'\nprint(calc())",
+      "expected_output": [
+        "Hello World"
+      ],
+      "hint": "Practice typing this code accurately",
+      "hint_id": "Latih ketik code ini dengan akurat",
+      "time_limit": 15,
+      "xp": 25,
+      "penalty_per_error": 2
+    },
+    {
+      "id": "L28-E9",
+      "type": "code",
+      "category": "graphql",
+      "instruction": "Define function 'process()'",
+      "instruction_id": "Definisikan fungsi 'process()'",
+      "shadow_text": "def process():\n    return 'Loaded'\nprint(process())",
+      "expected_output": [
+        "Loaded"
+      ],
+      "hint": "Practice typing this code accurately",
+      "hint_id": "Latih ketik code ini dengan akurat",
+      "time_limit": 12,
+      "xp": 30,
+      "penalty_per_error": 4
+    },
+    {
+      "id": "L28-E10",
+      "type": "code",
+      "category": "graphql",
+      "instruction": "Import pandas and use it",
+      "instruction_id": "Import pandas dan gunakan",
+      "shadow_text": "import pandas\nprint('pandas loaded')",
+      "expected_output": [
+        "pandas loaded"
+      ],
+      "hint": "Practice typing this code accurately",
+      "hint_id": "Latih ketik code ini dengan akurat",
+      "time_limit": 20,
+      "xp": 15,
+      "penalty_per_error": 2
+    }
+  ]
+}

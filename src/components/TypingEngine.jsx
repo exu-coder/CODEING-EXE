@@ -22,13 +22,28 @@ export default function TypingEngine({
   const [showHint, setShowHint] = useState(false)
   const [shake, setShake] = useState(false)
   const inputRef = useRef(null)
+  const containerRef = useRef(null)
   const timerRef = useRef(null)
   const shadowText = exercise.shadow_text
 
-  // Focus input on mount
+  // Focus input on mount and when exercise changes
   useEffect(() => {
-    inputRef.current?.focus()
-  }, [])
+    const timer = setTimeout(() => {
+      inputRef.current?.focus()
+    }, 100)
+    return () => clearTimeout(timer)
+  }, [exercise])
+
+  // Keep focus on input
+  useEffect(() => {
+    const handleBlur = () => {
+      if (status === 'idle' || status === 'typing') {
+        setTimeout(() => inputRef.current?.focus(), 50)
+      }
+    }
+    window.addEventListener('blur', handleBlur)
+    return () => window.removeEventListener('blur', handleBlur)
+  }, [status])
 
   // Timer
   useEffect(() => {
@@ -60,55 +75,95 @@ export default function TypingEngine({
     setAccuracy(acc)
   }, [typed, shadowText])
 
-  const handleKeyDown = useCallback((e) => {
-    if (status === 'executing' || status === 'success' || status === 'error') return
+  // ===== MOBILE + DESKTOP INPUT HANDLER =====
+  const handleInput = useCallback((e) => {
+    if (status === 'executing' || status === 'success' || status === 'error') {
+      e.preventDefault()
+      return
+    }
 
-    // Start timer on first keystroke
-    if (status === 'idle' && e.key.length === 1) {
+    const value = e.target.value
+    const inputType = e.nativeEvent?.inputType || ''
+
+    // Handle backspace/delete from mobile keyboard
+    if (inputType === 'deleteContentBackward' || inputType === 'deleteContentForward') {
+      setTyped(prev => {
+        const newVal = value
+        setCursorPos(newVal.length)
+        return newVal
+      })
+      return
+    }
+
+    // Start timer on first input
+    if (status === 'idle' && value.length > 0) {
       setStatus('typing')
       setStartTime(Date.now())
     }
 
+    // Check if user pressed Enter (value ends with newline or has newline)
+    if (value.includes('\n') || value.includes('\r')) {
+      e.preventDefault()
+      const cleanValue = value.replace(/\r?\n/g, '').trim()
+      setTyped(cleanValue)
+      setCursorPos(cleanValue.length)
+      handleExecute(cleanValue)
+      return
+    }
+
+    // Normal character input
+    setTyped(value)
+    setCursorPos(value.length)
+
+    // Check for errors on the newly typed character
+    const newCharIndex = value.length - 1
+    if (newCharIndex >= 0 && newCharIndex < shadowText.length) {
+      if (value[newCharIndex] !== shadowText[newCharIndex] && soundEnabled) {
+        playErrorSound()
+        setShake(true)
+        setTimeout(() => setShake(false), 300)
+      }
+    }
+  }, [status, shadowText, soundEnabled])
+
+  // ===== KEYBOARD HANDLER (desktop fallback) =====
+  const handleKeyDown = useCallback((e) => {
+    if (status === 'executing' || status === 'success' || status === 'error') return
+
     // ENTER to execute
     if (e.key === 'Enter') {
       e.preventDefault()
-      handleExecute()
+      handleExecute(typed)
       return
     }
 
-    // Backspace
+    // Backspace - let onInput handle it, but prevent default to avoid double handling
     if (e.key === 'Backspace') {
-      e.preventDefault()
-      setTyped(prev => prev.slice(0, -1))
-      setCursorPos(prev => Math.max(0, prev - 1))
+      // onInput will handle this
       return
     }
 
-    // Ignore special keys
-    if (e.key.length > 1 || e.ctrlKey || e.metaKey || e.altKey) return
-
-    // Type character
-    e.preventDefault()
-    const nextChar = shadowText[cursorPos]
-    const isCorrect = e.key === nextChar
-
-    setTyped(prev => prev + e.key)
-    setCursorPos(prev => prev + 1)
-
-    if (!isCorrect && soundEnabled) {
-      playErrorSound()
-      setShake(true)
-      setTimeout(() => setShake(false), 300)
+    // Ignore special keys (let onInput handle regular chars)
+    if (e.key.length > 1 || e.ctrlKey || e.metaKey || e.altKey) {
+      e.preventDefault()
+      return
     }
-  }, [status, cursorPos, shadowText, soundEnabled])
 
-  const handleExecute = () => {
+    // Start timer on first keystroke
+    if (status === 'idle') {
+      setStatus('typing')
+      setStartTime(Date.now())
+    }
+  }, [status, typed])
+
+  const handleExecute = (currentTyped) => {
+    const textToCheck = currentTyped || typed
     setStatus('executing')
 
     // Simulate execution delay
     setTimeout(() => {
-      const isMatch = typed.trim() === shadowText.trim()
-      const score = calculateScore()
+      const isMatch = textToCheck.trim() === shadowText.trim()
+      const score = calculateScore(textToCheck)
 
       if (isMatch && score >= 50) {
         setStatus('success')
@@ -122,7 +177,8 @@ export default function TypingEngine({
     }, 800)
   }
 
-  const calculateScore = () => {
+  const calculateScore = (textToScore) => {
+    const text = textToScore || typed
     const lengthBonus = Math.min(20, shadowText.length / 2)
     const accuracyBonus = accuracy * 0.5
     const speedBonus = Math.min(30, wpm)
@@ -133,33 +189,37 @@ export default function TypingEngine({
 
   const playSuccessSound = () => {
     if (!soundEnabled) return
-    const ctx = new (window.AudioContext || window.webkitAudioContext)()
-    const osc = ctx.createOscillator()
-    const gain = ctx.createGain()
-    osc.connect(gain)
-    gain.connect(ctx.destination)
-    osc.frequency.setValueAtTime(523, ctx.currentTime) // C5
-    osc.frequency.setValueAtTime(659, ctx.currentTime + 0.1) // E5
-    osc.frequency.setValueAtTime(784, ctx.currentTime + 0.2) // G5
-    gain.gain.setValueAtTime(0.1, ctx.currentTime)
-    gain.gain.exponentialRampToValueAtTime(0.01, ctx.currentTime + 0.4)
-    osc.start(ctx.currentTime)
-    osc.stop(ctx.currentTime + 0.4)
+    try {
+      const ctx = new (window.AudioContext || window.webkitAudioContext)()
+      const osc = ctx.createOscillator()
+      const gain = ctx.createGain()
+      osc.connect(gain)
+      gain.connect(ctx.destination)
+      osc.frequency.setValueAtTime(523, ctx.currentTime) // C5
+      osc.frequency.setValueAtTime(659, ctx.currentTime + 0.1) // E5
+      osc.frequency.setValueAtTime(784, ctx.currentTime + 0.2) // G5
+      gain.gain.setValueAtTime(0.1, ctx.currentTime)
+      gain.gain.exponentialRampToValueAtTime(0.01, ctx.currentTime + 0.4)
+      osc.start(ctx.currentTime)
+      osc.stop(ctx.currentTime + 0.4)
+    } catch (e) { /* silent fail */ }
   }
 
   const playErrorSound = () => {
     if (!soundEnabled) return
-    const ctx = new (window.AudioContext || window.webkitAudioContext)()
-    const osc = ctx.createOscillator()
-    const gain = ctx.createGain()
-    osc.connect(gain)
-    gain.connect(ctx.destination)
-    osc.type = 'sawtooth'
-    osc.frequency.setValueAtTime(150, ctx.currentTime)
-    gain.gain.setValueAtTime(0.1, ctx.currentTime)
-    gain.gain.exponentialRampToValueAtTime(0.01, ctx.currentTime + 0.15)
-    osc.start(ctx.currentTime)
-    osc.stop(ctx.currentTime + 0.15)
+    try {
+      const ctx = new (window.AudioContext || window.webkitAudioContext)()
+      const osc = ctx.createOscillator()
+      const gain = ctx.createGain()
+      osc.connect(gain)
+      gain.connect(ctx.destination)
+      osc.type = 'sawtooth'
+      osc.frequency.setValueAtTime(150, ctx.currentTime)
+      gain.gain.setValueAtTime(0.1, ctx.currentTime)
+      gain.gain.exponentialRampToValueAtTime(0.01, ctx.currentTime + 0.15)
+      osc.start(ctx.currentTime)
+      osc.stop(ctx.currentTime + 0.15)
+    } catch (e) { /* silent fail */ }
   }
 
   // Render shadow text with highlighting
@@ -179,8 +239,13 @@ export default function TypingEngine({
     })
   }
 
+  // Focus helper for mobile tap
+  const handleContainerClick = () => {
+    inputRef.current?.focus()
+  }
+
   return (
-    <div className="w-full max-w-3xl mx-auto">
+    <div className="w-full max-w-3xl mx-auto" ref={containerRef}>
       {/* Status Bar */}
       <div className="flex items-center justify-between mb-4 px-2">
         <div className="flex items-center gap-4">
@@ -215,20 +280,38 @@ export default function TypingEngine({
         />
       </div>
 
-      {/* Shadow Text Display */}
+      {/* Shadow Text Display + Hidden Input Overlay */}
       <motion.div 
-        className={`terminal-window p-6 mb-4 ${shake ? 'animate-shake' : ''}`}
+        className={`terminal-window p-6 mb-4 relative ${shake ? 'animate-shake' : ''}`}
         animate={shake ? { x: [-5, 5, -5, 5, 0] } : {}}
         transition={{ duration: 0.3 }}
+        onClick={handleContainerClick}
       >
-        <div className="terminal-header mb-3">
+        {/* Invisible full-size input overlay for mobile keyboard */}
+        <input
+          ref={inputRef}
+          type="text"
+          inputMode="text"
+          enterKeyHint="done"
+          value={typed}
+          onChange={handleInput}
+          onKeyDown={handleKeyDown}
+          className="absolute inset-0 w-full h-full opacity-0 cursor-text z-10"
+          style={{ fontSize: '16px' }} // prevent iOS zoom
+          autoComplete="off"
+          autoCorrect="off"
+          autoCapitalize="off"
+          spellCheck="false"
+        />
+
+        <div className="terminal-header mb-3 pointer-events-none">
           <div className="terminal-dot bg-red-500" />
           <div className="terminal-dot bg-yellow-500" />
           <div className="terminal-dot bg-green-500" />
           <span className="text-xs text-gray-500 ml-2 font-mono">typing_practice.sh</span>
         </div>
 
-        <div className="font-mono text-lg leading-relaxed whitespace-pre-wrap break-all">
+        <div className="font-mono text-lg leading-relaxed whitespace-pre-wrap break-all pointer-events-none">
           <span className="text-gray-600 mr-2">$</span>
           {renderShadowText()}
           {typed.length >= shadowText.length && (
@@ -236,20 +319,6 @@ export default function TypingEngine({
           )}
         </div>
       </motion.div>
-
-      {/* Hidden Input for capturing keystrokes */}
-      <input
-        ref={inputRef}
-        type="text"
-        value={typed}
-        onChange={() => {}} // controlled but we handle via keydown
-        onKeyDown={handleKeyDown}
-        className="absolute opacity-0 w-1 h-1"
-        autoComplete="off"
-        autoCorrect="off"
-        autoCapitalize="off"
-        spellCheck="false"
-      />
 
       {/* Hint Toggle */}
       <button 
@@ -337,10 +406,10 @@ export default function TypingEngine({
 
       {/* Tap to focus hint for mobile */}
       <div 
-        className="text-center text-xs text-gray-600 mt-4 cursor-pointer"
-        onClick={() => inputRef.current?.focus()}
+        className="text-center text-xs text-gray-600 mt-4 cursor-pointer select-none"
+        onClick={handleContainerClick}
       >
-        Tap here or press any key to focus
+        Tap terminal or press any key to focus
       </div>
     </div>
   )

@@ -1,0 +1,172 @@
+{
+  "level": 23,
+  "level_name": "Level 23",
+  "level_name_id": "Level 23",
+  "difficulty": "intermediate",
+  "required_score": 70,
+  "total_exercises": 10,
+  "exercises": [
+    {
+      "id": "L23-E1",
+      "type": "code",
+      "category": "mongodb",
+      "instruction": "Import numpy and use it",
+      "instruction_id": "Import numpy dan gunakan",
+      "shadow_text": "import numpy\nprint('numpy loaded')",
+      "expected_output": [
+        "numpy loaded"
+      ],
+      "hint": "Practice typing this code accurately",
+      "hint_id": "Latih ketik code ini dengan akurat",
+      "time_limit": 25,
+      "xp": 15,
+      "penalty_per_error": 4
+    },
+    {
+      "id": "L23-E2",
+      "type": "command",
+      "category": "mongodb",
+      "instruction": "Install graphql",
+      "instruction_id": "Instal graphql",
+      "shadow_text": "pkg install graphql",
+      "expected_output": [
+        "Setting up graphql...",
+        "graphql installed."
+      ],
+      "hint": "Practice typing this command accurately",
+      "hint_id": "Latih ketik command ini dengan akurat",
+      "time_limit": 18,
+      "xp": 30,
+      "penalty_per_error": 3
+    },
+    {
+      "id": "L23-E3",
+      "type": "code",
+      "category": "mongodb",
+      "instruction": "Print 'Success!'",
+      "instruction_id": "Print 'Success!'",
+      "shadow_text": "print('Success!')",
+      "expected_output": [
+        "Success!"
+      ],
+      "hint": "Practice typing this code accurately",
+      "hint_id": "Latih ketik code ini dengan akurat",
+      "time_limit": 20,
+      "xp": 15,
+      "penalty_per_error": 2
+    },
+    {
+      "id": "L23-E4",
+      "type": "code",
+      "category": "mongodb",
+      "instruction": "Create variable 'total' with value 42",
+      "instruction_id": "Buat variabel 'total' dengan nilai 42",
+      "shadow_text": "total = 42\nprint(total)",
+      "expected_output": [
+        "42"
+      ],
+      "hint": "Practice typing this code accurately",
+      "hint_id": "Latih ketik code ini dengan akurat",
+      "time_limit": 12,
+      "xp": 25,
+      "penalty_per_error": 2
+    },
+    {
+      "id": "L23-E5",
+      "type": "code",
+      "category": "mongodb",
+      "instruction": "Print 'Success!'",
+      "instruction_id": "Print 'Success!'",
+      "shadow_text": "print('Success!')",
+      "expected_output": [
+        "Success!"
+      ],
+      "hint": "Practice typing this code accurately",
+      "hint_id": "Latih ketik code ini dengan akurat",
+      "time_limit": 18,
+      "xp": 30,
+      "penalty_per_error": 4
+    },
+    {
+      "id": "L23-E6",
+      "type": "code",
+      "category": "mongodb",
+      "instruction": "Define function 'fetch()'",
+      "instruction_id": "Definisikan fungsi 'fetch()'",
+      "shadow_text": "def fetch():\n    return 'Success!'\nprint(fetch())",
+      "expected_output": [
+        "Success!"
+      ],
+      "hint": "Practice typing this code accurately",
+      "hint_id": "Latih ketik code ini dengan akurat",
+      "time_limit": 12,
+      "xp": 20,
+      "penalty_per_error": 3
+    },
+    {
+      "id": "L23-E7",
+      "type": "command",
+      "category": "mongodb",
+      "instruction": "List all pods",
+      "instruction_id": "Daftar semua pods",
+      "shadow_text": "ls -la ./dist",
+      "expected_output": [
+        "total 24",
+        "drwxr-xr-x 3 u0_a241"
+      ],
+      "hint": "Practice typing this command accurately",
+      "hint_id": "Latih ketik command ini dengan akurat",
+      "time_limit": 15,
+      "xp": 25,
+      "penalty_per_error": 2
+    },
+    {
+      "id": "L23-E8",
+      "type": "code",
+      "category": "mongodb",
+      "instruction": "Import os and use it",
+      "instruction_id": "Import os dan gunakan",
+      "shadow_text": "import os\nprint('os loaded')",
+      "expected_output": [
+        "os loaded"
+      ],
+      "hint": "Practice typing this code accurately",
+      "hint_id": "Latih ketik code ini dengan akurat",
+      "time_limit": 20,
+      "xp": 15,
+      "penalty_per_error": 4
+    },
+    {
+      "id": "L23-E9",
+      "type": "code",
+      "category": "mongodb",
+      "instruction": "Define function 'parse()'",
+      "instruction_id": "Definisikan fungsi 'parse()'",
+      "shadow_text": "def parse():\n    return 'Loaded'\nprint(parse())",
+      "expected_output": [
+        "Loaded"
+      ],
+      "hint": "Practice typing this code accurately",
+      "hint_id": "Latih ketik code ini dengan akurat",
+      "time_limit": 20,
+      "xp": 25,
+      "penalty_per_error": 3
+    },
+    {
+      "id": "L23-E10",
+      "type": "command",
+      "category": "mongodb",
+      "instruction": "Remove containers 'worker'",
+      "instruction_id": "Hapus containers 'worker'",
+      "shadow_text": "rm worker",
+      "expected_output": [
+        "Removed 'worker'."
+      ],
+      "hint": "Practice typing this command accurately",
+      "hint_id": "Latih ketik command ini dengan akurat",
+      "time_limit": 25,
+      "xp": 15,
+      "penalty_per_error": 3
+    }
+  ]
+}

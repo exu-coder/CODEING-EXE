@@ -1,0 +1,173 @@
+{
+  "level": 34,
+  "level_name": "Level 34",
+  "level_name_id": "Level 34",
+  "difficulty": "advanced",
+  "required_score": 70,
+  "total_exercises": 10,
+  "exercises": [
+    {
+      "id": "L34-E1",
+      "type": "code",
+      "category": "auth",
+      "instruction": "Import requests and use it",
+      "instruction_id": "Import requests dan gunakan",
+      "shadow_text": "import requests\nprint('requests loaded')",
+      "expected_output": [
+        "requests loaded"
+      ],
+      "hint": "Practice typing this code accurately",
+      "hint_id": "Latih ketik code ini dengan akurat",
+      "time_limit": 15,
+      "xp": 20,
+      "penalty_per_error": 3
+    },
+    {
+      "id": "L34-E2",
+      "type": "command",
+      "category": "auth",
+      "instruction": "Check version of scrapy",
+      "instruction_id": "Cek versi scrapy",
+      "shadow_text": "scrapy --version",
+      "expected_output": [
+        "scrapy version 1.0.0"
+      ],
+      "hint": "Practice typing this command accurately",
+      "hint_id": "Latih ketik command ini dengan akurat",
+      "time_limit": 12,
+      "xp": 25,
+      "penalty_per_error": 3
+    },
+    {
+      "id": "L34-E3",
+      "type": "code",
+      "category": "auth",
+      "instruction": "Use try-except to handle errors",
+      "instruction_id": "Gunakan try-except untuk handle errors",
+      "shadow_text": "# try-except example\nprint('Done')",
+      "expected_output": [
+        "Done"
+      ],
+      "hint": "Practice typing this code accurately",
+      "hint_id": "Latih ketik code ini dengan akurat",
+      "time_limit": 20,
+      "xp": 20,
+      "penalty_per_error": 4
+    },
+    {
+      "id": "L34-E4",
+      "type": "command",
+      "category": "auth",
+      "instruction": "Check version of redis",
+      "instruction_id": "Cek versi redis",
+      "shadow_text": "redis --version",
+      "expected_output": [
+        "redis version 1.0.0"
+      ],
+      "hint": "Practice typing this command accurately",
+      "hint_id": "Latih ketik command ini dengan akurat",
+      "time_limit": 15,
+      "xp": 30,
+      "penalty_per_error": 4
+    },
+    {
+      "id": "L34-E5",
+      "type": "command",
+      "category": "auth",
+      "instruction": "Install graphql",
+      "instruction_id": "Instal graphql",
+      "shadow_text": "pkg install graphql",
+      "expected_output": [
+        "Setting up graphql...",
+        "graphql installed."
+      ],
+      "hint": "Practice typing this command accurately",
+      "hint_id": "Latih ketik command ini dengan akurat",
+      "time_limit": 25,
+      "xp": 25,
+      "penalty_per_error": 4
+    },
+    {
+      "id": "L34-E6",
+      "type": "command",
+      "category": "auth",
+      "instruction": "Remove containers 'api'",
+      "instruction_id": "Hapus containers 'api'",
+      "shadow_text": "rm api",
+      "expected_output": [
+        "Removed 'api'."
+      ],
+      "hint": "Practice typing this command accurately",
+      "hint_id": "Latih ketik command ini dengan akurat",
+      "time_limit": 20,
+      "xp": 25,
+      "penalty_per_error": 4
+    },
+    {
+      "id": "L34-E7",
+      "type": "command",
+      "category": "auth",
+      "instruction": "List all routes",
+      "instruction_id": "Daftar semua routes",
+      "shadow_text": "ls -la ~/apps",
+      "expected_output": [
+        "total 24",
+        "drwxr-xr-x 3 u0_a241"
+      ],
+      "hint": "Practice typing this command accurately",
+      "hint_id": "Latih ketik command ini dengan akurat",
+      "time_limit": 18,
+      "xp": 30,
+      "penalty_per_error": 2
+    },
+    {
+      "id": "L34-E8",
+      "type": "code",
+      "category": "auth",
+      "instruction": "Import sys and use it",
+      "instruction_id": "Import sys dan gunakan",
+      "shadow_text": "import sys\nprint('sys loaded')",
+      "expected_output": [
+        "sys loaded"
+      ],
+      "hint": "Practice typing this code accurately",
+      "hint_id": "Latih ketik code ini dengan akurat",
+      "time_limit": 15,
+      "xp": 15,
+      "penalty_per_error": 2
+    },
+    {
+      "id": "L34-E9",
+      "type": "command",
+      "category": "auth",
+      "instruction": "List all directories",
+      "instruction_id": "Daftar semua directories",
+      "shadow_text": "ls -la ./dist",
+      "expected_output": [
+        "total 24",
+        "drwxr-xr-x 3 u0_a241"
+      ],
+      "hint": "Practice typing this command accurately",
+      "hint_id": "Latih ketik command ini dengan akurat",
+      "time_limit": 18,
+      "xp": 25,
+      "penalty_per_error": 3
+    },
+    {
+      "id": "L34-E10",
+      "type": "code",
+      "category": "auth",
+      "instruction": "Print 'Success!'",
+      "instruction_id": "Print 'Success!'",
+      "shadow_text": "print('Success!')",
+      "expected_output": [
+        "Success!"
+      ],
+      "hint": "Practice typing this code accurately",
+      "hint_id": "Latih ketik code ini dengan akurat",
+      "time_limit": 18,
+      "xp": 15,
+      "penalty_per_error": 2
+    }
+  ]
+}

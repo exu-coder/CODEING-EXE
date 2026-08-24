@@ -1,0 +1,182 @@
+{
+  "level": 5,
+  "level_name": "Level 5",
+  "level_name_id": "Level 5",
+  "difficulty": "beginner",
+  "required_score": 70,
+  "total_exercises": 10,
+  "exercises": [
+    {
+      "id": "L5-E1",
+      "type": "command",
+      "category": "packages",
+      "instruction": "Setup phone storage access for Termux",
+      "instruction_id": "Setup akses penyimpanan HP untuk Termux",
+      "shadow_text": "termux-setup-storage",
+      "expected_output": [
+        "Requesting storage permission...",
+        "Access granted. Symlinks created in ~/storage."
+      ],
+      "hint": "Run this FIRST before working with phone files",
+      "hint_id": "Jalankan ini PERTAMA sebelum kerja dengan file HP",
+      "time_limit": 20,
+      "xp": 25,
+      "penalty_per_error": 3
+    },
+    {
+      "id": "L5-E2",
+      "type": "command",
+      "category": "packages",
+      "instruction": "Install Git version control system",
+      "instruction_id": "Instal sistem version control Git",
+      "shadow_text": "pkg install git",
+      "expected_output": [
+        "Selected package git.",
+        "Unpacking git (2.41.0)...",
+        "Installation complete!"
+      ],
+      "hint": "Essential for downloading code from GitHub",
+      "hint_id": "Penting untuk mengunduh kode dari GitHub",
+      "time_limit": 16,
+      "xp": 25,
+      "penalty_per_error": 3
+    },
+    {
+      "id": "L5-E3",
+      "type": "command",
+      "category": "packages",
+      "instruction": "Install Python programming language",
+      "instruction_id": "Instal bahasa pemrograman Python",
+      "shadow_text": "pkg install python",
+      "expected_output": [
+        "Unpacking python (3.11.4)...",
+        "Setting up python (3.11.4)...",
+        "Requirement already satisfied: pip"
+      ],
+      "hint": "Includes pip for Python package management",
+      "hint_id": "Termasuk pip untuk manajemen paket Python",
+      "time_limit": 16,
+      "xp": 25,
+      "penalty_per_error": 3
+    },
+    {
+      "id": "L5-E4",
+      "type": "command",
+      "category": "packages",
+      "instruction": "Install Nano text editor",
+      "instruction_id": "Instal editor teks Nano",
+      "shadow_text": "pkg install nano",
+      "expected_output": [
+        "Setting up nano (7.2)...",
+        "Nano successfully installed."
+      ],
+      "hint": "Ctrl+O to save, Ctrl+X to exit in Nano",
+      "hint_id": "Ctrl+O simpan, Ctrl+X keluar di Nano",
+      "time_limit": 16,
+      "xp": 20,
+      "penalty_per_error": 3
+    },
+    {
+      "id": "L5-E5",
+      "type": "command",
+      "category": "packages",
+      "instruction": "Install Curl for downloading from URLs",
+      "instruction_id": "Instal Curl untuk mengunduh dari URL",
+      "shadow_text": "pkg install curl",
+      "expected_output": [
+        "Unpacking curl (8.1.2)...",
+        "Setting up curl (8.1.2)... Done."
+      ],
+      "hint": "curl -O URL downloads a file",
+      "hint_id": "curl -O URL mengunduh file",
+      "time_limit": 16,
+      "xp": 20,
+      "penalty_per_error": 3
+    },
+    {
+      "id": "L5-E6",
+      "type": "command",
+      "category": "packages",
+      "instruction": "Install Wget download tool",
+      "instruction_id": "Instal tool unduh Wget",
+      "shadow_text": "pkg install wget",
+      "expected_output": [
+        "Setting up wget (1.21.4)...",
+        "Ready to fetch files."
+      ],
+      "hint": "wget URL downloads files from web",
+      "hint_id": "wget URL mengunduh file dari web",
+      "time_limit": 16,
+      "xp": 20,
+      "penalty_per_error": 3
+    },
+    {
+      "id": "L5-E7",
+      "type": "command",
+      "category": "packages",
+      "instruction": "Install Clang C/C++ compiler",
+      "instruction_id": "Instal compiler C/C++ Clang",
+      "shadow_text": "pkg install clang",
+      "expected_output": [
+        "Unpacking clang (16.0.6)...",
+        "gcc and g++ links created."
+      ],
+      "hint": "Use 'clang file.c -o output' to compile",
+      "hint_id": "Gunakan 'clang file.c -o output' untuk kompilasi",
+      "time_limit": 16,
+      "xp": 30,
+      "penalty_per_error": 4
+    },
+    {
+      "id": "L5-E8",
+      "type": "command",
+      "category": "packages",
+      "instruction": "Install Node.js JavaScript runtime",
+      "instruction_id": "Instal runtime JavaScript Node.js",
+      "shadow_text": "pkg install nodejs",
+      "expected_output": [
+        "Unpacking nodejs (20.5.0)...",
+        "npm installed."
+      ],
+      "hint": "node script.js runs JavaScript files",
+      "hint_id": "node script.js menjalankan file JavaScript",
+      "time_limit": 16,
+      "xp": 30,
+      "penalty_per_error": 4
+    },
+    {
+      "id": "L5-E9",
+      "type": "command",
+      "category": "packages",
+      "instruction": "Install Vim text editor",
+      "instruction_id": "Instal editor teks Vim",
+      "shadow_text": "pkg install vim",
+      "expected_output": [
+        "Setting up vim (9.0)...",
+        "Vim installed."
+      ],
+      "hint": "Vim is powerful but has a learning curve!",
+      "hint_id": "Vim powerful tapi butuh waktu belajar!",
+      "time_limit": 14,
+      "xp": 20,
+      "penalty_per_error": 3
+    },
+    {
+      "id": "L5-E10",
+      "type": "command",
+      "category": "packages",
+      "instruction": "Install all basic tools at once: git, python, nano",
+      "instruction_id": "Instal semua tool dasar sekaligus: git, python, nano",
+      "shadow_text": "pkg install git python nano",
+      "expected_output": [
+        "Installing git, python, nano...",
+        "All packages installed successfully!"
+      ],
+      "hint": "You can install multiple packages in one command",
+      "hint_id": "Anda bisa instal banyak paket dalam satu perintah",
+      "time_limit": 22,
+      "xp": 35,
+      "penalty_per_error": 4
+    }
+  ]
+}

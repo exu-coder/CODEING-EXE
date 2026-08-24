@@ -1,0 +1,174 @@
+{
+  "level": 38,
+  "level_name": "Level 38",
+  "level_name_id": "Level 38",
+  "difficulty": "advanced",
+  "required_score": 70,
+  "total_exercises": 10,
+  "exercises": [
+    {
+      "id": "L38-E1",
+      "type": "command",
+      "category": "blockchain",
+      "instruction": "Install graphql",
+      "instruction_id": "Instal graphql",
+      "shadow_text": "pkg install graphql",
+      "expected_output": [
+        "Setting up graphql...",
+        "graphql installed."
+      ],
+      "hint": "Practice typing this command accurately",
+      "hint_id": "Latih ketik command ini dengan akurat",
+      "time_limit": 18,
+      "xp": 15,
+      "penalty_per_error": 4
+    },
+    {
+      "id": "L38-E2",
+      "type": "command",
+      "category": "blockchain",
+      "instruction": "Create pods called 'worker'",
+      "instruction_id": "Buat pods bernama 'worker'",
+      "shadow_text": "pip install worker",
+      "expected_output": [
+        "Created worker successfully."
+      ],
+      "hint": "Practice typing this command accurately",
+      "hint_id": "Latih ketik command ini dengan akurat",
+      "time_limit": 20,
+      "xp": 20,
+      "penalty_per_error": 2
+    },
+    {
+      "id": "L38-E3",
+      "type": "command",
+      "category": "blockchain",
+      "instruction": "List all models",
+      "instruction_id": "Daftar semua models",
+      "shadow_text": "ls -la ~/apps",
+      "expected_output": [
+        "total 24",
+        "drwxr-xr-x 3 u0_a241"
+      ],
+      "hint": "Practice typing this command accurately",
+      "hint_id": "Latih ketik command ini dengan akurat",
+      "time_limit": 18,
+      "xp": 20,
+      "penalty_per_error": 4
+    },
+    {
+      "id": "L38-E4",
+      "type": "command",
+      "category": "blockchain",
+      "instruction": "Remove containers 'queue'",
+      "instruction_id": "Hapus containers 'queue'",
+      "shadow_text": "rm queue",
+      "expected_output": [
+        "Removed 'queue'."
+      ],
+      "hint": "Practice typing this command accurately",
+      "hint_id": "Latih ketik command ini dengan akurat",
+      "time_limit": 18,
+      "xp": 30,
+      "penalty_per_error": 3
+    },
+    {
+      "id": "L38-E5",
+      "type": "command",
+      "category": "blockchain",
+      "instruction": "Remove pods 'cache'",
+      "instruction_id": "Hapus pods 'cache'",
+      "shadow_text": "rm cache",
+      "expected_output": [
+        "Removed 'cache'."
+      ],
+      "hint": "Practice typing this command accurately",
+      "hint_id": "Latih ketik command ini dengan akurat",
+      "time_limit": 20,
+      "xp": 20,
+      "penalty_per_error": 3
+    },
+    {
+      "id": "L38-E6",
+      "type": "command",
+      "category": "blockchain",
+      "instruction": "List all services",
+      "instruction_id": "Daftar semua services",
+      "shadow_text": "ls -la ~/apps",
+      "expected_output": [
+        "total 24",
+        "drwxr-xr-x 3 u0_a241"
+      ],
+      "hint": "Practice typing this command accurately",
+      "hint_id": "Latih ketik command ini dengan akurat",
+      "time_limit": 20,
+      "xp": 20,
+      "penalty_per_error": 3
+    },
+    {
+      "id": "L38-E7",
+      "type": "command",
+      "category": "blockchain",
+      "instruction": "Install scrapy",
+      "instruction_id": "Instal scrapy",
+      "shadow_text": "pkg install scrapy",
+      "expected_output": [
+        "Setting up scrapy...",
+        "scrapy installed."
+      ],
+      "hint": "Practice typing this command accurately",
+      "hint_id": "Latih ketik command ini dengan akurat",
+      "time_limit": 20,
+      "xp": 30,
+      "penalty_per_error": 4
+    },
+    {
+      "id": "L38-E8",
+      "type": "command",
+      "category": "blockchain",
+      "instruction": "Remove routes 'proxy'",
+      "instruction_id": "Hapus routes 'proxy'",
+      "shadow_text": "rm proxy",
+      "expected_output": [
+        "Removed 'proxy'."
+      ],
+      "hint": "Practice typing this command accurately",
+      "hint_id": "Latih ketik command ini dengan akurat",
+      "time_limit": 15,
+      "xp": 25,
+      "penalty_per_error": 2
+    },
+    {
+      "id": "L38-E9",
+      "type": "code",
+      "category": "blockchain",
+      "instruction": "Import numpy and use it",
+      "instruction_id": "Import numpy dan gunakan",
+      "shadow_text": "import numpy\nprint('numpy loaded')",
+      "expected_output": [
+        "numpy loaded"
+      ],
+      "hint": "Practice typing this code accurately",
+      "hint_id": "Latih ketik code ini dengan akurat",
+      "time_limit": 25,
+      "xp": 20,
+      "penalty_per_error": 3
+    },
+    {
+      "id": "L38-E10",
+      "type": "command",
+      "category": "blockchain",
+      "instruction": "Create packages called 'cache'",
+      "instruction_id": "Buat packages bernama 'cache'",
+      "shadow_text": "mkdir cache",
+      "expected_output": [
+        "Created cache successfully."
+      ],
+      "hint": "Practice typing this command accurately",
+      "hint_id": "Latih ketik command ini dengan akurat",
+      "time_limit": 18,
+      "xp": 25,
+      "penalty_per_error": 3
+    }
+  ]
+}

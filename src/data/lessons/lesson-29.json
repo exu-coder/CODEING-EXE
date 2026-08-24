@@ -1,0 +1,172 @@
+{
+  "level": 29,
+  "level_name": "Level 29",
+  "level_name_id": "Level 29",
+  "difficulty": "intermediate",
+  "required_score": 70,
+  "total_exercises": 10,
+  "exercises": [
+    {
+      "id": "L29-E1",
+      "type": "command",
+      "category": "redis",
+      "instruction": "Remove directories 'client'",
+      "instruction_id": "Hapus directories 'client'",
+      "shadow_text": "rm client",
+      "expected_output": [
+        "Removed 'client'."
+      ],
+      "hint": "Practice typing this command accurately",
+      "hint_id": "Latih ketik command ini dengan akurat",
+      "time_limit": 25,
+      "xp": 25,
+      "penalty_per_error": 3
+    },
+    {
+      "id": "L29-E2",
+      "type": "command",
+      "category": "redis",
+      "instruction": "Install jest",
+      "instruction_id": "Instal jest",
+      "shadow_text": "pkg install jest",
+      "expected_output": [
+        "Setting up jest...",
+        "jest installed."
+      ],
+      "hint": "Practice typing this command accurately",
+      "hint_id": "Latih ketik command ini dengan akurat",
+      "time_limit": 20,
+      "xp": 25,
+      "penalty_per_error": 4
+    },
+    {
+      "id": "L29-E3",
+      "type": "command",
+      "category": "redis",
+      "instruction": "List all models",
+      "instruction_id": "Daftar semua models",
+      "shadow_text": "ls -la ~/projects",
+      "expected_output": [
+        "total 24",
+        "drwxr-xr-x 3 u0_a241"
+      ],
+      "hint": "Practice typing this command accurately",
+      "hint_id": "Latih ketik command ini dengan akurat",
+      "time_limit": 12,
+      "xp": 25,
+      "penalty_per_error": 4
+    },
+    {
+      "id": "L29-E4",
+      "type": "code",
+      "category": "redis",
+      "instruction": "Use generator to process data",
+      "instruction_id": "Gunakan generator untuk process data",
+      "shadow_text": "# generator example\nprint('Done')",
+      "expected_output": [
+        "Done"
+      ],
+      "hint": "Practice typing this code accurately",
+      "hint_id": "Latih ketik code ini dengan akurat",
+      "time_limit": 20,
+      "xp": 20,
+      "penalty_per_error": 2
+    },
+    {
+      "id": "L29-E5",
+      "type": "command",
+      "category": "redis",
+      "instruction": "Remove directories 'db'",
+      "instruction_id": "Hapus directories 'db'",
+      "shadow_text": "rm db",
+      "expected_output": [
+        "Removed 'db'."
+      ],
+      "hint": "Practice typing this command accurately",
+      "hint_id": "Latih ketik command ini dengan akurat",
+      "time_limit": 25,
+      "xp": 25,
+      "penalty_per_error": 2
+    },
+    {
+      "id": "L29-E6",
+      "type": "code",
+      "category": "redis",
+      "instruction": "Define function 'process()'",
+      "instruction_id": "Definisikan fungsi 'process()'",
+      "shadow_text": "def process():\n    return 'Success!'\nprint(process())",
+      "expected_output": [
+        "Success!"
+      ],
+      "hint": "Practice typing this code accurately",
+      "hint_id": "Latih ketik code ini dengan akurat",
+      "time_limit": 12,
+      "xp": 15,
+      "penalty_per_error": 4
+    },
+    {
+      "id": "L29-E7",
+      "type": "code",
+      "category": "redis",
+      "instruction": "Use generator to handle errors",
+      "instruction_id": "Gunakan generator untuk handle errors",
+      "shadow_text": "# generator example\nprint('Done')",
+      "expected_output": [
+        "Done"
+      ],
+      "hint": "Practice typing this code accurately",
+      "hint_id": "Latih ketik code ini dengan akurat",
+      "time_limit": 15,
+      "xp": 20,
+      "penalty_per_error": 4
+    },
+    {
+      "id": "L29-E8",
+      "type": "code",
+      "category": "redis",
+      "instruction": "Print 'Running...'",
+      "instruction_id": "Print 'Running...'",
+      "shadow_text": "print('Running...')",
+      "expected_output": [
+        "Running..."
+      ],
+      "hint": "Practice typing this code accurately",
+      "hint_id": "Latih ketik code ini dengan akurat",
+      "time_limit": 20,
+      "xp": 15,
+      "penalty_per_error": 3
+    },
+    {
+      "id": "L29-E9",
+      "type": "command",
+      "category": "redis",
+      "instruction": "Remove files 'api'",
+      "instruction_id": "Hapus files 'api'",
+      "shadow_text": "rm api",
+      "expected_output": [
+        "Removed 'api'."
+      ],
+      "hint": "Practice typing this command accurately",
+      "hint_id": "Latih ketik command ini dengan akurat",
+      "time_limit": 18,
+      "xp": 25,
+      "penalty_per_error": 3
+    },
+    {
+      "id": "L29-E10",
+      "type": "code",
+      "category": "redis",
+      "instruction": "Print 'Connected!'",
+      "instruction_id": "Print 'Connected!'",
+      "shadow_text": "print('Connected!')",
+      "expected_output": [
+        "Connected!"
+      ],
+      "hint": "Practice typing this code accurately",
+      "hint_id": "Latih ketik code ini dengan akurat",
+      "time_limit": 20,
+      "xp": 15,
+      "penalty_per_error": 3
+    }
+  ]
+}

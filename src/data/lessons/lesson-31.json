@@ -1,0 +1,172 @@
+{
+  "level": 31,
+  "level_name": "Level 31",
+  "level_name_id": "Level 31",
+  "difficulty": "advanced",
+  "required_score": 70,
+  "total_exercises": 10,
+  "exercises": [
+    {
+      "id": "L31-E1",
+      "type": "code",
+      "category": "aws",
+      "instruction": "Create variable 'result' with value 10",
+      "instruction_id": "Buat variabel 'result' dengan nilai 10",
+      "shadow_text": "result = 10\nprint(result)",
+      "expected_output": [
+        "10"
+      ],
+      "hint": "Practice typing this code accurately",
+      "hint_id": "Latih ketik code ini dengan akurat",
+      "time_limit": 25,
+      "xp": 30,
+      "penalty_per_error": 2
+    },
+    {
+      "id": "L31-E2",
+      "type": "code",
+      "category": "aws",
+      "instruction": "Create variable 'data' with value 'test'",
+      "instruction_id": "Buat variabel 'data' dengan nilai 'test'",
+      "shadow_text": "data = 'test'\nprint(data)",
+      "expected_output": [
+        "'test'"
+      ],
+      "hint": "Practice typing this code accurately",
+      "hint_id": "Latih ketik code ini dengan akurat",
+      "time_limit": 20,
+      "xp": 20,
+      "penalty_per_error": 4
+    },
+    {
+      "id": "L31-E3",
+      "type": "code",
+      "category": "aws",
+      "instruction": "Define function 'process()'",
+      "instruction_id": "Definisikan fungsi 'process()'",
+      "shadow_text": "def process():\n    return 'Running...'\nprint(process())",
+      "expected_output": [
+        "Running..."
+      ],
+      "hint": "Practice typing this code accurately",
+      "hint_id": "Latih ketik code ini dengan akurat",
+      "time_limit": 15,
+      "xp": 20,
+      "penalty_per_error": 4
+    },
+    {
+      "id": "L31-E4",
+      "type": "code",
+      "category": "aws",
+      "instruction": "Define function 'greet()'",
+      "instruction_id": "Definisikan fungsi 'greet()'",
+      "shadow_text": "def greet():\n    return 'Loaded'\nprint(greet())",
+      "expected_output": [
+        "Loaded"
+      ],
+      "hint": "Practice typing this code accurately",
+      "hint_id": "Latih ketik code ini dengan akurat",
+      "time_limit": 15,
+      "xp": 25,
+      "penalty_per_error": 3
+    },
+    {
+      "id": "L31-E5",
+      "type": "code",
+      "category": "aws",
+      "instruction": "Use list comprehension to process data",
+      "instruction_id": "Gunakan list comprehension untuk process data",
+      "shadow_text": "# list comprehension example\nprint('Done')",
+      "expected_output": [
+        "Done"
+      ],
+      "hint": "Practice typing this code accurately",
+      "hint_id": "Latih ketik code ini dengan akurat",
+      "time_limit": 12,
+      "xp": 25,
+      "penalty_per_error": 2
+    },
+    {
+      "id": "L31-E6",
+      "type": "code",
+      "category": "aws",
+      "instruction": "Define function 'parse()'",
+      "instruction_id": "Definisikan fungsi 'parse()'",
+      "shadow_text": "def parse():\n    return 'Done'\nprint(parse())",
+      "expected_output": [
+        "Done"
+      ],
+      "hint": "Practice typing this code accurately",
+      "hint_id": "Latih ketik code ini dengan akurat",
+      "time_limit": 25,
+      "xp": 15,
+      "penalty_per_error": 2
+    },
+    {
+      "id": "L31-E7",
+      "type": "code",
+      "category": "aws",
+      "instruction": "Define function 'fetch()'",
+      "instruction_id": "Definisikan fungsi 'fetch()'",
+      "shadow_text": "def fetch():\n    return 'Connected!'\nprint(fetch())",
+      "expected_output": [
+        "Connected!"
+      ],
+      "hint": "Practice typing this code accurately",
+      "hint_id": "Latih ketik code ini dengan akurat",
+      "time_limit": 12,
+      "xp": 20,
+      "penalty_per_error": 3
+    },
+    {
+      "id": "L31-E8",
+      "type": "command",
+      "category": "aws",
+      "instruction": "Install jest",
+      "instruction_id": "Instal jest",
+      "shadow_text": "pkg install jest",
+      "expected_output": [
+        "Setting up jest...",
+        "jest installed."
+      ],
+      "hint": "Practice typing this command accurately",
+      "hint_id": "Latih ketik command ini dengan akurat",
+      "time_limit": 12,
+      "xp": 25,
+      "penalty_per_error": 2
+    },
+    {
+      "id": "L31-E9",
+      "type": "command",
+      "category": "aws",
+      "instruction": "Check version of jest",
+      "instruction_id": "Cek versi jest",
+      "shadow_text": "jest --version",
+      "expected_output": [
+        "jest version 1.0.0"
+      ],
+      "hint": "Practice typing this command accurately",
+      "hint_id": "Latih ketik command ini dengan akurat",
+      "time_limit": 20,
+      "xp": 15,
+      "penalty_per_error": 4
+    },
+    {
+      "id": "L31-E10",
+      "type": "command",
+      "category": "aws",
+      "instruction": "List all files",
+      "instruction_id": "Daftar semua files",
+      "shadow_text": "ls -la /tmp",
+      "expected_output": [
+        "total 24",
+        "drwxr-xr-x 3 u0_a241"
+      ],
+      "hint": "Practice typing this command accurately",
+      "hint_id": "Latih ketik command ini dengan akurat",
+      "time_limit": 18,
+      "xp": 20,
+      "penalty_per_error": 2
+    }
+  ]
+}

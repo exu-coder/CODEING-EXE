@@ -16,6 +16,7 @@ export default function LessonScreen() {
   const [showResults, setShowResults] = useState(false)
   const [sessionResults, setSessionResults] = useState([])
   const [soundEnabled, setSoundEnabled] = useState(progress.settings?.sound !== false)
+  const [typingKey, setTypingKey] = useState(0) // force remount TypingEngine
   const lang = progress.settings?.language || 'en'
 
   useEffect(() => {
@@ -57,17 +58,20 @@ export default function LessonScreen() {
   const nextExercise = () => {
     if (!isLastExercise) {
       setCurrentExercise(prev => prev + 1)
+      setTypingKey(prev => prev + 1) // remount TypingEngine
     }
   }
 
   const prevExercise = () => {
     if (currentExercise > 0) {
       setCurrentExercise(prev => prev - 1)
+      setTypingKey(prev => prev + 1) // remount TypingEngine
     }
   }
 
   const retryExercise = () => {
     setSessionResults(prev => prev.filter(r => r.exerciseId !== exercise.id))
+    setTypingKey(prev => prev + 1) // remount TypingEngine to reset state
   }
 
   const totalScore = sessionResults.filter(r => r.success).reduce((sum, r) => sum + r.score, 0)
@@ -118,6 +122,7 @@ export default function LessonScreen() {
                   setShowResults(false)
                   setCurrentExercise(0)
                   setSessionResults([])
+                  setTypingKey(prev => prev + 1)
                   setCurrentLevel(prev => prev + 1)
                 }}
                 className="btn-primary"
@@ -174,8 +179,9 @@ export default function LessonScreen() {
         </div>
       </div>
 
-      {/* Typing Engine */}
+      {/* Typing Engine — key prop forces remount on exercise change */}
       <TypingEngine 
+        key={typingKey}
         exercise={exercise}
         onComplete={handleComplete}
         onFail={handleFail}

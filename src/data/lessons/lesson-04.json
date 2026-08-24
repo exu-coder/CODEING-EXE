@@ -1,0 +1,175 @@
+{
+  "level": 4,
+  "level_name": "Level 4",
+  "level_name_id": "Level 4",
+  "difficulty": "beginner",
+  "required_score": 70,
+  "total_exercises": 10,
+  "exercises": [
+    {
+      "id": "L4-E1",
+      "type": "command",
+      "category": "filesystem",
+      "instruction": "Remove directory 'old_project' and all contents recursively",
+      "instruction_id": "Hapus direktori 'old_project' dan semua isinya rekursif",
+      "shadow_text": "rm -r old_project",
+      "expected_output": [
+        "Removed directory 'old_project' and all contents."
+      ],
+      "hint": "-r = recursive, DANGEROUS - be careful!",
+      "hint_id": "-r = rekursif, BERBAHAYA - hati-hati!",
+      "time_limit": 16,
+      "xp": 25,
+      "penalty_per_error": 3
+    },
+    {
+      "id": "L4-E2",
+      "type": "command",
+      "category": "filesystem",
+      "instruction": "Remove with confirmation for each file",
+      "instruction_id": "Hapus dengan konfirmasi untuk setiap file",
+      "shadow_text": "rm -ri old_project",
+      "expected_output": [
+        "rm: remove directory 'old_project/file1.txt'? (y/n)"
+      ],
+      "hint": "-i = interactive, -r = recursive",
+      "hint_id": "-i = interaktif, -r = rekursif",
+      "time_limit": 16,
+      "xp": 25,
+      "penalty_per_error": 3
+    },
+    {
+      "id": "L4-E3",
+      "type": "command",
+      "category": "filesystem",
+      "instruction": "Force remove without confirmation",
+      "instruction_id": "Hapus paksa tanpa konfirmasi",
+      "shadow_text": "rm -rf old_project",
+      "expected_output": [
+        "Force removed 'old_project'."
+      ],
+      "hint": "-f = force, -r = recursive. BE VERY CAREFUL!",
+      "hint_id": "-f = paksa, -r = rekursif. SANGAT HATI-HATI!",
+      "time_limit": 16,
+      "xp": 30,
+      "penalty_per_error": 4
+    },
+    {
+      "id": "L4-E4",
+      "type": "command",
+      "category": "filesystem",
+      "instruction": "View first 10 lines of 'log.txt'",
+      "instruction_id": "Lihat 10 baris pertama 'log.txt'",
+      "shadow_text": "head log.txt",
+      "expected_output": [
+        "[2024-07-12 10:00] Server started",
+        "[2024-07-12 10:01] Connection established"
+      ],
+      "hint": "head shows top of file, tail shows bottom",
+      "hint_id": "head menunjukkan awal file, tail menunjukkan akhir",
+      "time_limit": 12,
+      "xp": 15,
+      "penalty_per_error": 2
+    },
+    {
+      "id": "L4-E5",
+      "type": "command",
+      "category": "filesystem",
+      "instruction": "View last 5 lines of 'log.txt'",
+      "instruction_id": "Lihat 5 baris terakhir 'log.txt'",
+      "shadow_text": "tail -n 5 log.txt",
+      "expected_output": [
+        "[2024-07-12 10:20] Request completed",
+        "[2024-07-12 10:21] Server shutting down"
+      ],
+      "hint": "-n 5 specifies number of lines",
+      "hint_id": "-n 5 menentukan jumlah baris",
+      "time_limit": 14,
+      "xp": 15,
+      "penalty_per_error": 2
+    },
+    {
+      "id": "L4-E6",
+      "type": "command",
+      "category": "filesystem",
+      "instruction": "Count lines, words, and bytes in 'essay.txt'",
+      "instruction_id": "Hitung baris, kata, dan byte di 'essay.txt'",
+      "shadow_text": "wc essay.txt",
+      "expected_output": [
+        "  150  1200  8500 essay.txt"
+      ],
+      "hint": "Output: lines words bytes filename",
+      "hint_id": "Output: baris kata byte namafile",
+      "time_limit": 12,
+      "xp": 15,
+      "penalty_per_error": 2
+    },
+    {
+      "id": "L4-E7",
+      "type": "command",
+      "category": "filesystem",
+      "instruction": "Count only lines in 'data.csv'",
+      "instruction_id": "Hitung hanya baris di 'data.csv'",
+      "shadow_text": "wc -l data.csv",
+      "expected_output": [
+        "500 data.csv"
+      ],
+      "hint": "-l = lines only, -w = words only, -c = bytes only",
+      "hint_id": "-l = hanya baris, -w = hanya kata, -c = hanya byte",
+      "time_limit": 12,
+      "xp": 15,
+      "penalty_per_error": 2
+    },
+    {
+      "id": "L4-E8",
+      "type": "command",
+      "category": "filesystem",
+      "instruction": "Search for 'error' in 'log.txt'",
+      "instruction_id": "Cari 'error' di 'log.txt'",
+      "shadow_text": "grep 'error' log.txt",
+      "expected_output": [
+        "[2024-07-12 10:05] ERROR: Connection timeout",
+        "[2024-07-12 10:15] error: File not found"
+      ],
+      "hint": "grep searches for patterns in text",
+      "hint_id": "grep mencari pola dalam teks",
+      "time_limit": 14,
+      "xp": 20,
+      "penalty_per_error": 3
+    },
+    {
+      "id": "L4-E9",
+      "type": "command",
+      "category": "filesystem",
+      "instruction": "Search case-insensitively for 'ERROR'",
+      "instruction_id": "Cari 'ERROR' tanpa memperhatikan huruf besar/kecil",
+      "shadow_text": "grep -i 'error' log.txt",
+      "expected_output": [
+        "[2024-07-12 10:05] ERROR: Connection timeout",
+        "[2024-07-12 10:15] error: File not found",
+        "[2024-07-12 10:10] Error: Invalid input"
+      ],
+      "hint": "-i = ignore case (uppercase/lowercase)",
+      "hint_id": "-i = abaikan huruf besar/kecil",
+      "time_limit": 16,
+      "xp": 20,
+      "penalty_per_error": 3
+    },
+    {
+      "id": "L4-E10",
+      "type": "command",
+      "category": "filesystem",
+      "instruction": "Count occurrences of 'error' in log file",
+      "instruction_id": "Hitung kemunculan 'error' di file log",
+      "shadow_text": "grep -c 'error' log.txt",
+      "expected_output": [
+        "3"
+      ],
+      "hint": "-c = count matching lines",
+      "hint_id": "-c = hitung baris yang cocok",
+      "time_limit": 14,
+      "xp": 20,
+      "penalty_per_error": 3
+    }
+  ]
+}

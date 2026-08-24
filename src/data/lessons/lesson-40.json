@@ -1,0 +1,173 @@
+{
+  "level": 40,
+  "level_name": "Level 40",
+  "level_name_id": "Level 40",
+  "difficulty": "advanced",
+  "required_score": 70,
+  "total_exercises": 10,
+  "exercises": [
+    {
+      "id": "L40-E1",
+      "type": "code",
+      "category": "mobile",
+      "instruction": "Create variable 'result' with value True",
+      "instruction_id": "Buat variabel 'result' dengan nilai True",
+      "shadow_text": "result = True\nprint(result)",
+      "expected_output": [
+        "True"
+      ],
+      "hint": "Practice typing this code accurately",
+      "hint_id": "Latih ketik code ini dengan akurat",
+      "time_limit": 25,
+      "xp": 25,
+      "penalty_per_error": 4
+    },
+    {
+      "id": "L40-E2",
+      "type": "code",
+      "category": "mobile",
+      "instruction": "Create variable 'response' with value 42",
+      "instruction_id": "Buat variabel 'response' dengan nilai 42",
+      "shadow_text": "response = 42\nprint(response)",
+      "expected_output": [
+        "42"
+      ],
+      "hint": "Practice typing this code accurately",
+      "hint_id": "Latih ketik code ini dengan akurat",
+      "time_limit": 15,
+      "xp": 30,
+      "penalty_per_error": 3
+    },
+    {
+      "id": "L40-E3",
+      "type": "code",
+      "category": "mobile",
+      "instruction": "Import pandas and use it",
+      "instruction_id": "Import pandas dan gunakan",
+      "shadow_text": "import pandas\nprint('pandas loaded')",
+      "expected_output": [
+        "pandas loaded"
+      ],
+      "hint": "Practice typing this code accurately",
+      "hint_id": "Latih ketik code ini dengan akurat",
+      "time_limit": 18,
+      "xp": 30,
+      "penalty_per_error": 3
+    },
+    {
+      "id": "L40-E4",
+      "type": "command",
+      "category": "mobile",
+      "instruction": "Remove directories 'queue'",
+      "instruction_id": "Hapus directories 'queue'",
+      "shadow_text": "rm queue",
+      "expected_output": [
+        "Removed 'queue'."
+      ],
+      "hint": "Practice typing this command accurately",
+      "hint_id": "Latih ketik command ini dengan akurat",
+      "time_limit": 15,
+      "xp": 30,
+      "penalty_per_error": 3
+    },
+    {
+      "id": "L40-E5",
+      "type": "command",
+      "category": "mobile",
+      "instruction": "List all packages",
+      "instruction_id": "Daftar semua packages",
+      "shadow_text": "ls -la /tmp",
+      "expected_output": [
+        "total 24",
+        "drwxr-xr-x 3 u0_a241"
+      ],
+      "hint": "Practice typing this command accurately",
+      "hint_id": "Latih ketik command ini dengan akurat",
+      "time_limit": 12,
+      "xp": 20,
+      "penalty_per_error": 3
+    },
+    {
+      "id": "L40-E6",
+      "type": "command",
+      "category": "mobile",
+      "instruction": "Install scrapy",
+      "instruction_id": "Instal scrapy",
+      "shadow_text": "pkg install scrapy",
+      "expected_output": [
+        "Setting up scrapy...",
+        "scrapy installed."
+      ],
+      "hint": "Practice typing this command accurately",
+      "hint_id": "Latih ketik command ini dengan akurat",
+      "time_limit": 18,
+      "xp": 20,
+      "penalty_per_error": 2
+    },
+    {
+      "id": "L40-E7",
+      "type": "command",
+      "category": "mobile",
+      "instruction": "List all routes",
+      "instruction_id": "Daftar semua routes",
+      "shadow_text": "ls -la ~/projects",
+      "expected_output": [
+        "total 24",
+        "drwxr-xr-x 3 u0_a241"
+      ],
+      "hint": "Practice typing this command accurately",
+      "hint_id": "Latih ketik command ini dengan akurat",
+      "time_limit": 25,
+      "xp": 30,
+      "penalty_per_error": 2
+    },
+    {
+      "id": "L40-E8",
+      "type": "code",
+      "category": "mobile",
+      "instruction": "Define function 'parse()'",
+      "instruction_id": "Definisikan fungsi 'parse()'",
+      "shadow_text": "def parse():\n    return 'Success!'\nprint(parse())",
+      "expected_output": [
+        "Success!"
+      ],
+      "hint": "Practice typing this code accurately",
+      "hint_id": "Latih ketik code ini dengan akurat",
+      "time_limit": 18,
+      "xp": 25,
+      "penalty_per_error": 2
+    },
+    {
+      "id": "L40-E9",
+      "type": "command",
+      "category": "mobile",
+      "instruction": "Check version of graphql",
+      "instruction_id": "Cek versi graphql",
+      "shadow_text": "graphql --version",
+      "expected_output": [
+        "graphql version 1.0.0"
+      ],
+      "hint": "Practice typing this command accurately",
+      "hint_id": "Latih ketik command ini dengan akurat",
+      "time_limit": 15,
+      "xp": 30,
+      "penalty_per_error": 4
+    },
+    {
+      "id": "L40-E10",
+      "type": "command",
+      "category": "mobile",
+      "instruction": "Check version of jest",
+      "instruction_id": "Cek versi jest",
+      "shadow_text": "jest --version",
+      "expected_output": [
+        "jest version 1.0.0"
+      ],
+      "hint": "Practice typing this command accurately",
+      "hint_id": "Latih ketik command ini dengan akurat",
+      "time_limit": 18,
+      "xp": 15,
+      "penalty_per_error": 2
+    }
+  ]
+}

@@ -1,0 +1,178 @@
+{
+  "level": 18,
+  "level_name": "Level 18",
+  "level_name_id": "Level 18",
+  "difficulty": "intermediate",
+  "required_score": 70,
+  "total_exercises": 10,
+  "exercises": [
+    {
+      "id": "L18-E1",
+      "type": "command",
+      "category": "security",
+      "instruction": "Install nmap network scanner",
+      "instruction_id": "Instal scanner jaringan nmap",
+      "shadow_text": "pkg install nmap",
+      "expected_output": [
+        "Setting up nmap (7.94)...",
+        "Nmap installed."
+      ],
+      "hint": "nmap is the most popular network scanner",
+      "hint_id": "nmap adalah scanner jaringan paling populer",
+      "time_limit": 14,
+      "xp": 25,
+      "penalty_per_error": 3
+    },
+    {
+      "id": "L18-E2",
+      "type": "command",
+      "category": "security",
+      "instruction": "Scan a target IP for open ports (quick scan)",
+      "instruction_id": "Scan IP target untuk port terbuka (scan cepat)",
+      "shadow_text": "nmap -F 192.168.1.1",
+      "expected_output": [
+        "PORT   STATE SERVICE",
+        "22/tcp open  ssh",
+        "80/tcp open  http"
+      ],
+      "hint": "-F = fast scan (top 100 ports only)",
+      "hint_id": "-F = scan cepat (hanya 100 port teratas)",
+      "time_limit": 16,
+      "xp": 25,
+      "penalty_per_error": 3
+    },
+    {
+      "id": "L18-E3",
+      "type": "command",
+      "category": "security",
+      "instruction": "Scan with service version detection",
+      "instruction_id": "Scan dengan deteksi versi layanan",
+      "shadow_text": "nmap -sV 192.168.1.1",
+      "expected_output": [
+        "PORT   STATE SERVICE VERSION",
+        "22/tcp open  ssh     OpenSSH 8.9"
+      ],
+      "hint": "-sV probes open ports to determine service/version info",
+      "hint_id": "-sV probe port terbuka untuk tentukan info layanan/versi",
+      "time_limit": 16,
+      "xp": 30,
+      "penalty_per_error": 4
+    },
+    {
+      "id": "L18-E4",
+      "type": "command",
+      "category": "security",
+      "instruction": "Perform a stealth SYN scan",
+      "instruction_id": "Lakukan stealth SYN scan",
+      "shadow_text": "nmap -sS 192.168.1.1",
+      "expected_output": [
+        "Starting Nmap 7.94",
+        "PORT   STATE SERVICE"
+      ],
+      "hint": "-sS = SYN scan (half-open, stealthier)",
+      "hint_id": "-sS = SYN scan (half-open, lebih stealth)",
+      "time_limit": 16,
+      "xp": 30,
+      "penalty_per_error": 4
+    },
+    {
+      "id": "L18-E5",
+      "type": "command",
+      "category": "security",
+      "instruction": "Install hydra for brute force attacks",
+      "instruction_id": "Instal hydra untuk serangan brute force",
+      "shadow_text": "pkg install hydra",
+      "expected_output": [
+        "Setting up hydra (9.5)...",
+        "Hydra installed."
+      ],
+      "hint": "Hydra supports many protocols: SSH, FTP, HTTP, etc.",
+      "hint_id": "Hydra mendukung banyak protokol: SSH, FTP, HTTP, dll.",
+      "time_limit": 14,
+      "xp": 25,
+      "penalty_per_error": 3
+    },
+    {
+      "id": "L18-E6",
+      "type": "command",
+      "category": "security",
+      "instruction": "Install metasploit framework",
+      "instruction_id": "Instal framework metasploit",
+      "shadow_text": "pkg install metasploit",
+      "expected_output": [
+        "Setting up metasploit (6.3)...",
+        "Metasploit installed."
+      ],
+      "hint": "Metasploit is a powerful penetration testing framework",
+      "hint_id": "Metasploit adalah framework penetration testing powerful",
+      "time_limit": 16,
+      "xp": 30,
+      "penalty_per_error": 4
+    },
+    {
+      "id": "L18-E7",
+      "type": "command",
+      "category": "security",
+      "instruction": "Generate a SHA-256 hash of 'password123'",
+      "instruction_id": "Generate hash SHA-256 dari 'password123'",
+      "shadow_text": "echo -n 'password123' | sha256sum",
+      "expected_output": [
+        "ef92b768b6b9e6f5c5e8f3e8b9c2d1e0f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8  -"
+      ],
+      "hint": "sha256sum computes SHA-256 hash",
+      "hint_id": "sha256sum menghitung hash SHA-256",
+      "time_limit": 18,
+      "xp": 25,
+      "penalty_per_error": 3
+    },
+    {
+      "id": "L18-E8",
+      "type": "command",
+      "category": "security",
+      "instruction": "Generate an SSH key pair",
+      "instruction_id": "Generate pasangan kunci SSH",
+      "shadow_text": "ssh-keygen -t ed25519 -C 'coder@termux'",
+      "expected_output": [
+        "Generating public/private ed25519 key pair.",
+        "Your identification has been saved in ~/.ssh/id_ed25519"
+      ],
+      "hint": "ed25519 is modern and secure (better than RSA)",
+      "hint_id": "ed25519 modern dan aman (lebih baik dari RSA)",
+      "time_limit": 20,
+      "xp": 30,
+      "penalty_per_error": 4
+    },
+    {
+      "id": "L18-E9",
+      "type": "command",
+      "category": "security",
+      "instruction": "Display public SSH key",
+      "instruction_id": "Tampilkan kunci SSH publik",
+      "shadow_text": "cat ~/.ssh/id_ed25519.pub",
+      "expected_output": [
+        "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAI... coder@termux"
+      ],
+      "hint": "Share .pub file, NEVER share the private key!",
+      "hint_id": "Bagikan file .pub, JANGAN PERNAH bagikan kunci privat!",
+      "time_limit": 14,
+      "xp": 20,
+      "penalty_per_error": 3
+    },
+    {
+      "id": "L18-E10",
+      "type": "command",
+      "category": "security",
+      "instruction": "Check file integrity with md5sum",
+      "instruction_id": "Cek integritas file dengan md5sum",
+      "shadow_text": "md5sum important_file.zip",
+      "expected_output": [
+        "d41d8cd98f00b204e9800998ecf8427e  important_file.zip"
+      ],
+      "hint": "md5sum generates a hash to verify file integrity",
+      "hint_id": "md5sum generate hash untuk verifikasi integritas file",
+      "time_limit": 14,
+      "xp": 20,
+      "penalty_per_error": 3
+    }
+  ]
+}

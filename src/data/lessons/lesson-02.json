@@ -1,0 +1,176 @@
+{
+  "level": 2,
+  "level_name": "Level 2",
+  "level_name_id": "Level 2",
+  "difficulty": "beginner",
+  "required_score": 70,
+  "total_exercises": 10,
+  "exercises": [
+    {
+      "id": "L2-E1",
+      "type": "command",
+      "category": "filesystem",
+      "instruction": "Create a new directory called 'projects'",
+      "instruction_id": "Buat direktori baru bernama 'projects'",
+      "shadow_text": "mkdir projects",
+      "expected_output": [
+        "Directory 'projects' created successfully."
+      ],
+      "hint": "mkdir = Make Directory",
+      "hint_id": "mkdir = Make Directory (Buat Direktori)",
+      "time_limit": 12,
+      "xp": 15,
+      "penalty_per_error": 2
+    },
+    {
+      "id": "L2-E2",
+      "type": "command",
+      "category": "filesystem",
+      "instruction": "Enter the 'projects' directory",
+      "instruction_id": "Masuk ke direktori 'projects'",
+      "shadow_text": "cd projects",
+      "expected_output": [
+        "~/projects $"
+      ],
+      "hint": "cd = Change Directory",
+      "hint_id": "cd = Change Directory (Pindah Direktori)",
+      "time_limit": 10,
+      "xp": 10,
+      "penalty_per_error": 2
+    },
+    {
+      "id": "L2-E3",
+      "type": "command",
+      "category": "filesystem",
+      "instruction": "Create nested directories: projects/web/app",
+      "instruction_id": "Buat direktori bersarang: projects/web/app",
+      "shadow_text": "mkdir -p projects/web/app",
+      "expected_output": [
+        "Created nested directories: projects/web/app"
+      ],
+      "hint": "-p flag creates parent directories if they don't exist",
+      "hint_id": "Flag -p membuat direktori induk jika belum ada",
+      "time_limit": 18,
+      "xp": 20,
+      "penalty_per_error": 3
+    },
+    {
+      "id": "L2-E4",
+      "type": "command",
+      "category": "filesystem",
+      "instruction": "Remove empty directory 'old_folder'",
+      "instruction_id": "Hapus direktori kosong 'old_folder'",
+      "shadow_text": "rmdir old_folder",
+      "expected_output": [
+        "Directory 'old_folder' deleted."
+      ],
+      "hint": "rmdir only works on EMPTY directories!",
+      "hint_id": "rmdir hanya berfungsi pada direktori KOSONG!",
+      "time_limit": 12,
+      "xp": 15,
+      "penalty_per_error": 2
+    },
+    {
+      "id": "L2-E5",
+      "type": "command",
+      "category": "filesystem",
+      "instruction": "Create an empty file called 'README.md'",
+      "instruction_id": "Buat file kosong bernama 'README.md'",
+      "shadow_text": "touch README.md",
+      "expected_output": [
+        "Created file README.md"
+      ],
+      "hint": "touch creates empty files or updates timestamps",
+      "hint_id": "touch membuat file kosong atau update timestamp",
+      "time_limit": 12,
+      "xp": 10,
+      "penalty_per_error": 2
+    },
+    {
+      "id": "L2-E6",
+      "type": "command",
+      "category": "filesystem",
+      "instruction": "Create multiple files: index.html, style.css, script.js",
+      "instruction_id": "Buat banyak file: index.html, style.css, script.js",
+      "shadow_text": "touch index.html style.css script.js",
+      "expected_output": [
+        "Created 3 files: index.html, style.css, script.js"
+      ],
+      "hint": "You can create multiple files with one touch command",
+      "hint_id": "Anda bisa membuat banyak file dengan satu perintah touch",
+      "time_limit": 20,
+      "xp": 20,
+      "penalty_per_error": 3
+    },
+    {
+      "id": "L2-E7",
+      "type": "command",
+      "category": "filesystem",
+      "instruction": "List files with human-readable sizes",
+      "instruction_id": "Daftar file dengan ukuran mudah dibaca",
+      "shadow_text": "ls -lh",
+      "expected_output": [
+        "total 24K",
+        "-rw-r--r-- 1 u0_a241 u0_a241 1.2K Jul 12 10:20 file.txt"
+      ],
+      "hint": "-h = human-readable (shows KB, MB, GB)",
+      "hint_id": "-h = human-readable (menunjukkan KB, MB, GB)",
+      "time_limit": 12,
+      "xp": 15,
+      "penalty_per_error": 2
+    },
+    {
+      "id": "L2-E8",
+      "type": "command",
+      "category": "filesystem",
+      "instruction": "List files sorted by modification time (newest first)",
+      "instruction_id": "Daftar file diurutkan waktu modifikasi (terbaru dulu)",
+      "shadow_text": "ls -lt",
+      "expected_output": [
+        "-rw-r--r-- 1 u0_a241 u0_a241 4096 Jul 12 10:20 newest.txt",
+        "-rw-r--r-- 1 u0_a241 u0_a241 2048 Jul 12 09:15 older.txt"
+      ],
+      "hint": "-t = sort by time, -l = long format",
+      "hint_id": "-t = urutkan waktu, -l = format panjang",
+      "time_limit": 12,
+      "xp": 15,
+      "penalty_per_error": 2
+    },
+    {
+      "id": "L2-E9",
+      "type": "command",
+      "category": "filesystem",
+      "instruction": "List only directories in current folder",
+      "instruction_id": "Daftar hanya direktori di folder saat ini",
+      "shadow_text": "ls -d */",
+      "expected_output": [
+        "projects/",
+        "documents/",
+        "downloads/"
+      ],
+      "hint": "-d */ matches only directories",
+      "hint_id": "-d */ cocokkan hanya direktori",
+      "time_limit": 12,
+      "xp": 20,
+      "penalty_per_error": 3
+    },
+    {
+      "id": "L2-E10",
+      "type": "command",
+      "category": "filesystem",
+      "instruction": "Show current path and list all files in one command",
+      "instruction_id": "Tampilkan jalur saat ini dan daftar semua file dalam satu perintah",
+      "shadow_text": "pwd && ls -la",
+      "expected_output": [
+        "/data/data/com.termux/files/home",
+        "total 24",
+        "drwxr-xr-x  3 u0_a241 u0_a241 4096 Jul 12 10:20 ."
+      ],
+      "hint": "&& runs commands sequentially (second runs if first succeeds)",
+      "hint_id": "&& menjalankan perintah berurutan (kedua jalan jika pertama sukses)",
+      "time_limit": 18,
+      "xp": 25,
+      "penalty_per_error": 3
+    }
+  ]
+}

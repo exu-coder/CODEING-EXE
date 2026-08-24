@@ -1,0 +1,145 @@
+name: Build Windows EXE + Android APK
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+    branches: [main, master]
+  workflow_dispatch:
+
+jobs:
+  # ═══════════════════════════════════════
+  # JOB 1: Build Windows EXE
+  # ═══════════════════════════════════════
+  build-windows:
+    runs-on: windows-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build React app
+        run: npm run build
+
+      - name: Build Windows EXE
+        run: npm run electron:build
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Upload Windows EXE artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: windows-exe
+          path: dist-electron/*.exe
+          retention-days: 30
+
+  # ═══════════════════════════════════════
+  # JOB 2: Build Android APK
+  # ═══════════════════════════════════════
+  build-android:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Setup Java 17
+        uses: actions/setup-java@v4
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+
+      - name: Setup Android SDK
+        uses: android-actions/setup-android@v3
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build React app
+        run: npm run build
+
+      - name: Add Capacitor Android platform
+        run: npx cap add android
+
+      - name: Sync Capacitor Android
+        run: npx cap sync android
+
+      - name: Build Android APK (Debug)
+        run: |
+          cd capacitor/android
+          ./gradlew assembleDebug
+
+      - name: Build Android APK (Release)
+        run: |
+          cd capacitor/android
+          ./gradlew assembleRelease
+        env:
+          KEYSTORE_PASSWORD: ${{ secrets.KEYSTORE_PASSWORD }}
+
+      - name: Upload Android APK artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: android-apk
+          path: |
+            capacitor/android/app/build/outputs/apk/debug/*.apk
+            capacitor/android/app/build/outputs/apk/release/*.apk
+          retention-days: 30
+
+  # ═══════════════════════════════════════
+  # JOB 3: Create Release (optional)
+  # ═══════════════════════════════════════
+  release:
+    needs: [build-windows, build-android]
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+    steps:
+      - name: Download Windows EXE
+        uses: actions/download-artifact@v4
+        with:
+          name: windows-exe
+          path: ./artifacts/windows/
+
+      - name: Download Android APK
+        uses: actions/download-artifact@v4
+        with:
+          name: android-apk
+          path: ./artifacts/android/
+
+      - name: Create Release
+        uses: softprops/action-gh-release@v1
+        with:
+          tag_name: v${{ github.run_number }}
+          name: Release v${{ github.run_number }}
+          body: |
+            ## Termux Coding Learn v${{ github.run_number }}
+            
+            ### Downloads
+            - **Windows EXE**: `Termux Coding Learn Setup.exe`
+            - **Android APK**: `app-debug.apk` / `app-release.apk`
+            
+            ### Features
+            - 400+ typing lessons across 40 levels
+            - Offline-first learning
+            - Shadow text typing engine
+            - Terminal simulator
+            - Code playground
+            
+            Built with ❤️ by Iminthisera Team
+          files: |
+            artifacts/windows/*.exe
+            artifacts/android/**/*.apk
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

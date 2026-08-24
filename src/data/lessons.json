@@ -1,0 +1,906 @@
+{
+  "categories": [
+    {
+      "id": "basics",
+      "name": "Termux Basics",
+      "name_id": "Dasar Termux",
+      "icon": "Terminal",
+      "color": "cyan",
+      "description": "Essential commands for navigating Termux",
+      "description_id": "Perintah penting untuk menavigasi Termux",
+      "levels": [
+        "beginner"
+      ]
+    },
+    {
+      "id": "filesystem",
+      "name": "File System",
+      "name_id": "Sistem File",
+      "icon": "Folder",
+      "color": "green",
+      "description": "Manage files and directories",
+      "description_id": "Kelola file dan direktori",
+      "levels": [
+        "beginner",
+        "intermediate"
+      ]
+    },
+    {
+      "id": "packages",
+      "name": "Package Management",
+      "name_id": "Manajemen Paket",
+      "icon": "Package",
+      "color": "pink",
+      "description": "Install and manage software packages",
+      "description_id": "Instal dan kelola paket perangkat lunak",
+      "levels": [
+        "beginner",
+        "intermediate"
+      ]
+    },
+    {
+      "id": "programming",
+      "name": "Programming Setup",
+      "name_id": "Setup Pemrograman",
+      "icon": "Code",
+      "color": "yellow",
+      "description": "Set up coding environments",
+      "description_id": "Siapkan lingkungan coding",
+      "levels": [
+        "intermediate",
+        "advanced"
+      ]
+    },
+    {
+      "id": "networking",
+      "name": "Networking & Tools",
+      "name_id": "Jaringan & Tools",
+      "icon": "Wifi",
+      "color": "red",
+      "description": "Network commands and security tools",
+      "description_id": "Perintah jaringan dan tools keamanan",
+      "levels": [
+        "advanced",
+        "expert"
+      ]
+    },
+    {
+      "id": "python",
+      "name": "Python Coding",
+      "name_id": "Coding Python",
+      "icon": "FileCode",
+      "color": "cyan",
+      "description": "Learn Python programming in Termux",
+      "description_id": "Belajar pemrograman Python di Termux",
+      "levels": [
+        "beginner",
+        "intermediate",
+        "advanced"
+      ]
+    },
+    {
+      "id": "javascript",
+      "name": "JavaScript/Node.js",
+      "name_id": "JavaScript/Node.js",
+      "icon": "Braces",
+      "color": "yellow",
+      "description": "JavaScript and Node.js development",
+      "description_id": "Pengembangan JavaScript dan Node.js",
+      "levels": [
+        "intermediate",
+        "advanced"
+      ]
+    },
+    {
+      "id": "bash",
+      "name": "Bash Scripting",
+      "name_id": "Scripting Bash",
+      "icon": "ScrollText",
+      "color": "green",
+      "description": "Automate tasks with Bash scripts",
+      "description_id": "Otomatisasi tugas dengan script Bash",
+      "levels": [
+        "intermediate",
+        "advanced",
+        "expert"
+      ]
+    }
+  ],
+  "lessons": [
+    {
+      "id": "cmd-01",
+      "category": "basics",
+      "level": "beginner",
+      "order": 1,
+      "command": "pkg update",
+      "title": "Update Package List",
+      "title_id": "Perbarui Daftar Paket",
+      "description": "Update the list of available packages from Termux repositories.",
+      "description_id": "Perbarui daftar paket yang tersedia dari repositori Termux.",
+      "syntax": "pkg update",
+      "example": "pkg update",
+      "output": [
+        "Testing the available mirrors:",
+        "[*] https://packages.termux.dev/apt/termux-main: ok",
+        "Hit:1 https://packages.termux.dev/apt/termux-main stable InRelease",
+        "Reading package lists... Done",
+        "Building dependency tree... Done"
+      ],
+      "tips": [
+        "Run this before installing any new package",
+        "Use 'pkg upgrade' to actually install updates"
+      ],
+      "tips_id": [
+        "Jalankan ini sebelum menginstal paket baru",
+        "Gunakan 'pkg upgrade' untuk menginstal pembaruan"
+      ],
+      "xp": 10,
+      "quiz": {
+        "question": "What does 'pkg update' do?",
+        "question_id": "Apa yang dilakukan 'pkg update'?",
+        "options": [
+          "Installs all package updates",
+          "Updates the package list from repositories",
+          "Removes old packages",
+          "Shows installed packages"
+        ],
+        "options_id": [
+          "Menginstal semua pembaruan paket",
+          "Memperbarui daftar paket dari repositori",
+          "Menghapus paket lama",
+          "Menampilkan paket yang terinstal"
+        ],
+        "correct": 1
+      }
+    },
+    {
+      "id": "cmd-02",
+      "category": "basics",
+      "level": "beginner",
+      "order": 2,
+      "command": "pkg upgrade",
+      "title": "Upgrade Packages",
+      "title_id": "Tingkatkan Paket",
+      "description": "Upgrade installed packages to their latest versions.",
+      "description_id": "Tingkatkan paket yang terinstal ke versi terbaru.",
+      "syntax": "pkg upgrade",
+      "example": "pkg upgrade",
+      "output": [
+        "Reading package lists... Done",
+        "Building dependency tree... Done",
+        "Calculating upgrade... Done",
+        "0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded."
+      ],
+      "tips": [
+        "This may take time depending on your connection",
+        "Some packages may require confirmation (Y/n)"
+      ],
+      "tips_id": [
+        "Ini mungkin memerlukan waktu tergantung koneksi",
+        "Beberapa paket mungkin memerlukan konfirmasi (Y/n)"
+      ],
+      "xp": 10,
+      "quiz": {
+        "question": "What's the difference between 'pkg update' and 'pkg upgrade'?",
+        "question_id": "Apa perbedaan 'pkg update' dan 'pkg upgrade'?",
+        "options": [
+          "No difference, they are the same",
+          "Update refreshes the list, Upgrade installs updates",
+          "Update removes packages, Upgrade adds them",
+          "Update is for system, Upgrade is for apps"
+        ],
+        "options_id": [
+          "Tidak ada bedanya, sama saja",
+          "Update menyegarkan daftar, Upgrade menginstal pembaruan",
+          "Update menghapus paket, Upgrade menambahkannya",
+          "Update untuk sistem, Upgrade untuk aplikasi"
+        ],
+        "correct": 1
+      }
+    },
+    {
+      "id": "cmd-03",
+      "category": "basics",
+      "level": "beginner",
+      "order": 3,
+      "command": "apt update",
+      "title": "Alternative Update (apt)",
+      "title_id": "Update Alternatif (apt)",
+      "description": "Alternative command to update package lists using apt.",
+      "description_id": "Perintah alternatif untuk memperbarui daftar paket menggunakan apt.",
+      "syntax": "apt update",
+      "example": "apt update",
+      "output": [
+        "Get:1 https://packages.termux.dev/apt/termux-main stable InRelease [14.0 kB]",
+        "Fetched 14.0 kB in 2s (7000 B/s)",
+        "Reading package lists... Done"
+      ],
+      "tips": [
+        "'apt' is the underlying package manager",
+        "'pkg' is a wrapper that makes apt easier to use"
+      ],
+      "tips_id": [
+        "'apt' adalah package manager dasar",
+        "'pkg' adalah wrapper yang memudahkan penggunaan apt"
+      ],
+      "xp": 10,
+      "quiz": {
+        "question": "Which is the underlying package manager in Termux?",
+        "question_id": "Mana package manager dasar di Termux?",
+        "options": [
+          "pkg",
+          "apt",
+          "npm",
+          "pip"
+        ],
+        "options_id": [
+          "pkg",
+          "apt",
+          "npm",
+          "pip"
+        ],
+        "correct": 1
+      }
+    },
+    {
+      "id": "cmd-04",
+      "category": "basics",
+      "level": "beginner",
+      "order": 4,
+      "command": "apt upgrade",
+      "title": "Alternative Upgrade (apt)",
+      "title_id": "Upgrade Alternatif (apt)",
+      "description": "Alternative command to upgrade installed package software.",
+      "description_id": "Perintah alternatif untuk meningkatkan software paket yang terinstal.",
+      "syntax": "apt upgrade",
+      "example": "apt upgrade",
+      "output": [
+        "Reading package lists... Done",
+        "Building dependency tree... Done",
+        "0 upgraded, 0 newly installed."
+      ],
+      "tips": [
+        "Same as 'pkg upgrade' but lower-level",
+        "May show more technical output"
+      ],
+      "tips_id": [
+        "Sama dengan 'pkg upgrade' tapi level lebih rendah",
+        "Mungkin menampilkan output lebih teknis"
+      ],
+      "xp": 10,
+      "quiz": null
+    },
+    {
+      "id": "cmd-05",
+      "category": "filesystem",
+      "level": "beginner",
+      "order": 1,
+      "command": "ls",
+      "title": "List Directory Contents",
+      "title_id": "Daftar Isi Direktori",
+      "description": "List files and directories in the current folder.",
+      "description_id": "Tampilkan daftar file dan folder yang ada di direktori saat ini.",
+      "syntax": "ls [options] [path]",
+      "example": "ls -la",
+      "output": [
+        "total 24",
+        "drwxr-xr-x  3 u0_a241 u0_a241 4096 Jul 12 10:20 .",
+        "drwxr-xr-x 10 u0_a241 u0_a241 4096 Jul 12 10:15 ..",
+        "-rw-r--r--  1 u0_a241 u0_a241  220 Jul 12 10:15 .bashrc",
+        "drwxr-xr-x  2 u0_a241 u0_a241 4096 Jul 12 10:20 scripts"
+      ],
+      "tips": [
+        "Use 'ls -la' to show hidden files",
+        "Use 'ls -lh' for human-readable sizes"
+      ],
+      "tips_id": [
+        "Gunakan 'ls -la' untuk menampilkan file tersembunyi",
+        "Gunakan 'ls -lh' untuk ukuran yang mudah dibaca"
+      ],
+      "xp": 15,
+      "quiz": {
+        "question": "What does 'ls -la' show that 'ls' doesn't?",
+        "question_id": "Apa yang ditampilkan 'ls -la' yang tidak ditampilkan 'ls'?",
+        "options": [
+          "Only directories",
+          "Hidden files and detailed info",
+          "Only files larger than 1MB",
+          "File contents"
+        ],
+        "options_id": [
+          "Hanya direktori",
+          "File tersembunyi dan info detail",
+          "Hanya file lebih dari 1MB",
+          "Isi file"
+        ],
+        "correct": 1
+      }
+    },
+    {
+      "id": "cmd-06",
+      "category": "filesystem",
+      "level": "beginner",
+      "order": 2,
+      "command": "cd",
+      "title": "Change Directory",
+      "title_id": "Pindah Direktori",
+      "description": "Change the current working directory to navigate directories.",
+      "description_id": "Pindah direktori aktif untuk menjelajahi folder.",
+      "syntax": "cd <directory>",
+      "example": "cd scripts",
+      "output": [
+        "~/scripts $"
+      ],
+      "tips": [
+        "Use 'cd ..' to go up one level",
+        "Use 'cd ~' to go to home directory",
+        "Use 'cd -' to go to previous directory"
+      ],
+      "tips_id": [
+        "Gunakan 'cd ..' untuk naik satu level",
+        "Gunakan 'cd ~' untuk ke direktori home",
+        "Gunakan 'cd -' untuk ke direktori sebelumnya"
+      ],
+      "xp": 15,
+      "quiz": {
+        "question": "How do you go to the parent directory?",
+        "question_id": "Bagaimana cara ke direktori induk?",
+        "options": [
+          "cd /",
+          "cd ..",
+          "cd ~",
+          "cd -"
+        ],
+        "options_id": [
+          "cd /",
+          "cd ..",
+          "cd ~",
+          "cd -"
+        ],
+        "correct": 1
+      }
+    },
+    {
+      "id": "cmd-07",
+      "category": "filesystem",
+      "level": "beginner",
+      "order": 3,
+      "command": "pwd",
+      "title": "Print Working Directory",
+      "title_id": "Tampilkan Direktori Aktif",
+      "description": "Print working directory path showing where you currently are.",
+      "description_id": "Tampilkan jalur direktori lengkap tempat Anda berada saat ini.",
+      "syntax": "pwd",
+      "example": "pwd",
+      "output": [
+        "/data/data/com.termux/files/home/scripts"
+      ],
+      "tips": [
+        "Useful when you're deep in nested directories",
+        "The output shows the absolute path"
+      ],
+      "tips_id": [
+        "Berguna saat Anda berada di direktori bersarang",
+        "Output menunjukkan jalur absolut"
+      ],
+      "xp": 10,
+      "quiz": null
+    },
+    {
+      "id": "cmd-08",
+      "category": "filesystem",
+      "level": "beginner",
+      "order": 4,
+      "command": "mkdir",
+      "title": "Make Directory",
+      "title_id": "Buat Direktori",
+      "description": "Create a new folder or directory with a specified name.",
+      "description_id": "Buat folder atau direktori baru dengan nama yang ditentukan.",
+      "syntax": "mkdir <directory_name>",
+      "example": "mkdir termux_projects",
+      "output": [
+        "Directory 'termux_projects' created successfully."
+      ],
+      "tips": [
+        "Use 'mkdir -p path/to/dir' to create nested directories",
+        "Directory names are case-sensitive"
+      ],
+      "tips_id": [
+        "Gunakan 'mkdir -p path/to/dir' untuk membuat direktori bersarang",
+        "Nama direktori bersifat case-sensitive"
+      ],
+      "xp": 15,
+      "quiz": null
+    },
+    {
+      "id": "cmd-09",
+      "category": "filesystem",
+      "level": "beginner",
+      "order": 5,
+      "command": "rmdir",
+      "title": "Remove Empty Directory",
+      "title_id": "Hapus Direktori Kosong",
+      "description": "Remove or delete an empty directory.",
+      "description_id": "Hapus direktori atau folder kosong.",
+      "syntax": "rmdir <directory_name>",
+      "example": "rmdir termux_projects",
+      "output": [
+        "Directory 'termux_projects' deleted."
+      ],
+      "tips": [
+        "Only works on EMPTY directories",
+        "Use 'rm -r' for non-empty directories (be careful!)"
+      ],
+      "tips_id": [
+        "Hanya berfungsi pada direktori KOSONG",
+        "Gunakan 'rm -r' untuk direktori tidak kosong (hati-hati!)"
+      ],
+      "xp": 15,
+      "quiz": null
+    },
+    {
+      "id": "cmd-10",
+      "category": "filesystem",
+      "level": "beginner",
+      "order": 6,
+      "command": "rm",
+      "title": "Remove Files/Directories",
+      "title_id": "Hapus File/Direktori",
+      "description": "Remove or delete files or directories permanently.",
+      "description_id": "Hapus file atau direktori secara permanen.",
+      "syntax": "rm [options] <file_or_directory>",
+      "example": "rm old_file.txt",
+      "output": [
+        "Removed 'old_file.txt'."
+      ],
+      "tips": [
+        "WARNING: This is PERMANENT - no recycle bin!",
+        "Use 'rm -i' for interactive mode (asks before deleting)",
+        "Use 'rm -r' for recursive deletion of directories"
+      ],
+      "tips_id": [
+        "PERINGATAN: Ini PERMANEN - tidak ada tempat sampah!",
+        "Gunakan 'rm -i' untuk mode interaktif",
+        "Gunakan 'rm -r' untuk penghapusan rekursif direktori"
+      ],
+      "xp": 20,
+      "quiz": {
+        "question": "Which flag makes rm ask before deleting?",
+        "question_id": "Flag mana yang membuat rm bertanya sebelum menghapus?",
+        "options": [
+          "-f",
+          "-r",
+          "-i",
+          "-v"
+        ],
+        "options_id": [
+          "-f",
+          "-r",
+          "-i",
+          "-v"
+        ],
+        "correct": 2
+      }
+    },
+    {
+      "id": "cmd-11",
+      "category": "filesystem",
+      "level": "beginner",
+      "order": 7,
+      "command": "cp",
+      "title": "Copy Files/Folders",
+      "title_id": "Salin File/Folder",
+      "description": "Copy files or folders from one location to another.",
+      "description_id": "Salin file atau folder dari satu lokasi ke lokasi lain.",
+      "syntax": "cp [options] <source> <destination>",
+      "example": "cp script.py backup/",
+      "output": [
+        "Copied 'script.py' to 'backup/script.py'."
+      ],
+      "tips": [
+        "Use 'cp -r' for recursive copy of directories",
+        "Use 'cp -i' to prompt before overwriting"
+      ],
+      "tips_id": [
+        "Gunakan 'cp -r' untuk salin rekursif direktori",
+        "Gunakan 'cp -i' untuk konfirmasi sebelum menimpa"
+      ],
+      "xp": 15,
+      "quiz": null
+    },
+    {
+      "id": "cmd-12",
+      "category": "filesystem",
+      "level": "beginner",
+      "order": 8,
+      "command": "mv",
+      "title": "Move/Rename Files",
+      "title_id": "Pindah/Ubah Nama File",
+      "description": "Move files or folders, also used to rename files/folders.",
+      "description_id": "Pindahkan file/folder, atau gunakan untuk mengubah nama file/folder.",
+      "syntax": "mv <source> <destination>",
+      "example": "mv file.txt documents/",
+      "output": [
+        "Moved 'file.txt' to 'documents/file.txt'."
+      ],
+      "tips": [
+        "To rename: mv oldname.txt newname.txt",
+        "Same as cut-paste in GUI file managers"
+      ],
+      "tips_id": [
+        "Untuk rename: mv oldname.txt newname.txt",
+        "Sama seperti cut-paste di file manager GUI"
+      ],
+      "xp": 15,
+      "quiz": null
+    },
+    {
+      "id": "cmd-13",
+      "category": "filesystem",
+      "level": "beginner",
+      "order": 9,
+      "command": "touch",
+      "title": "Create Empty File",
+      "title_id": "Buat File Kosong",
+      "description": "Create a new empty file or update the access/modification date.",
+      "description_id": "Buat file kosong baru atau perbarui tanggal modifikasi file.",
+      "syntax": "touch <filename>",
+      "example": "touch index.js",
+      "output": [
+        "Created file index.js"
+      ],
+      "tips": [
+        "If file exists, updates its timestamp",
+        "Can create multiple files: touch a.txt b.txt c.txt"
+      ],
+      "tips_id": [
+        "Jika file ada, memperbarui timestamp-nya",
+        "Bisa membuat banyak file: touch a.txt b.txt c.txt"
+      ],
+      "xp": 10,
+      "quiz": null
+    },
+    {
+      "id": "cmd-14",
+      "category": "filesystem",
+      "level": "beginner",
+      "order": 10,
+      "command": "cat",
+      "title": "Display File Contents",
+      "title_id": "Tampilkan Isi File",
+      "description": "Concatenate and display the contents of a file in the terminal.",
+      "description_id": "Tampilkan seluruh isi file teks langsung ke layar terminal.",
+      "syntax": "cat <filename>",
+      "example": "cat greeting.txt",
+      "output": [
+        "Welcome to Termux Tutorial by Tim Iminthisera!",
+        "Enjoy learning coding on your smartphone."
+      ],
+      "tips": [
+        "Use 'cat > file.txt' to create and write to a file",
+        "Use 'cat file1 file2 > combined.txt' to merge files"
+      ],
+      "tips_id": [
+        "Gunakan 'cat > file.txt' untuk membuat dan menulis ke file",
+        "Gunakan 'cat file1 file2 > combined.txt' untuk menggabungkan file"
+      ],
+      "xp": 15,
+      "quiz": null
+    },
+    {
+      "id": "cmd-15",
+      "category": "filesystem",
+      "level": "beginner",
+      "order": 11,
+      "command": "clear",
+      "title": "Clear Terminal Screen",
+      "title_id": "Bersihkan Layar Terminal",
+      "description": "Clear all text from the terminal screen to start fresh.",
+      "description_id": "Bersihkan semua tampilan teks di layar terminal agar rapi kembali.",
+      "syntax": "clear",
+      "example": "clear",
+      "output": [],
+      "tips": [
+        "Shortcut: Ctrl+L also clears screen",
+        "Does not delete command history"
+      ],
+      "tips_id": [
+        "Shortcut: Ctrl+L juga membersihkan layar",
+        "Tidak menghapus riwayat perintah"
+      ],
+      "xp": 5,
+      "quiz": null
+    },
+    {
+      "id": "cmd-16",
+      "category": "packages",
+      "level": "beginner",
+      "order": 1,
+      "command": "termux-setup-storage",
+      "title": "Setup Phone Storage Access",
+      "title_id": "Setup Akses Penyimpanan HP",
+      "description": "Request Android permission for Termux to access shared phone storage.",
+      "description_id": "Minta izin Android agar Termux dapat mengakses penyimpanan internal HP.",
+      "syntax": "termux-setup-storage",
+      "example": "termux-setup-storage",
+      "output": [
+        "Requesting storage permission...",
+        "Access granted. Symlinks created in ~/storage."
+      ],
+      "tips": [
+        "Run this FIRST before working with phone files",
+        "Creates symlinks: ~/storage/shared, ~/storage/downloads, etc."
+      ],
+      "tips_id": [
+        "Jalankan ini PERTAMA sebelum bekerja dengan file HP",
+        "Membuat symlink: ~/storage/shared, ~/storage/downloads, dll."
+      ],
+      "xp": 20,
+      "quiz": {
+        "question": "What does termux-setup-storage create?",
+        "question_id": "Apa yang dibuat oleh termux-setup-storage?",
+        "options": [
+          "New folders in /sdcard",
+          "Symlinks in ~/storage pointing to phone storage",
+          "A backup of your files",
+          "A new user account"
+        ],
+        "options_id": [
+          "Folder baru di /sdcard",
+          "Symlink di ~/storage yang menunjuk ke penyimpanan HP",
+          "Backup file Anda",
+          "Akun user baru"
+        ],
+        "correct": 1
+      }
+    },
+    {
+      "id": "cmd-17",
+      "category": "packages",
+      "level": "beginner",
+      "order": 2,
+      "command": "pkg install git",
+      "title": "Install Git",
+      "title_id": "Instal Git",
+      "description": "Install Git to clone repositories and manage version control.",
+      "description_id": "Instal Git untuk menyalin repositori kode dan mengelola versi kode.",
+      "syntax": "pkg install git",
+      "example": "pkg install git",
+      "output": [
+        "Selected package git.",
+        "Unpacking git (2.41.0)...",
+        "Setting up git (2.41.0)...",
+        "Installation complete!"
+      ],
+      "tips": [
+        "Essential for downloading code from GitHub",
+        "After install, configure: git config --global user.name 'Your Name'"
+      ],
+      "tips_id": [
+        "Penting untuk mengunduh kode dari GitHub",
+        "Setelah instal, konfigurasi: git config --global user.name 'Nama Anda'"
+      ],
+      "xp": 25,
+      "quiz": null
+    },
+    {
+      "id": "cmd-18",
+      "category": "packages",
+      "level": "beginner",
+      "order": 3,
+      "command": "pkg install python",
+      "title": "Install Python",
+      "title_id": "Instal Python",
+      "description": "Install the Python programming language environment.",
+      "description_id": "Instal bahasa pemrograman Python untuk menjalankan skrip python.",
+      "syntax": "pkg install python",
+      "example": "pkg install python",
+      "output": [
+        "Unpacking python (3.11.4)...",
+        "Setting up python (3.11.4)...",
+        "Requirement already satisfied: pip in /prefix/lib/python"
+      ],
+      "tips": [
+        "Includes pip for installing Python packages",
+        "Check version: python --version"
+      ],
+      "tips_id": [
+        "Termasuk pip untuk menginstal paket Python",
+        "Cek versi: python --version"
+      ],
+      "xp": 25,
+      "quiz": null
+    },
+    {
+      "id": "cmd-19",
+      "category": "packages",
+      "level": "beginner",
+      "order": 4,
+      "command": "pkg install nano",
+      "title": "Install Nano Editor",
+      "title_id": "Instal Editor Nano",
+      "description": "Install Nano, a lightweight and easy-to-use terminal text editor.",
+      "description_id": "Instal Nano, editor teks terminal yang ringan dan mudah digunakan.",
+      "syntax": "pkg install nano",
+      "example": "pkg install nano",
+      "output": [
+        "Setting up nano (7.2)...",
+        "Nano successfully installed."
+      ],
+      "tips": [
+        "Open file: nano filename.txt",
+        "Save: Ctrl+O, Exit: Ctrl+X",
+        "Alternative: vim, micro"
+      ],
+      "tips_id": [
+        "Buka file: nano filename.txt",
+        "Simpan: Ctrl+O, Keluar: Ctrl+X",
+        "Alternatif: vim, micro"
+      ],
+      "xp": 20,
+      "quiz": null
+    },
+    {
+      "id": "cmd-20",
+      "category": "packages",
+      "level": "intermediate",
+      "order": 5,
+      "command": "pkg install curl",
+      "title": "Install Curl",
+      "title_id": "Instal Curl",
+      "description": "Install Curl to send requests and download content from URLs.",
+      "description_id": "Instal Curl untuk berkirim data atau mengunduh konten dari URL web.",
+      "syntax": "pkg install curl",
+      "example": "pkg install curl",
+      "output": [
+        "Unpacking curl (8.1.2)...",
+        "Setting up curl (8.1.2)... Done."
+      ],
+      "tips": [
+        "Download file: curl -O https://example.com/file.zip",
+        "Check headers: curl -I https://example.com"
+      ],
+      "tips_id": [
+        "Unduh file: curl -O https://example.com/file.zip",
+        "Cek header: curl -I https://example.com"
+      ],
+      "xp": 20,
+      "quiz": null
+    },
+    {
+      "id": "cmd-21",
+      "category": "packages",
+      "level": "intermediate",
+      "order": 6,
+      "command": "pkg install wget",
+      "title": "Install Wget",
+      "title_id": "Instal Wget",
+      "description": "Install Wget to download files from HTTP, HTTPS, and FTP servers.",
+      "description_id": "Instal Wget untuk mengunduh file dari internet via tautan/link.",
+      "syntax": "pkg install wget",
+      "example": "pkg install wget",
+      "output": [
+        "Setting up wget (1.21.4)...",
+        "Ready to fetch files."
+      ],
+      "tips": [
+        "Download: wget https://example.com/file.zip",
+        "Resume broken download: wget -c URL"
+      ],
+      "tips_id": [
+        "Unduh: wget https://example.com/file.zip",
+        "Lanjutkan unduhan terputus: wget -c URL"
+      ],
+      "xp": 20,
+      "quiz": null
+    },
+    {
+      "id": "cmd-22",
+      "category": "packages",
+      "level": "intermediate",
+      "order": 7,
+      "command": "pkg install clang",
+      "title": "Install Clang Compiler",
+      "title_id": "Instal Compiler Clang",
+      "description": "Install Clang C/C++ compiler and toolchain for coding.",
+      "description_id": "Instal compiler Clang C/C++ untuk mengompilasi kode program C/C++.",
+      "syntax": "pkg install clang",
+      "example": "pkg install clang",
+      "output": [
+        "Unpacking clang (16.0.6)...",
+        "Setting up clang (16.0.6)...",
+        "gcc and g++ links created."
+      ],
+      "tips": [
+        "Compile C: clang file.c -o output",
+        "Compile C++: clang++ file.cpp -o output"
+      ],
+      "tips_id": [
+        "Kompilasi C: clang file.c -o output",
+        "Kompilasi C++: clang++ file.cpp -o output"
+      ],
+      "xp": 30,
+      "quiz": null
+    },
+    {
+      "id": "cmd-23",
+      "category": "packages",
+      "level": "intermediate",
+      "order": 8,
+      "command": "pkg install nodejs",
+      "title": "Install Node.js",
+      "title_id": "Instal Node.js",
+      "description": "Install Node.js JavaScript runtime environment.",
+      "description_id": "Instal Node.js untuk mengeksekusi kode program JavaScript di terminal.",
+      "syntax": "pkg install nodejs",
+      "example": "pkg install nodejs",
+      "output": [
+        "Unpacking nodejs (20.5.0)...",
+        "Setting up nodejs (20.5.0)...",
+        "npm installed."
+      ],
+      "tips": [
+        "Check version: node --version and npm --version",
+        "Run JS file: node script.js"
+      ],
+      "tips_id": [
+        "Cek versi: node --version dan npm --version",
+        "Jalankan file JS: node script.js"
+      ],
+      "xp": 30,
+      "quiz": null
+    },
+    {
+      "id": "cmd-24",
+      "category": "basics",
+      "level": "beginner",
+      "order": 5,
+      "command": "whoami",
+      "title": "Show Current User",
+      "title_id": "Tampilkan User Saat Ini",
+      "description": "Display the active username of the current Termux shell.",
+      "description_id": "Tampilkan nama user aktif pada sesi shell Termux saat ini.",
+      "syntax": "whoami",
+      "example": "whoami",
+      "output": [
+        "u0_a241"
+      ],
+      "tips": [
+        "In Termux, you're not root by default",
+        "Shows your Android app user ID"
+      ],
+      "tips_id": [
+        "Di Termux, Anda bukan root secara default",
+        "Menunjukkan ID user aplikasi Android Anda"
+      ],
+      "xp": 10,
+      "quiz": null
+    },
+    {
+      "id": "cmd-25",
+      "category": "basics",
+      "level": "beginner",
+      "order": 6,
+      "command": "uname -a",
+      "title": "System Information",
+      "title_id": "Informasi Sistem",
+      "description": "Print detailed operating system, device architecture, and kernel info.",
+      "description_id": "Tampilkan detail info sistem operasi, arsitektur HP, dan kernel.",
+      "syntax": "uname [options]",
+      "example": "uname -a",
+      "output": [
+        "Linux localhost 4.19.113-android-g92a #1 SMP PREEMPT Sun Jun 14 aarch64 Android"
+      ],
+      "tips": [
+        "uname -r shows kernel version only",
+        "uname -m shows machine architecture"
+      ],
+      "tips_id": [
+        "uname -r hanya menunjukkan versi kernel",
+        "uname -m menunjukkan arsitektur mesin"
+      ],
+      "xp": 15,
+      "quiz": null
+    }
+  ]
+}

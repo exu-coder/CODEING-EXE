@@ -1,0 +1,172 @@
+{
+  "level": 6,
+  "level_name": "Level 6",
+  "level_name_id": "Level 6",
+  "difficulty": "beginner",
+  "required_score": 70,
+  "total_exercises": 10,
+  "exercises": [
+    {
+      "id": "L6-E1",
+      "type": "code",
+      "category": "python",
+      "instruction": "Type a Python print statement: Hello, Termux!",
+      "instruction_id": "Ketik statement Python print: Hello, Termux!",
+      "shadow_text": "print('Hello, Termux!')",
+      "expected_output": [
+        "Hello, Termux!"
+      ],
+      "hint": "Use single or double quotes for strings",
+      "hint_id": "Gunakan tanda kutip tunggal atau ganda untuk string",
+      "time_limit": 18,
+      "xp": 15,
+      "penalty_per_error": 2
+    },
+    {
+      "id": "L6-E2",
+      "type": "code",
+      "category": "python",
+      "instruction": "Create a variable 'name' and print a greeting",
+      "instruction_id": "Buat variabel 'name' dan print sapaan",
+      "shadow_text": "name = 'Coder'\nprint(f'Hello, {name}!')",
+      "expected_output": [
+        "Hello, Coder!"
+      ],
+      "hint": "f-strings allow variable interpolation with {var}",
+      "hint_id": "f-string memungkinkan interpolasi variabel dengan {var}",
+      "time_limit": 25,
+      "xp": 20,
+      "penalty_per_error": 3
+    },
+    {
+      "id": "L6-E3",
+      "type": "code",
+      "category": "python",
+      "instruction": "Create a list of 3 programming languages and print it",
+      "instruction_id": "Buat list 3 bahasa pemrograman dan print",
+      "shadow_text": "languages = ['Python', 'JavaScript', 'Bash']\nprint(languages)",
+      "expected_output": [
+        "['Python', 'JavaScript', 'Bash']"
+      ],
+      "hint": "Lists use square brackets []",
+      "hint_id": "List menggunakan kurung siku []",
+      "time_limit": 28,
+      "xp": 20,
+      "penalty_per_error": 3
+    },
+    {
+      "id": "L6-E4",
+      "type": "code",
+      "category": "python",
+      "instruction": "Print the length of the languages list",
+      "instruction_id": "Print panjang list languages",
+      "shadow_text": "print(len(languages))",
+      "expected_output": [
+        "3"
+      ],
+      "hint": "len() returns the number of items",
+      "hint_id": "len() mengembalikan jumlah item",
+      "time_limit": 15,
+      "xp": 15,
+      "penalty_per_error": 2
+    },
+    {
+      "id": "L6-E5",
+      "type": "code",
+      "category": "python",
+      "instruction": "Create a for loop to print each language",
+      "instruction_id": "Buat for loop untuk print setiap bahasa",
+      "shadow_text": "for lang in languages:\n    print(lang)",
+      "expected_output": [
+        "Python",
+        "JavaScript",
+        "Bash"
+      ],
+      "hint": "Indentation is CRITICAL in Python (4 spaces)",
+      "hint_id": "Indentasi SANGAT PENTING di Python (4 spasi)",
+      "time_limit": 25,
+      "xp": 25,
+      "penalty_per_error": 3
+    },
+    {
+      "id": "L6-E6",
+      "type": "code",
+      "category": "python",
+      "instruction": "Create a function that returns the square of a number",
+      "instruction_id": "Buat fungsi yang mengembalikan kuadrat angka",
+      "shadow_text": "def square(n):\n    return n ** 2\n\nprint(square(5))",
+      "expected_output": [
+        "25"
+      ],
+      "hint": "** is the exponentiation operator",
+      "hint_id": "** adalah operator eksponensiasi",
+      "time_limit": 30,
+      "xp": 25,
+      "penalty_per_error": 3
+    },
+    {
+      "id": "L6-E7",
+      "type": "code",
+      "category": "python",
+      "instruction": "Check if a number is even using modulo",
+      "instruction_id": "Cek apakah angka genap menggunakan modulo",
+      "shadow_text": "num = 10\nif num % 2 == 0:\n    print('Even')\nelse:\n    print('Odd')",
+      "expected_output": [
+        "Even"
+      ],
+      "hint": "% gives the remainder after division",
+      "hint_id": "% memberikan sisa setelah pembagian",
+      "time_limit": 30,
+      "xp": 25,
+      "penalty_per_error": 3
+    },
+    {
+      "id": "L6-E8",
+      "type": "code",
+      "category": "python",
+      "instruction": "Create a dictionary with name and age, then print it",
+      "instruction_id": "Buat dictionary dengan nama dan umur, lalu print",
+      "shadow_text": "person = {'name': 'Alex', 'age': 25}\nprint(person['name'])",
+      "expected_output": [
+        "Alex"
+      ],
+      "hint": "Dictionaries use curly braces {} with key:value pairs",
+      "hint_id": "Dictionary menggunakan kurung kurawal {} dengan pasangan key:value",
+      "time_limit": 28,
+      "xp": 20,
+      "penalty_per_error": 3
+    },
+    {
+      "id": "L6-E9",
+      "type": "code",
+      "category": "python",
+      "instruction": "Import os module and print current working directory",
+      "instruction_id": "Import modul os dan print direktori kerja saat ini",
+      "shadow_text": "import os\nprint(os.getcwd())",
+      "expected_output": [
+        "/data/data/com.termux/files/home"
+      ],
+      "hint": "os module provides operating system functions",
+      "hint_id": "Modul os menyediakan fungsi sistem operasi",
+      "time_limit": 22,
+      "xp": 25,
+      "penalty_per_error": 3
+    },
+    {
+      "id": "L6-E10",
+      "type": "code",
+      "category": "python",
+      "instruction": "Write a simple calculator: add 10 and 20",
+      "instruction_id": "Tulis kalkulator sederhana: tambah 10 dan 20",
+      "shadow_text": "a = 10\nb = 20\nprint(f'Sum: {a + b}')",
+      "expected_output": [
+        "Sum: 30"
+      ],
+      "hint": "Basic arithmetic: + - * / // % **",
+      "hint_id": "Aritmatika dasar: + - * / // % **",
+      "time_limit": 25,
+      "xp": 20,
+      "penalty_per_error": 3
+    }
+  ]
+}

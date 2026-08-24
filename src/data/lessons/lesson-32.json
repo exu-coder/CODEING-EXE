@@ -1,0 +1,173 @@
+{
+  "level": 32,
+  "level_name": "Level 32",
+  "level_name_id": "Level 32",
+  "difficulty": "advanced",
+  "required_score": 70,
+  "total_exercises": 10,
+  "exercises": [
+    {
+      "id": "L32-E1",
+      "type": "command",
+      "category": "kubernetes",
+      "instruction": "Remove packages 'queue'",
+      "instruction_id": "Hapus packages 'queue'",
+      "shadow_text": "rm queue",
+      "expected_output": [
+        "Removed 'queue'."
+      ],
+      "hint": "Practice typing this command accurately",
+      "hint_id": "Latih ketik command ini dengan akurat",
+      "time_limit": 15,
+      "xp": 15,
+      "penalty_per_error": 2
+    },
+    {
+      "id": "L32-E2",
+      "type": "code",
+      "category": "kubernetes",
+      "instruction": "Define function 'calc()'",
+      "instruction_id": "Definisikan fungsi 'calc()'",
+      "shadow_text": "def calc():\n    return 'Hello World'\nprint(calc())",
+      "expected_output": [
+        "Hello World"
+      ],
+      "hint": "Practice typing this code accurately",
+      "hint_id": "Latih ketik code ini dengan akurat",
+      "time_limit": 12,
+      "xp": 25,
+      "penalty_per_error": 3
+    },
+    {
+      "id": "L32-E3",
+      "type": "code",
+      "category": "kubernetes",
+      "instruction": "Define function 'process()'",
+      "instruction_id": "Definisikan fungsi 'process()'",
+      "shadow_text": "def process():\n    return 'Success!'\nprint(process())",
+      "expected_output": [
+        "Success!"
+      ],
+      "hint": "Practice typing this code accurately",
+      "hint_id": "Latih ketik code ini dengan akurat",
+      "time_limit": 12,
+      "xp": 30,
+      "penalty_per_error": 2
+    },
+    {
+      "id": "L32-E4",
+      "type": "command",
+      "category": "kubernetes",
+      "instruction": "Remove pods 'cache'",
+      "instruction_id": "Hapus pods 'cache'",
+      "shadow_text": "rm cache",
+      "expected_output": [
+        "Removed 'cache'."
+      ],
+      "hint": "Practice typing this command accurately",
+      "hint_id": "Latih ketik command ini dengan akurat",
+      "time_limit": 20,
+      "xp": 20,
+      "penalty_per_error": 4
+    },
+    {
+      "id": "L32-E5",
+      "type": "command",
+      "category": "kubernetes",
+      "instruction": "List all files",
+      "instruction_id": "Daftar semua files",
+      "shadow_text": "ls -la ./src",
+      "expected_output": [
+        "total 24",
+        "drwxr-xr-x 3 u0_a241"
+      ],
+      "hint": "Practice typing this command accurately",
+      "hint_id": "Latih ketik command ini dengan akurat",
+      "time_limit": 15,
+      "xp": 15,
+      "penalty_per_error": 2
+    },
+    {
+      "id": "L32-E6",
+      "type": "command",
+      "category": "kubernetes",
+      "instruction": "Install graphql",
+      "instruction_id": "Instal graphql",
+      "shadow_text": "pkg install graphql",
+      "expected_output": [
+        "Setting up graphql...",
+        "graphql installed."
+      ],
+      "hint": "Practice typing this command accurately",
+      "hint_id": "Latih ketik command ini dengan akurat",
+      "time_limit": 20,
+      "xp": 25,
+      "penalty_per_error": 3
+    },
+    {
+      "id": "L32-E7",
+      "type": "command",
+      "category": "kubernetes",
+      "instruction": "Install react-native",
+      "instruction_id": "Instal react-native",
+      "shadow_text": "pkg install react-native",
+      "expected_output": [
+        "Setting up react-native...",
+        "react-native installed."
+      ],
+      "hint": "Practice typing this command accurately",
+      "hint_id": "Latih ketik command ini dengan akurat",
+      "time_limit": 15,
+      "xp": 30,
+      "penalty_per_error": 4
+    },
+    {
+      "id": "L32-E8",
+      "type": "command",
+      "category": "kubernetes",
+      "instruction": "Remove pods 'db'",
+      "instruction_id": "Hapus pods 'db'",
+      "shadow_text": "rm db",
+      "expected_output": [
+        "Removed 'db'."
+      ],
+      "hint": "Practice typing this command accurately",
+      "hint_id": "Latih ketik command ini dengan akurat",
+      "time_limit": 15,
+      "xp": 15,
+      "penalty_per_error": 3
+    },
+    {
+      "id": "L32-E9",
+      "type": "code",
+      "category": "kubernetes",
+      "instruction": "Use try-except to process data",
+      "instruction_id": "Gunakan try-except untuk process data",
+      "shadow_text": "# try-except example\nprint('Done')",
+      "expected_output": [
+        "Done"
+      ],
+      "hint": "Practice typing this code accurately",
+      "hint_id": "Latih ketik code ini dengan akurat",
+      "time_limit": 18,
+      "xp": 20,
+      "penalty_per_error": 2
+    },
+    {
+      "id": "L32-E10",
+      "type": "code",
+      "category": "kubernetes",
+      "instruction": "Create variable 'count' with value 0",
+      "instruction_id": "Buat variabel 'count' dengan nilai 0",
+      "shadow_text": "count = 0\nprint(count)",
+      "expected_output": [
+        "0"
+      ],
+      "hint": "Practice typing this code accurately",
+      "hint_id": "Latih ketik code ini dengan akurat",
+      "time_limit": 12,
+      "xp": 25,
+      "penalty_per_error": 3
+    }
+  ]
+}

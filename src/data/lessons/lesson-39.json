@@ -1,0 +1,170 @@
+{
+  "level": 39,
+  "level_name": "Level 39",
+  "level_name_id": "Level 39",
+  "difficulty": "advanced",
+  "required_score": 70,
+  "total_exercises": 10,
+  "exercises": [
+    {
+      "id": "L39-E1",
+      "type": "code",
+      "category": "pygame",
+      "instruction": "Import os and use it",
+      "instruction_id": "Import os dan gunakan",
+      "shadow_text": "import os\nprint('os loaded')",
+      "expected_output": [
+        "os loaded"
+      ],
+      "hint": "Practice typing this code accurately",
+      "hint_id": "Latih ketik code ini dengan akurat",
+      "time_limit": 12,
+      "xp": 15,
+      "penalty_per_error": 3
+    },
+    {
+      "id": "L39-E2",
+      "type": "code",
+      "category": "pygame",
+      "instruction": "Create variable 'total' with value 0",
+      "instruction_id": "Buat variabel 'total' dengan nilai 0",
+      "shadow_text": "total = 0\nprint(total)",
+      "expected_output": [
+        "0"
+      ],
+      "hint": "Practice typing this code accurately",
+      "hint_id": "Latih ketik code ini dengan akurat",
+      "time_limit": 20,
+      "xp": 30,
+      "penalty_per_error": 2
+    },
+    {
+      "id": "L39-E3",
+      "type": "code",
+      "category": "pygame",
+      "instruction": "Use generator to handle errors",
+      "instruction_id": "Gunakan generator untuk handle errors",
+      "shadow_text": "# generator example\nprint('Done')",
+      "expected_output": [
+        "Done"
+      ],
+      "hint": "Practice typing this code accurately",
+      "hint_id": "Latih ketik code ini dengan akurat",
+      "time_limit": 25,
+      "xp": 20,
+      "penalty_per_error": 3
+    },
+    {
+      "id": "L39-E4",
+      "type": "command",
+      "category": "pygame",
+      "instruction": "Check version of pandas",
+      "instruction_id": "Cek versi pandas",
+      "shadow_text": "pandas --version",
+      "expected_output": [
+        "pandas version 1.0.0"
+      ],
+      "hint": "Practice typing this command accurately",
+      "hint_id": "Latih ketik command ini dengan akurat",
+      "time_limit": 25,
+      "xp": 15,
+      "penalty_per_error": 3
+    },
+    {
+      "id": "L39-E5",
+      "type": "command",
+      "category": "pygame",
+      "instruction": "Create packages called 'db'",
+      "instruction_id": "Buat packages bernama 'db'",
+      "shadow_text": "docker run db",
+      "expected_output": [
+        "Created db successfully."
+      ],
+      "hint": "Practice typing this command accurately",
+      "hint_id": "Latih ketik command ini dengan akurat",
+      "time_limit": 12,
+      "xp": 20,
+      "penalty_per_error": 3
+    },
+    {
+      "id": "L39-E6",
+      "type": "code",
+      "category": "pygame",
+      "instruction": "Import numpy and use it",
+      "instruction_id": "Import numpy dan gunakan",
+      "shadow_text": "import numpy\nprint('numpy loaded')",
+      "expected_output": [
+        "numpy loaded"
+      ],
+      "hint": "Practice typing this code accurately",
+      "hint_id": "Latih ketik code ini dengan akurat",
+      "time_limit": 15,
+      "xp": 30,
+      "penalty_per_error": 3
+    },
+    {
+      "id": "L39-E7",
+      "type": "code",
+      "category": "pygame",
+      "instruction": "Create variable 'total' with value 42",
+      "instruction_id": "Buat variabel 'total' dengan nilai 42",
+      "shadow_text": "total = 42\nprint(total)",
+      "expected_output": [
+        "42"
+      ],
+      "hint": "Practice typing this code accurately",
+      "hint_id": "Latih ketik code ini dengan akurat",
+      "time_limit": 20,
+      "xp": 30,
+      "penalty_per_error": 4
+    },
+    {
+      "id": "L39-E8",
+      "type": "command",
+      "category": "pygame",
+      "instruction": "Create models called 'client'",
+      "instruction_id": "Buat models bernama 'client'",
+      "shadow_text": "mkdir client",
+      "expected_output": [
+        "Created client successfully."
+      ],
+      "hint": "Practice typing this command accurately",
+      "hint_id": "Latih ketik command ini dengan akurat",
+      "time_limit": 25,
+      "xp": 25,
+      "penalty_per_error": 2
+    },
+    {
+      "id": "L39-E9",
+      "type": "command",
+      "category": "pygame",
+      "instruction": "Remove directories 'gateway'",
+      "instruction_id": "Hapus directories 'gateway'",
+      "shadow_text": "rm gateway",
+      "expected_output": [
+        "Removed 'gateway'."
+      ],
+      "hint": "Practice typing this command accurately",
+      "hint_id": "Latih ketik command ini dengan akurat",
+      "time_limit": 15,
+      "xp": 30,
+      "penalty_per_error": 2
+    },
+    {
+      "id": "L39-E10",
+      "type": "code",
+      "category": "pygame",
+      "instruction": "Define function 'calc()'",
+      "instruction_id": "Definisikan fungsi 'calc()'",
+      "shadow_text": "def calc():\n    return 'Running...'\nprint(calc())",
+      "expected_output": [
+        "Running..."
+      ],
+      "hint": "Practice typing this code accurately",
+      "hint_id": "Latih ketik code ini dengan akurat",
+      "time_limit": 18,
+      "xp": 30,
+      "penalty_per_error": 2
+    }
+  ]
+}

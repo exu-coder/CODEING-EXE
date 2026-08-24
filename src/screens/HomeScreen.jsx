@@ -27,6 +27,11 @@ export default function HomeScreen() {
   const completedCount = progress.completed?.length || 0
   const percent = totalLessons > 0 ? Math.round((completedCount / totalLessons) * 100) : 0
 
+  // Find highest unlocked level for "Continue Learning"
+  const maxUnlocked = progress.unlocked?.length > 0 
+    ? Math.max(...progress.unlocked) 
+    : 1
+
   return (
     <div className="space-y-6">
       {/* Hero Stats */}
@@ -85,31 +90,29 @@ export default function HomeScreen() {
         </div>
       </div>
 
-      {/* Continue Learning */}
-      {progress.current && (
-        <Link to={`/lessons`}>
-          <motion.div 
-            className="glass-card p-4 neon-border-green flex items-center justify-between cursor-pointer"
-            whileHover={{ scale: 1.02 }}
-            whileTap={{ scale: 0.98 }}
-          >
-            <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-full bg-termux-green/20 flex items-center justify-center">
-                <Play className="w-5 h-5 text-termux-green" />
+      {/* Continue Learning — links to highest unlocked level */}
+      <Link to={`/lesson/${maxUnlocked}`}>
+        <motion.div 
+          className="glass-card p-4 neon-border-green flex items-center justify-between cursor-pointer"
+          whileHover={{ scale: 1.02 }}
+          whileTap={{ scale: 0.98 }}
+        >
+          <div className="flex items-center gap-3">
+            <div className="w-10 h-10 rounded-full bg-termux-green/20 flex items-center justify-center">
+              <Play className="w-5 h-5 text-termux-green" />
+            </div>
+            <div>
+              <div className="text-sm font-semibold text-white">
+                {lang === 'id' ? 'Lanjutkan Belajar' : 'Continue Learning'}
               </div>
-              <div>
-                <div className="text-sm font-semibold text-white">
-                  {lang === 'id' ? 'Lanjutkan Belajar' : 'Continue Learning'}
-                </div>
-                <div className="text-xs text-gray-400">
-                  {lang === 'id' ? `Level ${progress.current}` : `Level ${progress.current}`}
-                </div>
+              <div className="text-xs text-gray-400">
+                {lang === 'id' ? `Level ${maxUnlocked}` : `Level ${maxUnlocked}`}
               </div>
             </div>
-            <ChevronRight className="w-5 h-5 text-gray-500" />
-          </motion.div>
-        </Link>
-      )}
+          </div>
+          <ChevronRight className="w-5 h-5 text-gray-500" />
+        </motion.div>
+      </Link>
 
       {/* Level Grid */}
       <div>
@@ -128,7 +131,7 @@ export default function HomeScreen() {
             return (
               <Link 
                 key={level.level} 
-                to={isUnlocked ? `/lessons` : '#'}
+                to={isUnlocked ? `/lesson/${level.level}` : '#'}
                 onClick={e => !isUnlocked && e.preventDefault()}
               >
                 <motion.div

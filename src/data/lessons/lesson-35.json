@@ -1,0 +1,174 @@
+{
+  "level": 35,
+  "level_name": "Level 35",
+  "level_name_id": "Level 35",
+  "difficulty": "advanced",
+  "required_score": 70,
+  "total_exercises": 10,
+  "exercises": [
+    {
+      "id": "L35-E1",
+      "type": "command",
+      "category": "scraping",
+      "instruction": "Remove directories 'cache'",
+      "instruction_id": "Hapus directories 'cache'",
+      "shadow_text": "rm cache",
+      "expected_output": [
+        "Removed 'cache'."
+      ],
+      "hint": "Practice typing this command accurately",
+      "hint_id": "Latih ketik command ini dengan akurat",
+      "time_limit": 18,
+      "xp": 20,
+      "penalty_per_error": 2
+    },
+    {
+      "id": "L35-E2",
+      "type": "command",
+      "category": "scraping",
+      "instruction": "Check version of pandas",
+      "instruction_id": "Cek versi pandas",
+      "shadow_text": "pandas --version",
+      "expected_output": [
+        "pandas version 1.0.0"
+      ],
+      "hint": "Practice typing this command accurately",
+      "hint_id": "Latih ketik command ini dengan akurat",
+      "time_limit": 20,
+      "xp": 30,
+      "penalty_per_error": 4
+    },
+    {
+      "id": "L35-E3",
+      "type": "command",
+      "category": "scraping",
+      "instruction": "Install scrapy",
+      "instruction_id": "Instal scrapy",
+      "shadow_text": "pkg install scrapy",
+      "expected_output": [
+        "Setting up scrapy...",
+        "scrapy installed."
+      ],
+      "hint": "Practice typing this command accurately",
+      "hint_id": "Latih ketik command ini dengan akurat",
+      "time_limit": 18,
+      "xp": 25,
+      "penalty_per_error": 3
+    },
+    {
+      "id": "L35-E4",
+      "type": "code",
+      "category": "scraping",
+      "instruction": "Define function 'process()'",
+      "instruction_id": "Definisikan fungsi 'process()'",
+      "shadow_text": "def process():\n    return 'Running...'\nprint(process())",
+      "expected_output": [
+        "Running..."
+      ],
+      "hint": "Practice typing this code accurately",
+      "hint_id": "Latih ketik code ini dengan akurat",
+      "time_limit": 12,
+      "xp": 25,
+      "penalty_per_error": 3
+    },
+    {
+      "id": "L35-E5",
+      "type": "code",
+      "category": "scraping",
+      "instruction": "Create variable 'total' with value 'test'",
+      "instruction_id": "Buat variabel 'total' dengan nilai 'test'",
+      "shadow_text": "total = 'test'\nprint(total)",
+      "expected_output": [
+        "'test'"
+      ],
+      "hint": "Practice typing this code accurately",
+      "hint_id": "Latih ketik code ini dengan akurat",
+      "time_limit": 15,
+      "xp": 20,
+      "penalty_per_error": 4
+    },
+    {
+      "id": "L35-E6",
+      "type": "code",
+      "category": "scraping",
+      "instruction": "Import numpy and use it",
+      "instruction_id": "Import numpy dan gunakan",
+      "shadow_text": "import numpy\nprint('numpy loaded')",
+      "expected_output": [
+        "numpy loaded"
+      ],
+      "hint": "Practice typing this code accurately",
+      "hint_id": "Latih ketik code ini dengan akurat",
+      "time_limit": 15,
+      "xp": 20,
+      "penalty_per_error": 3
+    },
+    {
+      "id": "L35-E7",
+      "type": "command",
+      "category": "scraping",
+      "instruction": "Install redis",
+      "instruction_id": "Instal redis",
+      "shadow_text": "pkg install redis",
+      "expected_output": [
+        "Setting up redis...",
+        "redis installed."
+      ],
+      "hint": "Practice typing this command accurately",
+      "hint_id": "Latih ketik command ini dengan akurat",
+      "time_limit": 12,
+      "xp": 30,
+      "penalty_per_error": 4
+    },
+    {
+      "id": "L35-E8",
+      "type": "command",
+      "category": "scraping",
+      "instruction": "Install scrapy",
+      "instruction_id": "Instal scrapy",
+      "shadow_text": "pkg install scrapy",
+      "expected_output": [
+        "Setting up scrapy...",
+        "scrapy installed."
+      ],
+      "hint": "Practice typing this command accurately",
+      "hint_id": "Latih ketik command ini dengan akurat",
+      "time_limit": 12,
+      "xp": 15,
+      "penalty_per_error": 3
+    },
+    {
+      "id": "L35-E9",
+      "type": "code",
+      "category": "scraping",
+      "instruction": "Define function 'process()'",
+      "instruction_id": "Definisikan fungsi 'process()'",
+      "shadow_text": "def process():\n    return 'Done'\nprint(process())",
+      "expected_output": [
+        "Done"
+      ],
+      "hint": "Practice typing this code accurately",
+      "hint_id": "Latih ketik code ini dengan akurat",
+      "time_limit": 25,
+      "xp": 20,
+      "penalty_per_error": 4
+    },
+    {
+      "id": "L35-E10",
+      "type": "command",
+      "category": "scraping",
+      "instruction": "Install graphql",
+      "instruction_id": "Instal graphql",
+      "shadow_text": "pkg install graphql",
+      "expected_output": [
+        "Setting up graphql...",
+        "graphql installed."
+      ],
+      "hint": "Practice typing this command accurately",
+      "hint_id": "Latih ketik command ini dengan akurat",
+      "time_limit": 25,
+      "xp": 30,
+      "penalty_per_error": 2
+    }
+  ]
+}

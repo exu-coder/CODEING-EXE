@@ -1,0 +1,178 @@
+{
+  "level": 11,
+  "level_name": "Level 11",
+  "level_name_id": "Level 11",
+  "difficulty": "intermediate",
+  "required_score": 70,
+  "total_exercises": 10,
+  "exercises": [
+    {
+      "id": "L11-E1",
+      "type": "code",
+      "category": "bash",
+      "instruction": "Create a shebang line for a bash script",
+      "instruction_id": "Buat shebang line untuk script bash",
+      "shadow_text": "#!/bin/bash",
+      "expected_output": [
+        "Shebang line set."
+      ],
+      "hint": "Shebang tells the system which interpreter to use",
+      "hint_id": "Shebang memberitahu sistem interpreter mana yang digunakan",
+      "time_limit": 12,
+      "xp": 15,
+      "penalty_per_error": 2
+    },
+    {
+      "id": "L11-E2",
+      "type": "code",
+      "category": "bash",
+      "instruction": "Write a script that echoes 'Hello World'",
+      "instruction_id": "Tulis script yang echo 'Hello World'",
+      "shadow_text": "#!/bin/bash\necho 'Hello World'",
+      "expected_output": [
+        "Hello World"
+      ],
+      "hint": "Every bash script starts with #!/bin/bash",
+      "hint_id": "Setiap script bash dimulai dengan #!/bin/bash",
+      "time_limit": 18,
+      "xp": 15,
+      "penalty_per_error": 2
+    },
+    {
+      "id": "L11-E3",
+      "type": "code",
+      "category": "bash",
+      "instruction": "Write a script that takes a name argument and greets",
+      "instruction_id": "Tulis script yang menerima argumen nama dan menyapa",
+      "shadow_text": "#!/bin/bash\necho \"Hello, $1!\"",
+      "expected_output": [
+        "Hello, Alice!"
+      ],
+      "hint": "$1 is the first command-line argument",
+      "hint_id": "$1 adalah argumen baris perintah pertama",
+      "time_limit": 20,
+      "xp": 20,
+      "penalty_per_error": 3
+    },
+    {
+      "id": "L11-E4",
+      "type": "code",
+      "category": "bash",
+      "instruction": "Write a script that checks if a file exists",
+      "instruction_id": "Tulis script yang cek apakah file ada",
+      "shadow_text": "#!/bin/bash\nif [ -f '$1' ]; then\n    echo 'File exists'\nelse\n    echo 'File not found'\nfi",
+      "expected_output": [
+        "File exists"
+      ],
+      "hint": "-f checks if file exists, -d checks directory",
+      "hint_id": "-f cek file ada, -d cek direktori",
+      "time_limit": 30,
+      "xp": 25,
+      "penalty_per_error": 3
+    },
+    {
+      "id": "L11-E5",
+      "type": "code",
+      "category": "bash",
+      "instruction": "Write a for loop that prints numbers 1 to 5",
+      "instruction_id": "Tulis for loop yang print angka 1 sampai 5",
+      "shadow_text": "#!/bin/bash\nfor i in {1..5}; do\n    echo $i\ndone",
+      "expected_output": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "hint": "{1..5} is bash range expansion",
+      "hint_id": "{1..5} adalah bash range expansion",
+      "time_limit": 25,
+      "xp": 20,
+      "penalty_per_error": 3
+    },
+    {
+      "id": "L11-E6",
+      "type": "code",
+      "category": "bash",
+      "instruction": "Write a while loop that counts down from 3 to 1",
+      "instruction_id": "Tulis while loop yang hitung mundur dari 3 ke 1",
+      "shadow_text": "#!/bin/bash\ncount=3\nwhile [ $count -gt 0 ]; do\n    echo $count\n    ((count--))\ndone\necho 'Blast off!'",
+      "expected_output": [
+        "3",
+        "2",
+        "1",
+        "Blast off!"
+      ],
+      "hint": "-gt means 'greater than', -lt means 'less than'",
+      "hint_id": "-gt berarti 'lebih besar dari', -lt berarti 'lebih kecil dari'",
+      "time_limit": 35,
+      "xp": 25,
+      "penalty_per_error": 3
+    },
+    {
+      "id": "L11-E7",
+      "type": "code",
+      "category": "bash",
+      "instruction": "Write a function that adds two numbers",
+      "instruction_id": "Tulis fungsi yang menambah dua angka",
+      "shadow_text": "#!/bin/bash\nadd() {\n    echo $(($1 + $2))\n}\nadd 5 3",
+      "expected_output": [
+        "8"
+      ],
+      "hint": "$(( )) is arithmetic expansion in bash",
+      "hint_id": "$(( )) adalah arithmetic expansion di bash",
+      "time_limit": 28,
+      "xp": 25,
+      "penalty_per_error": 3
+    },
+    {
+      "id": "L11-E8",
+      "type": "code",
+      "category": "bash",
+      "instruction": "Write a script that backs up a file with timestamp",
+      "instruction_id": "Tulis script yang backup file dengan timestamp",
+      "shadow_text": "#!/bin/bash\ncp '$1' \"$1.backup.$(date +%Y%m%d)\"",
+      "expected_output": [
+        "Created file.txt.backup.20240712"
+      ],
+      "hint": "$(command) is command substitution",
+      "hint_id": "$(command) adalah command substitution",
+      "time_limit": 30,
+      "xp": 30,
+      "penalty_per_error": 4
+    },
+    {
+      "id": "L11-E9",
+      "type": "code",
+      "category": "bash",
+      "instruction": "Write a script that reads user input",
+      "instruction_id": "Tulis script yang membaca input user",
+      "shadow_text": "#!/bin/bash\nread -p 'Enter your name: ' name\necho \"Welcome, $name!\"",
+      "expected_output": [
+        "Enter your name: ",
+        "Welcome, Coder!"
+      ],
+      "hint": "read -p shows a prompt before reading input",
+      "hint_id": "read -p menunjukkan prompt sebelum baca input",
+      "time_limit": 28,
+      "xp": 25,
+      "penalty_per_error": 3
+    },
+    {
+      "id": "L11-E10",
+      "type": "code",
+      "category": "bash",
+      "instruction": "Write a script that exits with error code 1 on failure",
+      "instruction_id": "Tulis script yang exit dengan kode error 1 saat gagal",
+      "shadow_text": "#!/bin/bash\nif [ ! -f 'config.txt' ]; then\n    echo 'Config missing!'\n    exit 1\nfi",
+      "expected_output": [
+        "Config missing!"
+      ],
+      "hint": "exit 0 = success, exit 1+ = error",
+      "hint_id": "exit 0 = sukses, exit 1+ = error",
+      "time_limit": 30,
+      "xp": 30,
+      "penalty_per_error": 4
+    }
+  ]
+}

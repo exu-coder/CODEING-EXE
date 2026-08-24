@@ -1,0 +1,172 @@
+{
+  "level": 13,
+  "level_name": "Level 13",
+  "level_name_id": "Level 13",
+  "difficulty": "intermediate",
+  "required_score": 70,
+  "total_exercises": 10,
+  "exercises": [
+    {
+      "id": "L13-E1",
+      "type": "code",
+      "category": "javascript",
+      "instruction": "Print 'Hello Node.js' to console",
+      "instruction_id": "Print 'Hello Node.js' ke console",
+      "shadow_text": "console.log('Hello Node.js');",
+      "expected_output": [
+        "Hello Node.js"
+      ],
+      "hint": "console.log() is the print function in JS",
+      "hint_id": "console.log() adalah fungsi print di JS",
+      "time_limit": 12,
+      "xp": 10,
+      "penalty_per_error": 2
+    },
+    {
+      "id": "L13-E2",
+      "type": "code",
+      "category": "javascript",
+      "instruction": "Create a constant variable and log it",
+      "instruction_id": "Buat variabel constant dan log",
+      "shadow_text": "const name = 'Termux';\nconsole.log(name);",
+      "expected_output": [
+        "Termux"
+      ],
+      "hint": "const = constant (cannot be reassigned)",
+      "hint_id": "const = konstan (tidak bisa di-reassign)",
+      "time_limit": 15,
+      "xp": 10,
+      "penalty_per_error": 2
+    },
+    {
+      "id": "L13-E3",
+      "type": "code",
+      "category": "javascript",
+      "instruction": "Create a function that returns the sum of two numbers",
+      "instruction_id": "Buat fungsi yang mengembalikan jumlah dua angka",
+      "shadow_text": "function add(a, b) {\n    return a + b;\n}\nconsole.log(add(5, 3));",
+      "expected_output": [
+        "8"
+      ],
+      "hint": "function keyword declares a named function",
+      "hint_id": "Keyword function mendeklarasikan fungsi bernama",
+      "time_limit": 22,
+      "xp": 15,
+      "penalty_per_error": 2
+    },
+    {
+      "id": "L13-E4",
+      "type": "code",
+      "category": "javascript",
+      "instruction": "Use arrow function to multiply two numbers",
+      "instruction_id": "Gunakan arrow function untuk kalikan dua angka",
+      "shadow_text": "const multiply = (a, b) => a * b;\nconsole.log(multiply(4, 5));",
+      "expected_output": [
+        "20"
+      ],
+      "hint": "Arrow functions: (params) => expression",
+      "hint_id": "Arrow functions: (params) => ekspresi",
+      "time_limit": 20,
+      "xp": 15,
+      "penalty_per_error": 2
+    },
+    {
+      "id": "L13-E5",
+      "type": "code",
+      "category": "javascript",
+      "instruction": "Create an array and use forEach to print elements",
+      "instruction_id": "Buat array dan gunakan forEach untuk print elemen",
+      "shadow_text": "const fruits = ['apple', 'banana', 'cherry'];\nfruits.forEach(fruit => console.log(fruit));",
+      "expected_output": [
+        "apple",
+        "banana",
+        "cherry"
+      ],
+      "hint": "forEach executes a function for each array element",
+      "hint_id": "forEach menjalankan fungsi untuk setiap elemen array",
+      "time_limit": 28,
+      "xp": 20,
+      "penalty_per_error": 3
+    },
+    {
+      "id": "L13-E6",
+      "type": "code",
+      "category": "javascript",
+      "instruction": "Use map to double each number in array",
+      "instruction_id": "Gunakan map untuk kalikan dua setiap angka di array",
+      "shadow_text": "const nums = [1, 2, 3, 4];\nconst doubled = nums.map(n => n * 2);\nconsole.log(doubled);",
+      "expected_output": [
+        "[ 2, 4, 6, 8 ]"
+      ],
+      "hint": "map returns a NEW array with transformed elements",
+      "hint_id": "map mengembalikan array BARU dengan elemen yang ditransformasi",
+      "time_limit": 28,
+      "xp": 20,
+      "penalty_per_error": 3
+    },
+    {
+      "id": "L13-E7",
+      "type": "code",
+      "category": "javascript",
+      "instruction": "Use filter to get even numbers only",
+      "instruction_id": "Gunakan filter untuk dapatkan hanya angka genap",
+      "shadow_text": "const nums = [1, 2, 3, 4, 5, 6];\nconst evens = nums.filter(n => n % 2 === 0);\nconsole.log(evens);",
+      "expected_output": [
+        "[ 2, 4, 6 ]"
+      ],
+      "hint": "filter keeps elements where callback returns true",
+      "hint_id": "filter menyimpan elemen di mana callback mengembalikan true",
+      "time_limit": 28,
+      "xp": 20,
+      "penalty_per_error": 3
+    },
+    {
+      "id": "L13-E8",
+      "type": "code",
+      "category": "javascript",
+      "instruction": "Read a file using fs module (Node.js)",
+      "instruction_id": "Baca file menggunakan modul fs (Node.js)",
+      "shadow_text": "const fs = require('fs');\nconst data = fs.readFileSync('file.txt', 'utf8');\nconsole.log(data);",
+      "expected_output": [
+        "File contents..."
+      ],
+      "hint": "require() imports modules in Node.js",
+      "hint_id": "require() mengimpor modul di Node.js",
+      "time_limit": 28,
+      "xp": 25,
+      "penalty_per_error": 3
+    },
+    {
+      "id": "L13-E9",
+      "type": "code",
+      "category": "javascript",
+      "instruction": "Write to a file using fs module",
+      "instruction_id": "Tulis ke file menggunakan modul fs",
+      "shadow_text": "const fs = require('fs');\nfs.writeFileSync('output.txt', 'Hello World');\nconsole.log('File written!');",
+      "expected_output": [
+        "File written!"
+      ],
+      "hint": "writeFileSync writes synchronously (blocks until done)",
+      "hint_id": "writeFileSync menulis secara sinkron (blokir sampai selesai)",
+      "time_limit": 28,
+      "xp": 25,
+      "penalty_per_error": 3
+    },
+    {
+      "id": "L13-E10",
+      "type": "code",
+      "category": "javascript",
+      "instruction": "Create a simple HTTP server",
+      "instruction_id": "Buat HTTP server sederhana",
+      "shadow_text": "const http = require('http');\nconst server = http.createServer((req, res) => {\n    res.end('Hello from Termux!');\n});\nserver.listen(3000);\nconsole.log('Server running on port 3000');",
+      "expected_output": [
+        "Server running on port 3000"
+      ],
+      "hint": "http.createServer() creates a web server",
+      "hint_id": "http.createServer() membuat web server",
+      "time_limit": 40,
+      "xp": 35,
+      "penalty_per_error": 5
+    }
+  ]
+}

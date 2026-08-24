@@ -1,0 +1,172 @@
+{
+  "level": 36,
+  "level_name": "Level 36",
+  "level_name_id": "Level 36",
+  "difficulty": "advanced",
+  "required_score": 70,
+  "total_exercises": 10,
+  "exercises": [
+    {
+      "id": "L36-E1",
+      "type": "code",
+      "category": "pandas",
+      "instruction": "Use generator to handle errors",
+      "instruction_id": "Gunakan generator untuk handle errors",
+      "shadow_text": "# generator example\nprint('Done')",
+      "expected_output": [
+        "Done"
+      ],
+      "hint": "Practice typing this code accurately",
+      "hint_id": "Latih ketik code ini dengan akurat",
+      "time_limit": 15,
+      "xp": 15,
+      "penalty_per_error": 2
+    },
+    {
+      "id": "L36-E2",
+      "type": "code",
+      "category": "pandas",
+      "instruction": "Use try-except to handle errors",
+      "instruction_id": "Gunakan try-except untuk handle errors",
+      "shadow_text": "# try-except example\nprint('Done')",
+      "expected_output": [
+        "Done"
+      ],
+      "hint": "Practice typing this code accurately",
+      "hint_id": "Latih ketik code ini dengan akurat",
+      "time_limit": 25,
+      "xp": 25,
+      "penalty_per_error": 2
+    },
+    {
+      "id": "L36-E3",
+      "type": "command",
+      "category": "pandas",
+      "instruction": "Remove services 'api'",
+      "instruction_id": "Hapus services 'api'",
+      "shadow_text": "rm api",
+      "expected_output": [
+        "Removed 'api'."
+      ],
+      "hint": "Practice typing this command accurately",
+      "hint_id": "Latih ketik command ini dengan akurat",
+      "time_limit": 25,
+      "xp": 20,
+      "penalty_per_error": 4
+    },
+    {
+      "id": "L36-E4",
+      "type": "command",
+      "category": "pandas",
+      "instruction": "Remove files 'cache'",
+      "instruction_id": "Hapus files 'cache'",
+      "shadow_text": "rm cache",
+      "expected_output": [
+        "Removed 'cache'."
+      ],
+      "hint": "Practice typing this command accurately",
+      "hint_id": "Latih ketik command ini dengan akurat",
+      "time_limit": 20,
+      "xp": 20,
+      "penalty_per_error": 4
+    },
+    {
+      "id": "L36-E5",
+      "type": "command",
+      "category": "pandas",
+      "instruction": "Check version of redis",
+      "instruction_id": "Cek versi redis",
+      "shadow_text": "redis --version",
+      "expected_output": [
+        "redis version 1.0.0"
+      ],
+      "hint": "Practice typing this command accurately",
+      "hint_id": "Latih ketik command ini dengan akurat",
+      "time_limit": 15,
+      "xp": 25,
+      "penalty_per_error": 2
+    },
+    {
+      "id": "L36-E6",
+      "type": "command",
+      "category": "pandas",
+      "instruction": "Install pandas",
+      "instruction_id": "Instal pandas",
+      "shadow_text": "pkg install pandas",
+      "expected_output": [
+        "Setting up pandas...",
+        "pandas installed."
+      ],
+      "hint": "Practice typing this command accurately",
+      "hint_id": "Latih ketik command ini dengan akurat",
+      "time_limit": 12,
+      "xp": 20,
+      "penalty_per_error": 4
+    },
+    {
+      "id": "L36-E7",
+      "type": "code",
+      "category": "pandas",
+      "instruction": "Use decorator to process data",
+      "instruction_id": "Gunakan decorator untuk process data",
+      "shadow_text": "# decorator example\nprint('Done')",
+      "expected_output": [
+        "Done"
+      ],
+      "hint": "Practice typing this code accurately",
+      "hint_id": "Latih ketik code ini dengan akurat",
+      "time_limit": 25,
+      "xp": 20,
+      "penalty_per_error": 3
+    },
+    {
+      "id": "L36-E8",
+      "type": "code",
+      "category": "pandas",
+      "instruction": "Import requests and use it",
+      "instruction_id": "Import requests dan gunakan",
+      "shadow_text": "import requests\nprint('requests loaded')",
+      "expected_output": [
+        "requests loaded"
+      ],
+      "hint": "Practice typing this code accurately",
+      "hint_id": "Latih ketik code ini dengan akurat",
+      "time_limit": 20,
+      "xp": 15,
+      "penalty_per_error": 4
+    },
+    {
+      "id": "L36-E9",
+      "type": "command",
+      "category": "pandas",
+      "instruction": "List all services",
+      "instruction_id": "Daftar semua services",
+      "shadow_text": "ls -la ~/projects",
+      "expected_output": [
+        "total 24",
+        "drwxr-xr-x 3 u0_a241"
+      ],
+      "hint": "Practice typing this command accurately",
+      "hint_id": "Latih ketik command ini dengan akurat",
+      "time_limit": 25,
+      "xp": 30,
+      "penalty_per_error": 3
+    },
+    {
+      "id": "L36-E10",
+      "type": "code",
+      "category": "pandas",
+      "instruction": "Create variable 'result' with value 'test'",
+      "instruction_id": "Buat variabel 'result' dengan nilai 'test'",
+      "shadow_text": "result = 'test'\nprint(result)",
+      "expected_output": [
+        "'test'"
+      ],
+      "hint": "Practice typing this code accurately",
+      "hint_id": "Latih ketik code ini dengan akurat",
+      "time_limit": 20,
+      "xp": 30,
+      "penalty_per_error": 3
+    }
+  ]
+}

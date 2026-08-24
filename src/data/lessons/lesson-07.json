@@ -1,0 +1,180 @@
+{
+  "level": 7,
+  "level_name": "Level 7",
+  "level_name_id": "Level 7",
+  "difficulty": "beginner",
+  "required_score": 70,
+  "total_exercises": 10,
+  "exercises": [
+    {
+      "id": "L7-E1",
+      "type": "command",
+      "category": "git",
+      "instruction": "Initialize a new Git repository",
+      "instruction_id": "Inisialisasi repository Git baru",
+      "shadow_text": "git init",
+      "expected_output": [
+        "Initialized empty Git repository in /home/projects/.git/"
+      ],
+      "hint": "Run this in your project folder",
+      "hint_id": "Jalankan ini di folder proyek Anda",
+      "time_limit": 12,
+      "xp": 20,
+      "penalty_per_error": 3
+    },
+    {
+      "id": "L7-E2",
+      "type": "command",
+      "category": "git",
+      "instruction": "Check Git status of your repository",
+      "instruction_id": "Cek status Git repository Anda",
+      "shadow_text": "git status",
+      "expected_output": [
+        "On branch main",
+        "No commits yet",
+        "Untracked files:"
+      ],
+      "hint": "Shows which files are tracked/untracked",
+      "hint_id": "Menunjukkan file yang dilacak/tidak dilacak",
+      "time_limit": 12,
+      "xp": 15,
+      "penalty_per_error": 2
+    },
+    {
+      "id": "L7-E3",
+      "type": "command",
+      "category": "git",
+      "instruction": "Stage 'index.html' for commit",
+      "instruction_id": "Stage 'index.html' untuk commit",
+      "shadow_text": "git add index.html",
+      "expected_output": [
+        "Staged 'index.html' for commit."
+      ],
+      "hint": "git add prepares files for the next commit",
+      "hint_id": "git add menyiapkan file untuk commit berikutnya",
+      "time_limit": 14,
+      "xp": 15,
+      "penalty_per_error": 2
+    },
+    {
+      "id": "L7-E4",
+      "type": "command",
+      "category": "git",
+      "instruction": "Stage ALL changed files at once",
+      "instruction_id": "Stage SEMUA file yang berubah sekaligus",
+      "shadow_text": "git add .",
+      "expected_output": [
+        "Staged all changes."
+      ],
+      "hint": ". means current directory (all files)",
+      "hint_id": ". berarti direktori saat ini (semua file)",
+      "time_limit": 12,
+      "xp": 20,
+      "penalty_per_error": 3
+    },
+    {
+      "id": "L7-E5",
+      "type": "command",
+      "category": "git",
+      "instruction": "Commit staged files with message 'Initial commit'",
+      "instruction_id": "Commit file yang di-stage dengan pesan 'Initial commit'",
+      "shadow_text": "git commit -m 'Initial commit'",
+      "expected_output": [
+        "[main (root-commit) a1b2c3d] Initial commit",
+        " 1 file changed, 10 insertions(+)"
+      ],
+      "hint": "-m flag adds a commit message inline",
+      "hint_id": "Flag -m menambahkan pesan commit inline",
+      "time_limit": 20,
+      "xp": 25,
+      "penalty_per_error": 3
+    },
+    {
+      "id": "L7-E6",
+      "type": "command",
+      "category": "git",
+      "instruction": "View commit history",
+      "instruction_id": "Lihat riwayat commit",
+      "shadow_text": "git log",
+      "expected_output": [
+        "commit a1b2c3d4e5f6",
+        "Author: Coder <coder@termux>",
+        "Date:   Mon Jul 12 10:00:00 2024",
+        "    Initial commit"
+      ],
+      "hint": "Shows all commits in reverse chronological order",
+      "hint_id": "Menunjukkan semua commit secara terbalik kronologis",
+      "time_limit": 12,
+      "xp": 15,
+      "penalty_per_error": 2
+    },
+    {
+      "id": "L7-E7",
+      "type": "command",
+      "category": "git",
+      "instruction": "View commit history in one line each",
+      "instruction_id": "Lihat riwayat commit dalam satu baris masing-masing",
+      "shadow_text": "git log --oneline",
+      "expected_output": [
+        "a1b2c3d Initial commit",
+        "b2c3d4e Add navbar",
+        "c3d4e5f Fix typo"
+      ],
+      "hint": "--oneline shows abbreviated commit hash and message",
+      "hint_id": "--oneline menunjukkan hash singkat dan pesan",
+      "time_limit": 16,
+      "xp": 20,
+      "penalty_per_error": 3
+    },
+    {
+      "id": "L7-E8",
+      "type": "command",
+      "category": "git",
+      "instruction": "Clone a repository from GitHub",
+      "instruction_id": "Clone repository dari GitHub",
+      "shadow_text": "git clone https://github.com/user/repo.git",
+      "expected_output": [
+        "Cloning into 'repo'...",
+        "remote: Enumerating objects: 100, done.",
+        "Receiving objects: 100% (100/100), done."
+      ],
+      "hint": "Downloads entire repository to a new folder",
+      "hint_id": "Mengunduh seluruh repository ke folder baru",
+      "time_limit": 25,
+      "xp": 30,
+      "penalty_per_error": 4
+    },
+    {
+      "id": "L7-E9",
+      "type": "command",
+      "category": "git",
+      "instruction": "Configure Git username globally",
+      "instruction_id": "Konfigurasi username Git secara global",
+      "shadow_text": "git config --global user.name 'Your Name'",
+      "expected_output": [
+        "Global user.name set to 'Your Name'."
+      ],
+      "hint": "--global applies to all repositories on this device",
+      "hint_id": "--global berlaku untuk semua repository di device ini",
+      "time_limit": 20,
+      "xp": 20,
+      "penalty_per_error": 3
+    },
+    {
+      "id": "L7-E10",
+      "type": "command",
+      "category": "git",
+      "instruction": "Configure Git email globally",
+      "instruction_id": "Konfigurasi email Git secara global",
+      "shadow_text": "git config --global user.email 'you@example.com'",
+      "expected_output": [
+        "Global user.email set to 'you@example.com'."
+      ],
+      "hint": "Required before making commits",
+      "hint_id": "Diperlukan sebelum membuat commit",
+      "time_limit": 20,
+      "xp": 20,
+      "penalty_per_error": 3
+    }
+  ]
+}

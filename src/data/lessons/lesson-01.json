@@ -1,0 +1,173 @@
+{
+  "level": 1,
+  "level_name": "Level 1",
+  "level_name_id": "Level 1",
+  "difficulty": "beginner",
+  "required_score": 70,
+  "total_exercises": 10,
+  "exercises": [
+    {
+      "id": "L1-E1",
+      "type": "command",
+      "category": "navigation",
+      "instruction": "Type the command to update package lists",
+      "instruction_id": "Ketik perintah untuk memperbarui daftar paket",
+      "shadow_text": "pkg update",
+      "expected_output": [
+        "Hit:1 https://packages.termux.dev/apt/termux-main stable InRelease",
+        "Reading package lists... Done",
+        "Building dependency tree... Done"
+      ],
+      "hint": "Use 'pkg' wrapper to update repositories",
+      "hint_id": "Gunakan wrapper 'pkg' untuk update repositori",
+      "time_limit": 15,
+      "xp": 10,
+      "penalty_per_error": 2
+    },
+    {
+      "id": "L1-E2",
+      "type": "command",
+      "category": "navigation",
+      "instruction": "Type the command to upgrade installed packages",
+      "instruction_id": "Ketik perintah untuk meningkatkan paket terinstal",
+      "shadow_text": "pkg upgrade",
+      "expected_output": [
+        "Reading package lists... Done",
+        "0 upgraded, 0 newly installed."
+      ],
+      "hint": "Similar to update but installs the upgrades",
+      "hint_id": "Mirip update tapi menginstal pembaruan",
+      "time_limit": 15,
+      "xp": 10,
+      "penalty_per_error": 2
+    },
+    {
+      "id": "L1-E3",
+      "type": "command",
+      "category": "navigation",
+      "instruction": "List all files including hidden ones",
+      "instruction_id": "Daftar semua file termasuk yang tersembunyi",
+      "shadow_text": "ls -la",
+      "expected_output": [
+        "total 24",
+        "drwxr-xr-x  3 u0_a241 u0_a241 4096 Jul 12 10:20 .",
+        "drwxr-xr-x 10 u0_a241 u0_a241 4096 Jul 12 10:15 .."
+      ],
+      "hint": "-l = long format, -a = all files (including hidden)",
+      "hint_id": "-l = format panjang, -a = semua file (termasuk tersembunyi)",
+      "time_limit": 12,
+      "xp": 15,
+      "penalty_per_error": 2
+    },
+    {
+      "id": "L1-E4",
+      "type": "command",
+      "category": "navigation",
+      "instruction": "Show current directory path",
+      "instruction_id": "Tampilkan jalur direktori saat ini",
+      "shadow_text": "pwd",
+      "expected_output": [
+        "/data/data/com.termux/files/home"
+      ],
+      "hint": "Print Working Directory - shows where you are",
+      "hint_id": "Print Working Directory - menunjukkan lokasi Anda",
+      "time_limit": 8,
+      "xp": 10,
+      "penalty_per_error": 2
+    },
+    {
+      "id": "L1-E5",
+      "type": "command",
+      "category": "navigation",
+      "instruction": "Clear the terminal screen",
+      "instruction_id": "Bersihkan layar terminal",
+      "shadow_text": "clear",
+      "expected_output": [],
+      "hint": "Shortcut: Ctrl+L also works",
+      "hint_id": "Shortcut: Ctrl+L juga berfungsi",
+      "time_limit": 8,
+      "xp": 5,
+      "penalty_per_error": 1
+    },
+    {
+      "id": "L1-E6",
+      "type": "command",
+      "category": "navigation",
+      "instruction": "Show current user name",
+      "instruction_id": "Tampilkan nama user saat ini",
+      "shadow_text": "whoami",
+      "expected_output": [
+        "u0_a241"
+      ],
+      "hint": "Simple command, no arguments needed",
+      "hint_id": "Perintah sederhana, tidak perlu argumen",
+      "time_limit": 8,
+      "xp": 10,
+      "penalty_per_error": 2
+    },
+    {
+      "id": "L1-E7",
+      "type": "command",
+      "category": "navigation",
+      "instruction": "Show system information",
+      "instruction_id": "Tampilkan informasi sistem",
+      "shadow_text": "uname -a",
+      "expected_output": [
+        "Linux localhost 4.19.113-android-g92a aarch64 Android"
+      ],
+      "hint": "-a flag shows ALL system info",
+      "hint_id": "Flag -a menampilkan SEMUA info sistem",
+      "time_limit": 12,
+      "xp": 15,
+      "penalty_per_error": 2
+    },
+    {
+      "id": "L1-E8",
+      "type": "command",
+      "category": "navigation",
+      "instruction": "Go to home directory",
+      "instruction_id": "Pergi ke direktori home",
+      "shadow_text": "cd ~",
+      "expected_output": [
+        "~ $"
+      ],
+      "hint": "~ is shorthand for home directory",
+      "hint_id": "~ adalah singkatan untuk direktori home",
+      "time_limit": 8,
+      "xp": 10,
+      "penalty_per_error": 2
+    },
+    {
+      "id": "L1-E9",
+      "type": "command",
+      "category": "navigation",
+      "instruction": "Go up one directory level",
+      "instruction_id": "Naik satu level direktori",
+      "shadow_text": "cd ..",
+      "expected_output": [
+        ".. $"
+      ],
+      "hint": ".. means parent directory",
+      "hint_id": ".. berarti direktori induk",
+      "time_limit": 8,
+      "xp": 10,
+      "penalty_per_error": 2
+    },
+    {
+      "id": "L1-E10",
+      "type": "command",
+      "category": "navigation",
+      "instruction": "Go to previous directory",
+      "instruction_id": "Pergi ke direktori sebelumnya",
+      "shadow_text": "cd -",
+      "expected_output": [
+        "- $"
+      ],
+      "hint": "- jumps to the directory you were just in",
+      "hint_id": "- lompat ke direktori yang baru saja Anda tinggalkan",
+      "time_limit": 8,
+      "xp": 10,
+      "penalty_per_error": 2
+    }
+  ]
+}

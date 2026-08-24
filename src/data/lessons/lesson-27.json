@@ -1,0 +1,175 @@
+{
+  "level": 27,
+  "level_name": "Level 27",
+  "level_name_id": "Level 27",
+  "difficulty": "intermediate",
+  "required_score": 70,
+  "total_exercises": 10,
+  "exercises": [
+    {
+      "id": "L27-E1",
+      "type": "command",
+      "category": "devops",
+      "instruction": "Remove routes 'api'",
+      "instruction_id": "Hapus routes 'api'",
+      "shadow_text": "rm api",
+      "expected_output": [
+        "Removed 'api'."
+      ],
+      "hint": "Practice typing this command accurately",
+      "hint_id": "Latih ketik command ini dengan akurat",
+      "time_limit": 25,
+      "xp": 25,
+      "penalty_per_error": 2
+    },
+    {
+      "id": "L27-E2",
+      "type": "command",
+      "category": "devops",
+      "instruction": "List all models",
+      "instruction_id": "Daftar semua models",
+      "shadow_text": "ls -la ./dist",
+      "expected_output": [
+        "total 24",
+        "drwxr-xr-x 3 u0_a241"
+      ],
+      "hint": "Practice typing this command accurately",
+      "hint_id": "Latih ketik command ini dengan akurat",
+      "time_limit": 18,
+      "xp": 20,
+      "penalty_per_error": 4
+    },
+    {
+      "id": "L27-E3",
+      "type": "code",
+      "category": "devops",
+      "instruction": "Import requests and use it",
+      "instruction_id": "Import requests dan gunakan",
+      "shadow_text": "import requests\nprint('requests loaded')",
+      "expected_output": [
+        "requests loaded"
+      ],
+      "hint": "Practice typing this code accurately",
+      "hint_id": "Latih ketik code ini dengan akurat",
+      "time_limit": 12,
+      "xp": 20,
+      "penalty_per_error": 4
+    },
+    {
+      "id": "L27-E4",
+      "type": "command",
+      "category": "devops",
+      "instruction": "Install pandas",
+      "instruction_id": "Instal pandas",
+      "shadow_text": "pkg install pandas",
+      "expected_output": [
+        "Setting up pandas...",
+        "pandas installed."
+      ],
+      "hint": "Practice typing this command accurately",
+      "hint_id": "Latih ketik command ini dengan akurat",
+      "time_limit": 18,
+      "xp": 25,
+      "penalty_per_error": 4
+    },
+    {
+      "id": "L27-E5",
+      "type": "command",
+      "category": "devops",
+      "instruction": "Install aws-cli",
+      "instruction_id": "Instal aws-cli",
+      "shadow_text": "pkg install aws-cli",
+      "expected_output": [
+        "Setting up aws-cli...",
+        "aws-cli installed."
+      ],
+      "hint": "Practice typing this command accurately",
+      "hint_id": "Latih ketik command ini dengan akurat",
+      "time_limit": 12,
+      "xp": 30,
+      "penalty_per_error": 2
+    },
+    {
+      "id": "L27-E6",
+      "type": "code",
+      "category": "devops",
+      "instruction": "Use decorator to process data",
+      "instruction_id": "Gunakan decorator untuk process data",
+      "shadow_text": "# decorator example\nprint('Done')",
+      "expected_output": [
+        "Done"
+      ],
+      "hint": "Practice typing this code accurately",
+      "hint_id": "Latih ketik code ini dengan akurat",
+      "time_limit": 25,
+      "xp": 30,
+      "penalty_per_error": 4
+    },
+    {
+      "id": "L27-E7",
+      "type": "code",
+      "category": "devops",
+      "instruction": "Create variable 'y' with value 0",
+      "instruction_id": "Buat variabel 'y' dengan nilai 0",
+      "shadow_text": "y = 0\nprint(y)",
+      "expected_output": [
+        "0"
+      ],
+      "hint": "Practice typing this code accurately",
+      "hint_id": "Latih ketik code ini dengan akurat",
+      "time_limit": 18,
+      "xp": 30,
+      "penalty_per_error": 3
+    },
+    {
+      "id": "L27-E8",
+      "type": "code",
+      "category": "devops",
+      "instruction": "Use list comprehension to transform output",
+      "instruction_id": "Gunakan list comprehension untuk transform output",
+      "shadow_text": "# list comprehension example\nprint('Done')",
+      "expected_output": [
+        "Done"
+      ],
+      "hint": "Practice typing this code accurately",
+      "hint_id": "Latih ketik code ini dengan akurat",
+      "time_limit": 18,
+      "xp": 20,
+      "penalty_per_error": 3
+    },
+    {
+      "id": "L27-E9",
+      "type": "command",
+      "category": "devops",
+      "instruction": "Install redis",
+      "instruction_id": "Instal redis",
+      "shadow_text": "pkg install redis",
+      "expected_output": [
+        "Setting up redis...",
+        "redis installed."
+      ],
+      "hint": "Practice typing this command accurately",
+      "hint_id": "Latih ketik command ini dengan akurat",
+      "time_limit": 25,
+      "xp": 15,
+      "penalty_per_error": 4
+    },
+    {
+      "id": "L27-E10",
+      "type": "command",
+      "category": "devops",
+      "instruction": "List all services",
+      "instruction_id": "Daftar semua services",
+      "shadow_text": "ls -la ~/apps",
+      "expected_output": [
+        "total 24",
+        "drwxr-xr-x 3 u0_a241"
+      ],
+      "hint": "Practice typing this command accurately",
+      "hint_id": "Latih ketik command ini dengan akurat",
+      "time_limit": 12,
+      "xp": 25,
+      "penalty_per_error": 3
+    }
+  ]
+}

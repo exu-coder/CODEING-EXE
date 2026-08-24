@@ -1,0 +1,179 @@
+{
+  "level": 19,
+  "level_name": "Level 19",
+  "level_name_id": "Level 19",
+  "difficulty": "intermediate",
+  "required_score": 70,
+  "total_exercises": 10,
+  "exercises": [
+    {
+      "id": "L19-E1",
+      "type": "command",
+      "category": "database",
+      "instruction": "Install SQLite",
+      "instruction_id": "Instal SQLite",
+      "shadow_text": "pkg install sqlite",
+      "expected_output": [
+        "Setting up sqlite (3.42)...",
+        "SQLite installed."
+      ],
+      "hint": "SQLite is a lightweight serverless database",
+      "hint_id": "SQLite adalah database serverless yang ringan",
+      "time_limit": 14,
+      "xp": 20,
+      "penalty_per_error": 3
+    },
+    {
+      "id": "L19-E2",
+      "type": "command",
+      "category": "database",
+      "instruction": "Create a new SQLite database",
+      "instruction_id": "Buat database SQLite baru",
+      "shadow_text": "sqlite3 mydata.db",
+      "expected_output": [
+        "SQLite version 3.42.0",
+        "Enter '.help' for usage hints.",
+        "sqlite>"
+      ],
+      "hint": "sqlite3 filename creates/opens a database file",
+      "hint_id": "sqlite3 namafile membuat/membuka file database",
+      "time_limit": 12,
+      "xp": 15,
+      "penalty_per_error": 2
+    },
+    {
+      "id": "L19-E3",
+      "type": "command",
+      "category": "database",
+      "instruction": "Create a table in SQLite",
+      "instruction_id": "Buat tabel di SQLite",
+      "shadow_text": "CREATE TABLE users (id INTEGER PRIMARY KEY, name TEXT, age INTEGER);",
+      "expected_output": [
+        "Table created successfully."
+      ],
+      "hint": "INTEGER PRIMARY KEY auto-increments",
+      "hint_id": "INTEGER PRIMARY KEY auto-increment",
+      "time_limit": 20,
+      "xp": 25,
+      "penalty_per_error": 3
+    },
+    {
+      "id": "L19-E4",
+      "type": "command",
+      "category": "database",
+      "instruction": "Insert data into users table",
+      "instruction_id": "Masukkan data ke tabel users",
+      "shadow_text": "INSERT INTO users (name, age) VALUES ('Alice', 25);",
+      "expected_output": [
+        "1 row inserted."
+      ],
+      "hint": "VALUES must match column order/number",
+      "hint_id": "VALUES harus cocok urutan/jumlah kolom",
+      "time_limit": 18,
+      "xp": 20,
+      "penalty_per_error": 3
+    },
+    {
+      "id": "L19-E5",
+      "type": "command",
+      "category": "database",
+      "instruction": "Select all data from users table",
+      "instruction_id": "Pilih semua data dari tabel users",
+      "shadow_text": "SELECT * FROM users;",
+      "expected_output": [
+        "id|name|age",
+        "1|Alice|25"
+      ],
+      "hint": "* means all columns",
+      "hint_id": "* berarti semua kolom",
+      "time_limit": 14,
+      "xp": 15,
+      "penalty_per_error": 2
+    },
+    {
+      "id": "L19-E6",
+      "type": "command",
+      "category": "database",
+      "instruction": "Select only names where age > 20",
+      "instruction_id": "Pilih hanya nama di mana age > 20",
+      "shadow_text": "SELECT name FROM users WHERE age > 20;",
+      "expected_output": [
+        "name",
+        "Alice",
+        "Bob"
+      ],
+      "hint": "WHERE filters rows based on conditions",
+      "hint_id": "WHERE menyaring baris berdasarkan kondisi",
+      "time_limit": 18,
+      "xp": 20,
+      "penalty_per_error": 3
+    },
+    {
+      "id": "L19-E7",
+      "type": "command",
+      "category": "database",
+      "instruction": "Update Alice's age to 26",
+      "instruction_id": "Update umur Alice ke 26",
+      "shadow_text": "UPDATE users SET age = 26 WHERE name = 'Alice';",
+      "expected_output": [
+        "1 row updated."
+      ],
+      "hint": "Always use WHERE with UPDATE to avoid changing all rows!",
+      "hint_id": "Selalu gunakan WHERE dengan UPDATE untuk hindari ubah semua baris!",
+      "time_limit": 20,
+      "xp": 20,
+      "penalty_per_error": 3
+    },
+    {
+      "id": "L19-E8",
+      "type": "command",
+      "category": "database",
+      "instruction": "Delete user where name is 'Bob'",
+      "instruction_id": "Hapus user di mana nama adalah 'Bob'",
+      "shadow_text": "DELETE FROM users WHERE name = 'Bob';",
+      "expected_output": [
+        "1 row deleted."
+      ],
+      "hint": "DELETE without WHERE removes ALL rows!",
+      "hint_id": "DELETE tanpa WHERE menghapus SEMUA baris!",
+      "time_limit": 18,
+      "xp": 20,
+      "penalty_per_error": 3
+    },
+    {
+      "id": "L19-E9",
+      "type": "command",
+      "category": "database",
+      "instruction": "Count total number of users",
+      "instruction_id": "Hitung total jumlah users",
+      "shadow_text": "SELECT COUNT(*) FROM users;",
+      "expected_output": [
+        "COUNT(*)",
+        "2"
+      ],
+      "hint": "COUNT(*) counts all rows, COUNT(column) counts non-NULL",
+      "hint_id": "COUNT(*) hitung semua baris, COUNT(kolom) hitung non-NULL",
+      "time_limit": 16,
+      "xp": 15,
+      "penalty_per_error": 2
+    },
+    {
+      "id": "L19-E10",
+      "type": "command",
+      "category": "database",
+      "instruction": "Order users by age descending",
+      "instruction_id": "Urutkan users berdasarkan age menurun",
+      "shadow_text": "SELECT * FROM users ORDER BY age DESC;",
+      "expected_output": [
+        "id|name|age",
+        "2|Charlie|30",
+        "1|Alice|26"
+      ],
+      "hint": "ASC = ascending (default), DESC = descending",
+      "hint_id": "ASC = naik (default), DESC = menurun",
+      "time_limit": 18,
+      "xp": 20,
+      "penalty_per_error": 3
+    }
+  ]
+}

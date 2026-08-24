@@ -1,0 +1,173 @@
+{
+  "level": 25,
+  "level_name": "Level 25",
+  "level_name_id": "Level 25",
+  "difficulty": "intermediate",
+  "required_score": 70,
+  "total_exercises": 10,
+  "exercises": [
+    {
+      "id": "L25-E1",
+      "type": "command",
+      "category": "websocket",
+      "instruction": "Install react-native",
+      "instruction_id": "Instal react-native",
+      "shadow_text": "pkg install react-native",
+      "expected_output": [
+        "Setting up react-native...",
+        "react-native installed."
+      ],
+      "hint": "Practice typing this command accurately",
+      "hint_id": "Latih ketik command ini dengan akurat",
+      "time_limit": 12,
+      "xp": 15,
+      "penalty_per_error": 3
+    },
+    {
+      "id": "L25-E2",
+      "type": "command",
+      "category": "websocket",
+      "instruction": "Create directories called 'gateway'",
+      "instruction_id": "Buat directories bernama 'gateway'",
+      "shadow_text": "kubectl create gateway",
+      "expected_output": [
+        "Created gateway successfully."
+      ],
+      "hint": "Practice typing this command accurately",
+      "hint_id": "Latih ketik command ini dengan akurat",
+      "time_limit": 25,
+      "xp": 15,
+      "penalty_per_error": 3
+    },
+    {
+      "id": "L25-E3",
+      "type": "command",
+      "category": "websocket",
+      "instruction": "List all services",
+      "instruction_id": "Daftar semua services",
+      "shadow_text": "ls -la ./src",
+      "expected_output": [
+        "total 24",
+        "drwxr-xr-x 3 u0_a241"
+      ],
+      "hint": "Practice typing this command accurately",
+      "hint_id": "Latih ketik command ini dengan akurat",
+      "time_limit": 15,
+      "xp": 25,
+      "penalty_per_error": 4
+    },
+    {
+      "id": "L25-E4",
+      "type": "command",
+      "category": "websocket",
+      "instruction": "Create pods called 'cache'",
+      "instruction_id": "Buat pods bernama 'cache'",
+      "shadow_text": "touch cache",
+      "expected_output": [
+        "Created cache successfully."
+      ],
+      "hint": "Practice typing this command accurately",
+      "hint_id": "Latih ketik command ini dengan akurat",
+      "time_limit": 20,
+      "xp": 25,
+      "penalty_per_error": 2
+    },
+    {
+      "id": "L25-E5",
+      "type": "command",
+      "category": "websocket",
+      "instruction": "List all models",
+      "instruction_id": "Daftar semua models",
+      "shadow_text": "ls -la /tmp",
+      "expected_output": [
+        "total 24",
+        "drwxr-xr-x 3 u0_a241"
+      ],
+      "hint": "Practice typing this command accurately",
+      "hint_id": "Latih ketik command ini dengan akurat",
+      "time_limit": 25,
+      "xp": 20,
+      "penalty_per_error": 2
+    },
+    {
+      "id": "L25-E6",
+      "type": "code",
+      "category": "websocket",
+      "instruction": "Use list comprehension to process data",
+      "instruction_id": "Gunakan list comprehension untuk process data",
+      "shadow_text": "# list comprehension example\nprint('Done')",
+      "expected_output": [
+        "Done"
+      ],
+      "hint": "Practice typing this code accurately",
+      "hint_id": "Latih ketik code ini dengan akurat",
+      "time_limit": 15,
+      "xp": 25,
+      "penalty_per_error": 4
+    },
+    {
+      "id": "L25-E7",
+      "type": "command",
+      "category": "websocket",
+      "instruction": "Create services called 'worker'",
+      "instruction_id": "Buat services bernama 'worker'",
+      "shadow_text": "kubectl create worker",
+      "expected_output": [
+        "Created worker successfully."
+      ],
+      "hint": "Practice typing this command accurately",
+      "hint_id": "Latih ketik command ini dengan akurat",
+      "time_limit": 15,
+      "xp": 15,
+      "penalty_per_error": 4
+    },
+    {
+      "id": "L25-E8",
+      "type": "code",
+      "category": "websocket",
+      "instruction": "Define function 'handle()'",
+      "instruction_id": "Definisikan fungsi 'handle()'",
+      "shadow_text": "def handle():\n    return 'Done'\nprint(handle())",
+      "expected_output": [
+        "Done"
+      ],
+      "hint": "Practice typing this code accurately",
+      "hint_id": "Latih ketik code ini dengan akurat",
+      "time_limit": 15,
+      "xp": 25,
+      "penalty_per_error": 2
+    },
+    {
+      "id": "L25-E9",
+      "type": "command",
+      "category": "websocket",
+      "instruction": "Check version of kubectl",
+      "instruction_id": "Cek versi kubectl",
+      "shadow_text": "kubectl --version",
+      "expected_output": [
+        "kubectl version 1.0.0"
+      ],
+      "hint": "Practice typing this command accurately",
+      "hint_id": "Latih ketik command ini dengan akurat",
+      "time_limit": 12,
+      "xp": 25,
+      "penalty_per_error": 3
+    },
+    {
+      "id": "L25-E10",
+      "type": "command",
+      "category": "websocket",
+      "instruction": "Create packages called 'app'",
+      "instruction_id": "Buat packages bernama 'app'",
+      "shadow_text": "npm install app",
+      "expected_output": [
+        "Created app successfully."
+      ],
+      "hint": "Practice typing this command accurately",
+      "hint_id": "Latih ketik command ini dengan akurat",
+      "time_limit": 12,
+      "xp": 20,
+      "penalty_per_error": 2
+    }
+  ]
+}

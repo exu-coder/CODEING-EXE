@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <rect width="512" height="512" rx="64" fill="#0d1117"/>
+  <path d="M120 380 Q160 280 256 260 Q352 240 400 160 Q380 220 300 280 Q260 320 280 360 Q300 400 380 420 Q300 400 240 360 Q180 320 120 380Z" 
+        fill="none" stroke="#20c20e" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M400 160 Q420 140 440 150 Q430 170 420 180 Q410 170 400 160Z" fill="#20c20e"/>
+  <path d="M256 260 Q200 200 180 120 Q220 180 260 240 Q280 220 300 200" 
+        fill="none" stroke="#20c20e" stroke-width="8" stroke-linecap="round" opacity="0.6"/>
+  <circle cx="420" cy="155" r="6" fill="#ff0000"/>
+  <text x="256" y="460" text-anchor="middle" fill="#20c20e" font-family="monospace" font-size="28" font-weight="bold">TERMUX</text>
+</svg>

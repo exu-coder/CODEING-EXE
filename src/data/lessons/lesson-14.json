@@ -1,0 +1,175 @@
+{
+  "level": 14,
+  "level_name": "Level 14",
+  "level_name_id": "Level 14",
+  "difficulty": "intermediate",
+  "required_score": 70,
+  "total_exercises": 10,
+  "exercises": [
+    {
+      "id": "L14-E1",
+      "type": "command",
+      "category": "process",
+      "instruction": "List all running processes",
+      "instruction_id": "Daftar semua proses yang berjalan",
+      "shadow_text": "ps",
+      "expected_output": [
+        "  PID TTY          TIME CMD",
+        " 1234 pts/0    00:00:01 bash",
+        " 5678 pts/0    00:00:00 ps"
+      ],
+      "hint": "ps = process status",
+      "hint_id": "ps = process status (status proses)",
+      "time_limit": 10,
+      "xp": 15,
+      "penalty_per_error": 2
+    },
+    {
+      "id": "L14-E2",
+      "type": "command",
+      "category": "process",
+      "instruction": "List all processes with detailed info",
+      "instruction_id": "Daftar semua proses dengan info detail",
+      "shadow_text": "ps aux",
+      "expected_output": [
+        "USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND",
+        ""
+      ],
+      "hint": "a = all users, u = user-oriented, x = no TTY",
+      "hint_id": "a = semua user, u = user-oriented, x = tanpa TTY",
+      "time_limit": 12,
+      "xp": 15,
+      "penalty_per_error": 2
+    },
+    {
+      "id": "L14-E3",
+      "type": "command",
+      "category": "process",
+      "instruction": "Find processes matching 'python'",
+      "instruction_id": "Cari proses yang cocok dengan 'python'",
+      "shadow_text": "ps aux | grep python",
+      "expected_output": [
+        "u0_a241   1234  0.5  2.1  45000  8000 pts/0    S+   10:00   0:01 python app.py"
+      ],
+      "hint": "Pipe ps output to grep for filtering",
+      "hint_id": "Pipe output ps ke grep untuk filter",
+      "time_limit": 16,
+      "xp": 20,
+      "penalty_per_error": 3
+    },
+    {
+      "id": "L14-E4",
+      "type": "command",
+      "category": "process",
+      "instruction": "Kill process with PID 1234",
+      "instruction_id": "Kill proses dengan PID 1234",
+      "shadow_text": "kill 1234",
+      "expected_output": [
+        "Process 1234 terminated."
+      ],
+      "hint": "kill sends SIGTERM (graceful shutdown) by default",
+      "hint_id": "kill mengirim SIGTERM (shutdown graceful) secara default",
+      "time_limit": 12,
+      "xp": 15,
+      "penalty_per_error": 2
+    },
+    {
+      "id": "L14-E5",
+      "type": "command",
+      "category": "process",
+      "instruction": "Force kill process with PID 1234",
+      "instruction_id": "Force kill proses dengan PID 1234",
+      "shadow_text": "kill -9 1234",
+      "expected_output": [
+        "Process 1234 force killed."
+      ],
+      "hint": "-9 = SIGKILL (immediate, cannot be blocked)",
+      "hint_id": "-9 = SIGKILL (langsung, tidak bisa diblokir)",
+      "time_limit": 14,
+      "xp": 20,
+      "penalty_per_error": 3
+    },
+    {
+      "id": "L14-E6",
+      "type": "command",
+      "category": "process",
+      "instruction": "Run 'app.py' in the background",
+      "instruction_id": "Jalankan 'app.py' di background",
+      "shadow_text": "python app.py &",
+      "expected_output": [
+        "[1] 1234",
+        "Running app.py in background."
+      ],
+      "hint": "& at the end runs command in background",
+      "hint_id": "& di akhir menjalankan perintah di background",
+      "time_limit": 14,
+      "xp": 20,
+      "penalty_per_error": 3
+    },
+    {
+      "id": "L14-E7",
+      "type": "command",
+      "category": "process",
+      "instruction": "List background jobs",
+      "instruction_id": "Daftar job background",
+      "shadow_text": "jobs",
+      "expected_output": [
+        "[1]+  Running                 python app.py &"
+      ],
+      "hint": "jobs shows commands started with & in current session",
+      "hint_id": "jobs menunjukkan perintah yang dimulai dengan & di sesi saat ini",
+      "time_limit": 10,
+      "xp": 15,
+      "penalty_per_error": 2
+    },
+    {
+      "id": "L14-E8",
+      "type": "command",
+      "category": "process",
+      "instruction": "Bring background job [1] to foreground",
+      "instruction_id": "Bawa job background [1] ke foreground",
+      "shadow_text": "fg %1",
+      "expected_output": [
+        "python app.py"
+      ],
+      "hint": "fg %N brings job N to foreground",
+      "hint_id": "fg %N membawa job N ke foreground",
+      "time_limit": 12,
+      "xp": 15,
+      "penalty_per_error": 2
+    },
+    {
+      "id": "L14-E9",
+      "type": "command",
+      "category": "process",
+      "instruction": "Send foreground process to background (Ctrl+Z then bg)",
+      "instruction_id": "Kirim proses foreground ke background (Ctrl+Z lalu bg)",
+      "shadow_text": "bg %1",
+      "expected_output": [
+        "[1]+ python app.py &"
+      ],
+      "hint": "Ctrl+Z suspends, bg resumes in background",
+      "hint_id": "Ctrl+Z suspend, bg lanjutkan di background",
+      "time_limit": 12,
+      "xp": 20,
+      "penalty_per_error": 3
+    },
+    {
+      "id": "L14-E10",
+      "type": "command",
+      "category": "process",
+      "instruction": "Run 'server.js' with nohup (survives logout)",
+      "instruction_id": "Jalankan 'server.js' dengan nohup (tetap berjalan setelah logout)",
+      "shadow_text": "nohup node server.js &",
+      "expected_output": [
+        "nohup: ignoring input and appending output to 'nohup.out'",
+        "[1] 5678"
+      ],
+      "hint": "nohup = no hang up (ignores SIGHUP signal)",
+      "hint_id": "nohup = no hang up (abaikan sinyal SIGHUP)",
+      "time_limit": 18,
+      "xp": 25,
+      "penalty_per_error": 3
+    }
+  ]
+}

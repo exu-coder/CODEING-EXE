@@ -1,0 +1,172 @@
+{
+  "level": 12,
+  "level_name": "Level 12",
+  "level_name_id": "Level 12",
+  "difficulty": "intermediate",
+  "required_score": 70,
+  "total_exercises": 10,
+  "exercises": [
+    {
+      "id": "L12-E1",
+      "type": "code",
+      "category": "python",
+      "instruction": "Open and read 'data.txt' file",
+      "instruction_id": "Buka dan baca file 'data.txt'",
+      "shadow_text": "with open('data.txt', 'r') as f:\n    content = f.read()\nprint(content)",
+      "expected_output": [
+        "File contents here..."
+      ],
+      "hint": "with statement auto-closes the file",
+      "hint_id": "Statement with otomatis menutup file",
+      "time_limit": 25,
+      "xp": 20,
+      "penalty_per_error": 3
+    },
+    {
+      "id": "L12-E2",
+      "type": "code",
+      "category": "python",
+      "instruction": "Write 'Hello World' to 'output.txt'",
+      "instruction_id": "Tulis 'Hello World' ke 'output.txt'",
+      "shadow_text": "with open('output.txt', 'w') as f:\n    f.write('Hello World')",
+      "expected_output": [
+        "Written to output.txt"
+      ],
+      "hint": "'w' mode overwrites, 'a' appends",
+      "hint_id": "Mode 'w' menimpa, 'a' menambahkan",
+      "time_limit": 22,
+      "xp": 20,
+      "penalty_per_error": 3
+    },
+    {
+      "id": "L12-E3",
+      "type": "code",
+      "category": "python",
+      "instruction": "Read file line by line and print each line",
+      "instruction_id": "Baca file baris per baris dan print setiap baris",
+      "shadow_text": "with open('data.txt', 'r') as f:\n    for line in f:\n        print(line.strip())",
+      "expected_output": [
+        "Line 1",
+        "Line 2",
+        "Line 3"
+      ],
+      "hint": ".strip() removes whitespace including newlines",
+      "hint_id": ".strip() menghapus whitespace termasuk newline",
+      "time_limit": 28,
+      "xp": 25,
+      "penalty_per_error": 3
+    },
+    {
+      "id": "L12-E4",
+      "type": "code",
+      "category": "python",
+      "instruction": "Use list comprehension to square numbers 1-5",
+      "instruction_id": "Gunakan list comprehension untuk kuadrat angka 1-5",
+      "shadow_text": "squares = [x**2 for x in range(1, 6)]\nprint(squares)",
+      "expected_output": [
+        "[1, 4, 9, 16, 25]"
+      ],
+      "hint": "List comprehension: [expression for item in iterable]",
+      "hint_id": "List comprehension: [ekspresi for item in iterable]",
+      "time_limit": 25,
+      "xp": 25,
+      "penalty_per_error": 3
+    },
+    {
+      "id": "L12-E5",
+      "type": "code",
+      "category": "python",
+      "instruction": "Use dictionary comprehension for word lengths",
+      "instruction_id": "Gunakan dictionary comprehension untuk panjang kata",
+      "shadow_text": "words = ['cat', 'elephant', 'dog']\nlengths = {w: len(w) for w in words}\nprint(lengths)",
+      "expected_output": [
+        "{'cat': 3, 'elephant': 8, 'dog': 3}"
+      ],
+      "hint": "Dict comp: {key: value for item in iterable}",
+      "hint_id": "Dict comp: {key: value for item in iterable}",
+      "time_limit": 30,
+      "xp": 25,
+      "penalty_per_error": 3
+    },
+    {
+      "id": "L12-E6",
+      "type": "code",
+      "category": "python",
+      "instruction": "Use try-except to handle division by zero",
+      "instruction_id": "Gunakan try-except untuk handle pembagian nol",
+      "shadow_text": "try:\n    result = 10 / 0\nexcept ZeroDivisionError:\n    print('Cannot divide by zero!')",
+      "expected_output": [
+        "Cannot divide by zero!"
+      ],
+      "hint": "Always handle exceptions for robust code",
+      "hint_id": "Selalu handle exception untuk kode yang robust",
+      "time_limit": 28,
+      "xp": 25,
+      "penalty_per_error": 3
+    },
+    {
+      "id": "L12-E7",
+      "type": "code",
+      "category": "python",
+      "instruction": "Import json and parse a JSON string",
+      "instruction_id": "Import json dan parse string JSON",
+      "shadow_text": "import json\ndata = '{\"name\": \"Alice\", \"age\": 25}'\nparsed = json.loads(data)\nprint(parsed['name'])",
+      "expected_output": [
+        "Alice"
+      ],
+      "hint": "json.loads() parses string to Python dict",
+      "hint_id": "json.loads() parse string ke dict Python",
+      "time_limit": 28,
+      "xp": 25,
+      "penalty_per_error": 3
+    },
+    {
+      "id": "L12-E8",
+      "type": "code",
+      "category": "python",
+      "instruction": "Use requests to fetch a webpage (simulated)",
+      "instruction_id": "Gunakan requests untuk fetch webpage (simulasi)",
+      "shadow_text": "import requests\nresponse = requests.get('https://api.github.com')\nprint(response.status_code)",
+      "expected_output": [
+        "200"
+      ],
+      "hint": "200 = OK, 404 = Not Found, 500 = Server Error",
+      "hint_id": "200 = OK, 404 = Not Found, 500 = Server Error",
+      "time_limit": 28,
+      "xp": 30,
+      "penalty_per_error": 4
+    },
+    {
+      "id": "L12-E9",
+      "type": "code",
+      "category": "python",
+      "instruction": "Create a class 'Car' with brand and color attributes",
+      "instruction_id": "Buat class 'Car' dengan atribut brand dan color",
+      "shadow_text": "class Car:\n    def __init__(self, brand, color):\n        self.brand = brand\n        self.color = color\n\ncar = Car('Toyota', 'Red')\nprint(car.brand)",
+      "expected_output": [
+        "Toyota"
+      ],
+      "hint": "__init__ is the constructor method",
+      "hint_id": "__init__ adalah method constructor",
+      "time_limit": 35,
+      "xp": 30,
+      "penalty_per_error": 4
+    },
+    {
+      "id": "L12-E10",
+      "type": "code",
+      "category": "python",
+      "instruction": "Use lambda to sort list of tuples by second element",
+      "instruction_id": "Gunakan lambda untuk sort list tuple berdasarkan elemen kedua",
+      "shadow_text": "pairs = [(1, 'b'), (3, 'a'), (2, 'c')]\nsorted_pairs = sorted(pairs, key=lambda x: x[1])\nprint(sorted_pairs)",
+      "expected_output": [
+        "[(3, 'a'), (1, 'b'), (2, 'c')]"
+      ],
+      "hint": "lambda creates anonymous functions: lambda args: expression",
+      "hint_id": "lambda membuat fungsi anonim: lambda args: ekspresi",
+      "time_limit": 35,
+      "xp": 30,
+      "penalty_per_error": 4
+    }
+  ]
+}

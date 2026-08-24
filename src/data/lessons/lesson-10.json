@@ -1,0 +1,178 @@
+{
+  "level": 10,
+  "level_name": "Level 10",
+  "level_name_id": "Level 10",
+  "difficulty": "beginner",
+  "required_score": 70,
+  "total_exercises": 10,
+  "exercises": [
+    {
+      "id": "L10-E1",
+      "type": "command",
+      "category": "pipes",
+      "instruction": "Count lines in 'users.txt' using pipe",
+      "instruction_id": "Hitung baris di 'users.txt' menggunakan pipe",
+      "shadow_text": "cat users.txt | wc -l",
+      "expected_output": [
+        "50"
+      ],
+      "hint": "| (pipe) passes output of left command to right command",
+      "hint_id": "| (pipe) meneruskan output perintah kiri ke kanan",
+      "time_limit": 16,
+      "xp": 20,
+      "penalty_per_error": 3
+    },
+    {
+      "id": "L10-E2",
+      "type": "command",
+      "category": "pipes",
+      "instruction": "Find 'error' in log and count occurrences",
+      "instruction_id": "Cari 'error' di log dan hitung kemunculan",
+      "shadow_text": "grep 'error' log.txt | wc -l",
+      "expected_output": [
+        "5"
+      ],
+      "hint": "Chain multiple pipes: cmd1 | cmd2 | cmd3",
+      "hint_id": "Rantai multiple pipe: cmd1 | cmd2 | cmd3",
+      "time_limit": 18,
+      "xp": 25,
+      "penalty_per_error": 3
+    },
+    {
+      "id": "L10-E3",
+      "type": "command",
+      "category": "pipes",
+      "instruction": "Sort 'names.txt' alphabetically and show top 5",
+      "instruction_id": "Urutkan 'names.txt' alfabetis dan tampilkan 5 teratas",
+      "shadow_text": "sort names.txt | head -n 5",
+      "expected_output": [
+        "Alice",
+        "Bob",
+        "Charlie",
+        "David",
+        "Eve"
+      ],
+      "hint": "sort arranges lines alphabetically by default",
+      "hint_id": "sort mengurutkan baris alfabetis secara default",
+      "time_limit": 20,
+      "xp": 25,
+      "penalty_per_error": 3
+    },
+    {
+      "id": "L10-E4",
+      "type": "command",
+      "category": "pipes",
+      "instruction": "List files and filter for .py files only",
+      "instruction_id": "Daftar file dan filter hanya .py",
+      "shadow_text": "ls -la | grep '.py'",
+      "expected_output": [
+        "-rw-r--r-- 1 u0_a241 u0_a241 2048 Jul 12 10:20 app.py",
+        "-rw-r--r-- 1 u0_a241 u0_a241 1024 Jul 12 10:15 utils.py"
+      ],
+      "hint": "grep filters lines matching a pattern",
+      "hint_id": "grep menyaring baris yang cocok dengan pola",
+      "time_limit": 18,
+      "xp": 20,
+      "penalty_per_error": 3
+    },
+    {
+      "id": "L10-E5",
+      "type": "command",
+      "category": "redirection",
+      "instruction": "Save list of installed packages to 'packages.txt'",
+      "instruction_id": "Simpan daftar paket terinstal ke 'packages.txt'",
+      "shadow_text": "pkg list-installed > packages.txt",
+      "expected_output": [
+        "Saved package list to 'packages.txt'."
+      ],
+      "hint": "> redirects stdout to a file (overwrites)",
+      "hint_id": "> redirect stdout ke file (timpa)",
+      "time_limit": 18,
+      "xp": 20,
+      "penalty_per_error": 3
+    },
+    {
+      "id": "L10-E6",
+      "type": "command",
+      "category": "redirection",
+      "instruction": "Append current date to 'history.log'",
+      "instruction_id": "Tambahkan tanggal saat ini ke 'history.log'",
+      "shadow_text": "date >> history.log",
+      "expected_output": [
+        "Appended 'Mon Jul 12 10:30:00 UTC 2024' to history.log"
+      ],
+      "hint": ">> appends to end of file without overwriting",
+      "hint_id": ">> menambahkan ke akhir file tanpa menimpa",
+      "time_limit": 16,
+      "xp": 15,
+      "penalty_per_error": 2
+    },
+    {
+      "id": "L10-E7",
+      "type": "command",
+      "category": "redirection",
+      "instruction": "Run 'bad_command' and redirect errors to 'errors.log'",
+      "instruction_id": "Jalankan 'bad_command' dan redirect error ke 'errors.log'",
+      "shadow_text": "bad_command 2> errors.log",
+      "expected_output": [
+        "Errors redirected to 'errors.log'."
+      ],
+      "hint": "2> redirects stderr (error output), 1> or > redirects stdout",
+      "hint_id": "2> redirect stderr (output error), 1> atau > redirect stdout",
+      "time_limit": 18,
+      "xp": 25,
+      "penalty_per_error": 3
+    },
+    {
+      "id": "L10-E8",
+      "type": "command",
+      "category": "redirection",
+      "instruction": "Redirect both stdout and stderr to 'output.log'",
+      "instruction_id": "Redirect stdout dan stderr ke 'output.log'",
+      "shadow_text": "command > output.log 2>&1",
+      "expected_output": [
+        "Both stdout and stderr saved to 'output.log'."
+      ],
+      "hint": "2>&1 means 'redirect stderr to where stdout is going'",
+      "hint_id": "2>&1 berarti 'redirect stderr ke tempat stdout pergi'",
+      "time_limit": 22,
+      "xp": 30,
+      "penalty_per_error": 4
+    },
+    {
+      "id": "L10-E9",
+      "type": "command",
+      "category": "pipes",
+      "instruction": "Find largest files in current directory",
+      "instruction_id": "Cari file terbesar di direktori saat ini",
+      "shadow_text": "ls -lhS | head -n 5",
+      "expected_output": [
+        "-rw-r--r-- 1 u0_a241 u0_a241 5.2M Jul 12 10:20 data.db",
+        "-rw-r--r-- 1 u0_a241 u0_a241 2.1M Jul 12 10:15 video.mp4"
+      ],
+      "hint": "-S sorts by file size (largest first)",
+      "hint_id": "-S mengurutkan ukuran file (terbesar dulu)",
+      "time_limit": 18,
+      "xp": 25,
+      "penalty_per_error": 3
+    },
+    {
+      "id": "L10-E10",
+      "type": "command",
+      "category": "pipes",
+      "instruction": "Count unique words in 'essay.txt' and sort by frequency",
+      "instruction_id": "Hitung kata unik di 'essay.txt' dan urutkan frekuensi",
+      "shadow_text": "cat essay.txt | tr ' ' '\\n' | sort | uniq -c | sort -nr",
+      "expected_output": [
+        "  45 the",
+        "  38 and",
+        "  22 python"
+      ],
+      "hint": "tr replaces characters, uniq -c counts duplicates, sort -nr sorts numerically reverse",
+      "hint_id": "tr ganti karakter, uniq -c hitung duplikat, sort -nr urut numerik terbalik",
+      "time_limit": 35,
+      "xp": 40,
+      "penalty_per_error": 5
+    }
+  ]
+}

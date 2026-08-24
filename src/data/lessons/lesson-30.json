@@ -1,0 +1,172 @@
+{
+  "level": 30,
+  "level_name": "Level 30",
+  "level_name_id": "Level 30",
+  "difficulty": "intermediate",
+  "required_score": 70,
+  "total_exercises": 10,
+  "exercises": [
+    {
+      "id": "L30-E1",
+      "type": "code",
+      "category": "sysadmin",
+      "instruction": "Use list comprehension to handle errors",
+      "instruction_id": "Gunakan list comprehension untuk handle errors",
+      "shadow_text": "# list comprehension example\nprint('Done')",
+      "expected_output": [
+        "Done"
+      ],
+      "hint": "Practice typing this code accurately",
+      "hint_id": "Latih ketik code ini dengan akurat",
+      "time_limit": 12,
+      "xp": 25,
+      "penalty_per_error": 2
+    },
+    {
+      "id": "L30-E2",
+      "type": "command",
+      "category": "sysadmin",
+      "instruction": "List all routes",
+      "instruction_id": "Daftar semua routes",
+      "shadow_text": "ls -la ./src",
+      "expected_output": [
+        "total 24",
+        "drwxr-xr-x 3 u0_a241"
+      ],
+      "hint": "Practice typing this command accurately",
+      "hint_id": "Latih ketik command ini dengan akurat",
+      "time_limit": 18,
+      "xp": 20,
+      "penalty_per_error": 3
+    },
+    {
+      "id": "L30-E3",
+      "type": "code",
+      "category": "sysadmin",
+      "instruction": "Print 'Done'",
+      "instruction_id": "Print 'Done'",
+      "shadow_text": "print('Done')",
+      "expected_output": [
+        "Done"
+      ],
+      "hint": "Practice typing this code accurately",
+      "hint_id": "Latih ketik code ini dengan akurat",
+      "time_limit": 15,
+      "xp": 25,
+      "penalty_per_error": 2
+    },
+    {
+      "id": "L30-E4",
+      "type": "code",
+      "category": "sysadmin",
+      "instruction": "Import pandas and use it",
+      "instruction_id": "Import pandas dan gunakan",
+      "shadow_text": "import pandas\nprint('pandas loaded')",
+      "expected_output": [
+        "pandas loaded"
+      ],
+      "hint": "Practice typing this code accurately",
+      "hint_id": "Latih ketik code ini dengan akurat",
+      "time_limit": 25,
+      "xp": 25,
+      "penalty_per_error": 4
+    },
+    {
+      "id": "L30-E5",
+      "type": "command",
+      "category": "sysadmin",
+      "instruction": "Check version of pandas",
+      "instruction_id": "Cek versi pandas",
+      "shadow_text": "pandas --version",
+      "expected_output": [
+        "pandas version 1.0.0"
+      ],
+      "hint": "Practice typing this command accurately",
+      "hint_id": "Latih ketik command ini dengan akurat",
+      "time_limit": 20,
+      "xp": 30,
+      "penalty_per_error": 2
+    },
+    {
+      "id": "L30-E6",
+      "type": "code",
+      "category": "sysadmin",
+      "instruction": "Define function 'handle()'",
+      "instruction_id": "Definisikan fungsi 'handle()'",
+      "shadow_text": "def handle():\n    return 'Connected!'\nprint(handle())",
+      "expected_output": [
+        "Connected!"
+      ],
+      "hint": "Practice typing this code accurately",
+      "hint_id": "Latih ketik code ini dengan akurat",
+      "time_limit": 25,
+      "xp": 20,
+      "penalty_per_error": 3
+    },
+    {
+      "id": "L30-E7",
+      "type": "command",
+      "category": "sysadmin",
+      "instruction": "Remove files 'queue'",
+      "instruction_id": "Hapus files 'queue'",
+      "shadow_text": "rm queue",
+      "expected_output": [
+        "Removed 'queue'."
+      ],
+      "hint": "Practice typing this command accurately",
+      "hint_id": "Latih ketik command ini dengan akurat",
+      "time_limit": 20,
+      "xp": 30,
+      "penalty_per_error": 4
+    },
+    {
+      "id": "L30-E8",
+      "type": "code",
+      "category": "sysadmin",
+      "instruction": "Define function 'parse()'",
+      "instruction_id": "Definisikan fungsi 'parse()'",
+      "shadow_text": "def parse():\n    return 'Loaded'\nprint(parse())",
+      "expected_output": [
+        "Loaded"
+      ],
+      "hint": "Practice typing this code accurately",
+      "hint_id": "Latih ketik code ini dengan akurat",
+      "time_limit": 12,
+      "xp": 30,
+      "penalty_per_error": 3
+    },
+    {
+      "id": "L30-E9",
+      "type": "command",
+      "category": "sysadmin",
+      "instruction": "Remove services 'server'",
+      "instruction_id": "Hapus services 'server'",
+      "shadow_text": "rm server",
+      "expected_output": [
+        "Removed 'server'."
+      ],
+      "hint": "Practice typing this command accurately",
+      "hint_id": "Latih ketik command ini dengan akurat",
+      "time_limit": 12,
+      "xp": 25,
+      "penalty_per_error": 4
+    },
+    {
+      "id": "L30-E10",
+      "type": "command",
+      "category": "sysadmin",
+      "instruction": "List all directories",
+      "instruction_id": "Daftar semua directories",
+      "shadow_text": "ls -la /tmp",
+      "expected_output": [
+        "total 24",
+        "drwxr-xr-x 3 u0_a241"
+      ],
+      "hint": "Practice typing this command accurately",
+      "hint_id": "Latih ketik command ini dengan akurat",
+      "time_limit": 20,
+      "xp": 20,
+      "penalty_per_error": 2
+    }
+  ]
+}

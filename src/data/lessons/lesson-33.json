@@ -1,0 +1,172 @@
+{
+  "level": 33,
+  "level_name": "Level 33",
+  "level_name_id": "Level 33",
+  "difficulty": "advanced",
+  "required_score": 70,
+  "total_exercises": 10,
+  "exercises": [
+    {
+      "id": "L33-E1",
+      "type": "command",
+      "category": "microservices",
+      "instruction": "Remove routes 'gateway'",
+      "instruction_id": "Hapus routes 'gateway'",
+      "shadow_text": "rm gateway",
+      "expected_output": [
+        "Removed 'gateway'."
+      ],
+      "hint": "Practice typing this command accurately",
+      "hint_id": "Latih ketik command ini dengan akurat",
+      "time_limit": 15,
+      "xp": 20,
+      "penalty_per_error": 2
+    },
+    {
+      "id": "L33-E2",
+      "type": "command",
+      "category": "microservices",
+      "instruction": "Remove directories 'proxy'",
+      "instruction_id": "Hapus directories 'proxy'",
+      "shadow_text": "rm proxy",
+      "expected_output": [
+        "Removed 'proxy'."
+      ],
+      "hint": "Practice typing this command accurately",
+      "hint_id": "Latih ketik command ini dengan akurat",
+      "time_limit": 18,
+      "xp": 15,
+      "penalty_per_error": 3
+    },
+    {
+      "id": "L33-E3",
+      "type": "code",
+      "category": "microservices",
+      "instruction": "Import sys and use it",
+      "instruction_id": "Import sys dan gunakan",
+      "shadow_text": "import sys\nprint('sys loaded')",
+      "expected_output": [
+        "sys loaded"
+      ],
+      "hint": "Practice typing this code accurately",
+      "hint_id": "Latih ketik code ini dengan akurat",
+      "time_limit": 15,
+      "xp": 25,
+      "penalty_per_error": 4
+    },
+    {
+      "id": "L33-E4",
+      "type": "code",
+      "category": "microservices",
+      "instruction": "Print 'Connected!'",
+      "instruction_id": "Print 'Connected!'",
+      "shadow_text": "print('Connected!')",
+      "expected_output": [
+        "Connected!"
+      ],
+      "hint": "Practice typing this code accurately",
+      "hint_id": "Latih ketik code ini dengan akurat",
+      "time_limit": 25,
+      "xp": 25,
+      "penalty_per_error": 4
+    },
+    {
+      "id": "L33-E5",
+      "type": "command",
+      "category": "microservices",
+      "instruction": "Create routes called 'db'",
+      "instruction_id": "Buat routes bernama 'db'",
+      "shadow_text": "pip install db",
+      "expected_output": [
+        "Created db successfully."
+      ],
+      "hint": "Practice typing this command accurately",
+      "hint_id": "Latih ketik command ini dengan akurat",
+      "time_limit": 15,
+      "xp": 25,
+      "penalty_per_error": 4
+    },
+    {
+      "id": "L33-E6",
+      "type": "code",
+      "category": "microservices",
+      "instruction": "Define function 'fetch()'",
+      "instruction_id": "Definisikan fungsi 'fetch()'",
+      "shadow_text": "def fetch():\n    return 'Connected!'\nprint(fetch())",
+      "expected_output": [
+        "Connected!"
+      ],
+      "hint": "Practice typing this code accurately",
+      "hint_id": "Latih ketik code ini dengan akurat",
+      "time_limit": 18,
+      "xp": 30,
+      "penalty_per_error": 2
+    },
+    {
+      "id": "L33-E7",
+      "type": "code",
+      "category": "microservices",
+      "instruction": "Print 'Success!'",
+      "instruction_id": "Print 'Success!'",
+      "shadow_text": "print('Success!')",
+      "expected_output": [
+        "Success!"
+      ],
+      "hint": "Practice typing this code accurately",
+      "hint_id": "Latih ketik code ini dengan akurat",
+      "time_limit": 15,
+      "xp": 30,
+      "penalty_per_error": 4
+    },
+    {
+      "id": "L33-E8",
+      "type": "command",
+      "category": "microservices",
+      "instruction": "Create models called 'app'",
+      "instruction_id": "Buat models bernama 'app'",
+      "shadow_text": "mkdir app",
+      "expected_output": [
+        "Created app successfully."
+      ],
+      "hint": "Practice typing this command accurately",
+      "hint_id": "Latih ketik command ini dengan akurat",
+      "time_limit": 12,
+      "xp": 25,
+      "penalty_per_error": 3
+    },
+    {
+      "id": "L33-E9",
+      "type": "command",
+      "category": "microservices",
+      "instruction": "List all files",
+      "instruction_id": "Daftar semua files",
+      "shadow_text": "ls -la ~/apps",
+      "expected_output": [
+        "total 24",
+        "drwxr-xr-x 3 u0_a241"
+      ],
+      "hint": "Practice typing this command accurately",
+      "hint_id": "Latih ketik command ini dengan akurat",
+      "time_limit": 12,
+      "xp": 20,
+      "penalty_per_error": 3
+    },
+    {
+      "id": "L33-E10",
+      "type": "command",
+      "category": "microservices",
+      "instruction": "Install scrapy",
+      "instruction_id": "Instal scrapy",
+      "shadow_text": "pkg install scrapy",
+      "expected_output": [
+        "Setting up scrapy...",
+        "scrapy installed."
+      ],
+      "hint": "Practice typing this command accurately",
+      "hint_id": "Latih ketik command ini dengan akurat",
+      "time_limit": 18,
+      "xp": 25,
+      "penalty_per_error": 2
+    }
+  ]
+}

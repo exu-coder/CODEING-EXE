@@ -71,6 +71,18 @@ jobs:
 
       - name: Add Capacitor Android platform
         run: npx cap add android
+        continue-on-error: true
+
+      - name: Verify capacitor/android exists
+        run: |
+          if [ ! -d "capacitor/android" ]; then
+            echo "ERROR: capacitor/android directory not found after 'npx cap add android'"
+            echo "Directory listing:"
+            ls -la
+            echo "capacitor/ contents (if exists):"
+            ls -la capacitor/ 2>/dev/null || echo "capacitor/ does not exist"
+            exit 1
+          fi
 
       - name: Sync Capacitor Android
         run: npx cap sync android

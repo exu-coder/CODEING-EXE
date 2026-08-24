@@ -1,0 +1,175 @@
+{
+  "level": 20,
+  "level_name": "Level 20",
+  "level_name_id": "Level 20",
+  "difficulty": "intermediate",
+  "required_score": 70,
+  "total_exercises": 10,
+  "exercises": [
+    {
+      "id": "L20-E1",
+      "type": "command",
+      "category": "docker",
+      "instruction": "Install Docker (via termux-docker script)",
+      "instruction_id": "Instal Docker (via script termux-docker)",
+      "shadow_text": "pkg install docker",
+      "expected_output": [
+        "Setting up docker...",
+        "Docker installed."
+      ],
+      "hint": "Docker runs containers on your device",
+      "hint_id": "Docker menjalankan container di device Anda",
+      "time_limit": 14,
+      "xp": 25,
+      "penalty_per_error": 3
+    },
+    {
+      "id": "L20-E2",
+      "type": "command",
+      "category": "docker",
+      "instruction": "Check Docker version",
+      "instruction_id": "Cek versi Docker",
+      "shadow_text": "docker --version",
+      "expected_output": [
+        "Docker version 24.0.5, build ced0996"
+      ],
+      "hint": "--version shows installed version",
+      "hint_id": "--version menunjukkan versi terinstal",
+      "time_limit": 10,
+      "xp": 10,
+      "penalty_per_error": 2
+    },
+    {
+      "id": "L20-E3",
+      "type": "command",
+      "category": "docker",
+      "instruction": "Pull the official Python image from Docker Hub",
+      "instruction_id": "Pull image Python official dari Docker Hub",
+      "shadow_text": "docker pull python:3.11",
+      "expected_output": [
+        "3.11: Pulling from library/python",
+        "Status: Downloaded newer image for python:3.11"
+      ],
+      "hint": "docker pull downloads images from Docker Hub",
+      "hint_id": "docker pull mengunduh image dari Docker Hub",
+      "time_limit": 16,
+      "xp": 20,
+      "penalty_per_error": 3
+    },
+    {
+      "id": "L20-E4",
+      "type": "command",
+      "category": "docker",
+      "instruction": "List all Docker images",
+      "instruction_id": "Daftar semua image Docker",
+      "shadow_text": "docker images",
+      "expected_output": [
+        "REPOSITORY   TAG       IMAGE ID       CREATED        SIZE",
+        ""
+      ],
+      "hint": "Shows downloaded images and their sizes",
+      "hint_id": "Menunjukkan image yang diunduh dan ukurannya",
+      "time_limit": 10,
+      "xp": 10,
+      "penalty_per_error": 2
+    },
+    {
+      "id": "L20-E5",
+      "type": "command",
+      "category": "docker",
+      "instruction": "Run a Python container interactively",
+      "instruction_id": "Jalankan container Python secara interaktif",
+      "shadow_text": "docker run -it python:3.11 bash",
+      "expected_output": [
+        "root@container:/#"
+      ],
+      "hint": "-i = interactive, -t = allocate pseudo-TTY",
+      "hint_id": "-i = interaktif, -t = alokasi pseudo-TTY",
+      "time_limit": 16,
+      "xp": 20,
+      "penalty_per_error": 3
+    },
+    {
+      "id": "L20-E6",
+      "type": "command",
+      "category": "docker",
+      "instruction": "Run a container and auto-remove after exit",
+      "instruction_id": "Jalankan container dan auto-hapus setelah keluar",
+      "shadow_text": "docker run --rm python:3.11 python -c \"print('Hello')\"",
+      "expected_output": [
+        "Hello"
+      ],
+      "hint": "--rm removes container after it stops",
+      "hint_id": "--rm menghapus container setelah berhenti",
+      "time_limit": 20,
+      "xp": 25,
+      "penalty_per_error": 3
+    },
+    {
+      "id": "L20-E7",
+      "type": "command",
+      "category": "docker",
+      "instruction": "List running containers",
+      "instruction_id": "Daftar container yang berjalan",
+      "shadow_text": "docker ps",
+      "expected_output": [
+        "CONTAINER ID   IMAGE         COMMAND   CREATED   STATUS",
+        ""
+      ],
+      "hint": "docker ps shows only RUNNING containers",
+      "hint_id": "docker ps hanya menunjukkan container YANG BERJALAN",
+      "time_limit": 10,
+      "xp": 10,
+      "penalty_per_error": 2
+    },
+    {
+      "id": "L20-E8",
+      "type": "command",
+      "category": "docker",
+      "instruction": "List all containers (including stopped)",
+      "instruction_id": "Daftar semua container (termasuk yang berhenti)",
+      "shadow_text": "docker ps -a",
+      "expected_output": [
+        "CONTAINER ID   IMAGE         COMMAND   STATUS",
+        "abc123   python:3.11   'bash'    Exited (0)"
+      ],
+      "hint": "-a = all containers (running and stopped)",
+      "hint_id": "-a = semua container (berjalan dan berhenti)",
+      "time_limit": 12,
+      "xp": 15,
+      "penalty_per_error": 2
+    },
+    {
+      "id": "L20-E9",
+      "type": "command",
+      "category": "docker",
+      "instruction": "Stop a running container",
+      "instruction_id": "Hentikan container yang berjalan",
+      "shadow_text": "docker stop abc123",
+      "expected_output": [
+        "abc123"
+      ],
+      "hint": "Use container ID or name from docker ps",
+      "hint_id": "Gunakan container ID atau nama dari docker ps",
+      "time_limit": 12,
+      "xp": 15,
+      "penalty_per_error": 2
+    },
+    {
+      "id": "L20-E10",
+      "type": "command",
+      "category": "docker",
+      "instruction": "Remove a stopped container",
+      "instruction_id": "Hapus container yang berhenti",
+      "shadow_text": "docker rm abc123",
+      "expected_output": [
+        "abc123"
+      ],
+      "hint": "docker rm removes stopped containers, docker rmi removes images",
+      "hint_id": "docker rm hapus container berhenti, docker rmi hapus image",
+      "time_limit": 12,
+      "xp": 15,
+      "penalty_per_error": 2
+    }
+  ]
+}

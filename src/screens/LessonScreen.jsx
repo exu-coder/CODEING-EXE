@@ -16,15 +16,24 @@ export default function LessonScreen() {
   const [showResults, setShowResults] = useState(false)
   const [sessionResults, setSessionResults] = useState([])
   const [soundEnabled, setSoundEnabled] = useState(progress.settings?.sound !== false)
-  const [typingKey, setTypingKey] = useState(0) // force remount TypingEngine
+  const [typingKey, setTypingKey] = useState(0)
   const lang = progress.settings?.language || 'en'
+
+  // Total levels available
+  const TOTAL_LEVELS = 40
 
   useEffect(() => {
     const load = async () => {
       const level = id ? parseInt(id) : (progress.current || 1)
-      setCurrentLevel(level)
-      const data = await loadLessonFile(level)
+      // Validate level is unlocked
+      const targetLevel = Math.max(1, Math.min(level, TOTAL_LEVELS))
+      setCurrentLevel(targetLevel)
+      const data = await loadLessonFile(targetLevel)
       setLessonData(data)
+      setCurrentExercise(0)
+      setSessionResults([])
+      setShowResults(false)
+      setTypingKey(prev => prev + 1)
     }
     load()
   }, [id, progress.current])
@@ -39,6 +48,7 @@ export default function LessonScreen() {
 
   const exercise = lessonData.exercises[currentExercise]
   const isLastExercise = currentExercise >= lessonData.exercises.length - 1
+  const isLastLevel = currentLevel >= TOTAL_LEVELS
 
   const handleComplete = (result) => {
     addXP(result.score)
@@ -52,32 +62,45 @@ export default function LessonScreen() {
 
   const handleFail = (result) => {
     setSessionResults(prev => [...prev, { ...result, exerciseId: exercise.id, success: false }])
-    // Allow retry - don't advance
   }
 
   const nextExercise = () => {
     if (!isLastExercise) {
       setCurrentExercise(prev => prev + 1)
-      setTypingKey(prev => prev + 1) // remount TypingEngine
+      setTypingKey(prev => prev + 1)
     }
   }
 
   const prevExercise = () => {
     if (currentExercise > 0) {
       setCurrentExercise(prev => prev - 1)
-      setTypingKey(prev => prev + 1) // remount TypingEngine
+      setTypingKey(prev => prev + 1)
     }
   }
 
   const retryExercise = () => {
     setSessionResults(prev => prev.filter(r => r.exerciseId !== exercise.id))
-    setTypingKey(prev => prev + 1) // remount TypingEngine to reset state
+    setTypingKey(prev => prev + 1)
+  }
+
+  const goToNextLevel = () => {
+    const nextLevel = currentLevel + 1
+    if (nextLevel <= TOTAL_LEVELS) {
+      navigate(`/lesson/${nextLevel}`)
+    }
+  }
+
+  const goToLevelList = () => {
+    navigate('/')
   }
 
   const totalScore = sessionResults.filter(r => r.success).reduce((sum, r) => sum + r.score, 0)
   const avgAccuracy = sessionResults.length > 0 
     ? Math.round(sessionResults.reduce((sum, r) => sum + r.accuracy, 0) / sessionResults.length) 
     : 0
+  const allExercisesPassed = lessonData.exercises.every(e => 
+    sessionResults.find(r => r.exerciseId === e.id)?.success
+  )
 
   if (showResults) {
     return (
@@ -109,22 +132,16 @@ export default function LessonScreen() {
               <div className="text-xs text-gray-500">Passed</div>
             </div>
           </div>
-          <div className="flex gap-3 justify-center mt-6">
+          <div className="flex gap-3 justify-center mt-6 flex-wrap">
             <button 
-              onClick={() => navigate('/lessons')}
+              onClick={goToLevelList}
               className="btn-secondary"
             >
               {lang === 'id' ? 'Daftar Level' : 'Level List'}
             </button>
-            {!isLastExercise && (
+            {!isLastLevel && allExercisesPassed && (
               <button 
-                onClick={() => {
-                  setShowResults(false)
-                  setCurrentExercise(0)
-                  setSessionResults([])
-                  setTypingKey(prev => prev + 1)
-                  setCurrentLevel(prev => prev + 1)
-                }}
+                onClick={goToNextLevel}
                 className="btn-primary"
               >
                 {lang === 'id' ? 'Level Berikutnya' : 'Next Level'} →
@@ -141,7 +158,7 @@ export default function LessonScreen() {
       {/* Header */}
       <div className="flex items-center justify-between">
         <button 
-          onClick={() => navigate('/lessons')}
+          onClick={goToLevelList}
           className="flex items-center gap-1 text-gray-400 hover:text-white transition-colors"
         >
           <ArrowLeft className="w-4 h-4" />
@@ -179,7 +196,7 @@ export default function LessonScreen() {
         </div>
       </div>
 
-      {/* Typing Engine — key prop forces remount on exercise change */}
+      {/* Typing Engine */}
       <TypingEngine 
         key={typingKey}
         exercise={exercise}

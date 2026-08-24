@@ -1,0 +1,171 @@
+{
+  "level": 37,
+  "level_name": "Level 37",
+  "level_name_id": "Level 37",
+  "difficulty": "advanced",
+  "required_score": 70,
+  "total_exercises": 10,
+  "exercises": [
+    {
+      "id": "L37-E1",
+      "type": "code",
+      "category": "ml",
+      "instruction": "Define function 'handle()'",
+      "instruction_id": "Definisikan fungsi 'handle()'",
+      "shadow_text": "def handle():\n    return 'Connected!'\nprint(handle())",
+      "expected_output": [
+        "Connected!"
+      ],
+      "hint": "Practice typing this code accurately",
+      "hint_id": "Latih ketik code ini dengan akurat",
+      "time_limit": 12,
+      "xp": 15,
+      "penalty_per_error": 3
+    },
+    {
+      "id": "L37-E2",
+      "type": "code",
+      "category": "ml",
+      "instruction": "Create variable 'count' with value 10",
+      "instruction_id": "Buat variabel 'count' dengan nilai 10",
+      "shadow_text": "count = 10\nprint(count)",
+      "expected_output": [
+        "10"
+      ],
+      "hint": "Practice typing this code accurately",
+      "hint_id": "Latih ketik code ini dengan akurat",
+      "time_limit": 20,
+      "xp": 15,
+      "penalty_per_error": 2
+    },
+    {
+      "id": "L37-E3",
+      "type": "command",
+      "category": "ml",
+      "instruction": "Install express",
+      "instruction_id": "Instal express",
+      "shadow_text": "pkg install express",
+      "expected_output": [
+        "Setting up express...",
+        "express installed."
+      ],
+      "hint": "Practice typing this command accurately",
+      "hint_id": "Latih ketik command ini dengan akurat",
+      "time_limit": 12,
+      "xp": 20,
+      "penalty_per_error": 2
+    },
+    {
+      "id": "L37-E4",
+      "type": "code",
+      "category": "ml",
+      "instruction": "Import pandas and use it",
+      "instruction_id": "Import pandas dan gunakan",
+      "shadow_text": "import pandas\nprint('pandas loaded')",
+      "expected_output": [
+        "pandas loaded"
+      ],
+      "hint": "Practice typing this code accurately",
+      "hint_id": "Latih ketik code ini dengan akurat",
+      "time_limit": 15,
+      "xp": 25,
+      "penalty_per_error": 4
+    },
+    {
+      "id": "L37-E5",
+      "type": "code",
+      "category": "ml",
+      "instruction": "Print 'Running...'",
+      "instruction_id": "Print 'Running...'",
+      "shadow_text": "print('Running...')",
+      "expected_output": [
+        "Running..."
+      ],
+      "hint": "Practice typing this code accurately",
+      "hint_id": "Latih ketik code ini dengan akurat",
+      "time_limit": 20,
+      "xp": 25,
+      "penalty_per_error": 4
+    },
+    {
+      "id": "L37-E6",
+      "type": "code",
+      "category": "ml",
+      "instruction": "Import numpy and use it",
+      "instruction_id": "Import numpy dan gunakan",
+      "shadow_text": "import numpy\nprint('numpy loaded')",
+      "expected_output": [
+        "numpy loaded"
+      ],
+      "hint": "Practice typing this code accurately",
+      "hint_id": "Latih ketik code ini dengan akurat",
+      "time_limit": 12,
+      "xp": 20,
+      "penalty_per_error": 3
+    },
+    {
+      "id": "L37-E7",
+      "type": "code",
+      "category": "ml",
+      "instruction": "Create variable 'result' with value 42",
+      "instruction_id": "Buat variabel 'result' dengan nilai 42",
+      "shadow_text": "result = 42\nprint(result)",
+      "expected_output": [
+        "42"
+      ],
+      "hint": "Practice typing this code accurately",
+      "hint_id": "Latih ketik code ini dengan akurat",
+      "time_limit": 20,
+      "xp": 20,
+      "penalty_per_error": 4
+    },
+    {
+      "id": "L37-E8",
+      "type": "code",
+      "category": "ml",
+      "instruction": "Import matplotlib and use it",
+      "instruction_id": "Import matplotlib dan gunakan",
+      "shadow_text": "import matplotlib\nprint('matplotlib loaded')",
+      "expected_output": [
+        "matplotlib loaded"
+      ],
+      "hint": "Practice typing this code accurately",
+      "hint_id": "Latih ketik code ini dengan akurat",
+      "time_limit": 18,
+      "xp": 15,
+      "penalty_per_error": 4
+    },
+    {
+      "id": "L37-E9",
+      "type": "command",
+      "category": "ml",
+      "instruction": "Create containers called 'cache'",
+      "instruction_id": "Buat containers bernama 'cache'",
+      "shadow_text": "docker run cache",
+      "expected_output": [
+        "Created cache successfully."
+      ],
+      "hint": "Practice typing this command accurately",
+      "hint_id": "Latih ketik command ini dengan akurat",
+      "time_limit": 25,
+      "xp": 25,
+      "penalty_per_error": 2
+    },
+    {
+      "id": "L37-E10",
+      "type": "code",
+      "category": "ml",
+      "instruction": "Print 'Loaded'",
+      "instruction_id": "Print 'Loaded'",
+      "shadow_text": "print('Loaded')",
+      "expected_output": [
+        "Loaded"
+      ],
+      "hint": "Practice typing this code accurately",
+      "hint_id": "Latih ketik code ini dengan akurat",
+      "time_limit": 18,
+      "xp": 30,
+      "penalty_per_error": 3
+    }
+  ]
+}

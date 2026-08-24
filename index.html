@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="theme-color" content="#0d1117" />
+  <meta name="description" content="Learn Termux commands and coding skills offline" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Orbitron:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="/src/assets/icons/icon-32.png" />
+  <title>Termux Coding Learn</title>
+  <style>
+    body { background: #0d1117; }
+    #loading-screen {
+      position: fixed; inset: 0; z-index: 9999;
+      background: #0d1117; display: flex;
+      flex-direction: column; align-items: center; justify-content: center;
+    }
+    .loader-dragon {
+      width: 80px; height: 80px;
+      animation: loaderSpin 2s linear infinite;
+    }
+    @keyframes loaderSpin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    .loader-text {
+      color: #20c20e; font-family: 'Orbitron', sans-serif;
+      font-size: 14px; margin-top: 16px; letter-spacing: 4px;
+      animation: loaderPulse 1.5s ease-in-out infinite;
+    }
+    @keyframes loaderPulse {
+      0%, 100% { opacity: 0.5; }
+      50% { opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <div id="loading-screen">
+    <svg class="loader-dragon" viewBox="0 0 100 100" fill="none">
+      <path d="M50 10 C30 10 15 25 15 45 C15 60 25 70 35 75 L35 85 L45 80 L50 90 L55 80 L65 85 L65 75 C75 70 85 60 85 45 C85 25 70 10 50 10Z" 
+            stroke="#20c20e" stroke-width="2" fill="none" stroke-linecap="round">
+        <animate attributeName="stroke-dasharray" values="0,300;300,0" dur="2s" repeatCount="indefinite"/>
+      </path>
+      <circle cx="38" cy="40" r="3" fill="#20c20e"/>
+      <circle cx="62" cy="40" r="3" fill="#20c20e"/>
+      <path d="M45 55 Q50 60 55 55" stroke="#20c20e" stroke-width="2" fill="none"/>
+    </svg>
+    <div class="loader-text">INITIALIZING...</div>
+  </div>
+  <div id="root"></div>
+  <script type="module" src="/src/main.jsx"></script>
+</body>
+</html>

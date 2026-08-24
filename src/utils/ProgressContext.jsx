@@ -11,27 +11,42 @@ export function ProgressProvider({ children }) {
 
   useEffect(() => {
     getProgress().then(p => {
-      setProgress(p)
+      if (p) {
+        // Ensure unlocked always has at least level 1
+        const unlocked = p.unlocked?.length > 0 ? p.unlocked : [1]
+        setProgress({ ...p, unlocked: [...new Set(unlocked)] })
+      }
       setLoaded(true)
     })
   }, [])
 
   const addXP = useCallback((amount) => {
     setProgress(prev => {
-      const updated = { ...prev, xp: prev.xp + amount }
+      const updated = { ...prev, xp: (prev.xp || 0) + amount }
       saveProgress(updated)
       return updated
     })
   }, [])
 
-  const completeExercise = useCallback((exerciseId, levelNum, score) => {
+  const completeExercise = useCallback((exerciseId, levelNum, accuracy) => {
     setProgress(prev => {
-      const completed = [...new Set([...prev.completed, exerciseId])]
-      const unlocked = [...prev.unlocked]
-      if (score >= 70 && !unlocked.includes(levelNum + 1) && levelNum < 40) {
+      const completed = [...new Set([...(prev.completed || []), exerciseId])]
+      const unlocked = [...(prev.unlocked || [1])]
+
+      // Unlock next level if accuracy is good enough (70%+)
+      if (accuracy >= 70 && !unlocked.includes(levelNum + 1) && levelNum < 40) {
         unlocked.push(levelNum + 1)
       }
-      const updated = { ...prev, completed, unlocked, current: levelNum }
+
+      // Update current to the level just played (or next if completed)
+      const nextLevel = unlocked.includes(levelNum + 1) ? levelNum + 1 : levelNum
+
+      const updated = { 
+        ...prev, 
+        completed, 
+        unlocked: [...new Set(unlocked)], 
+        current: nextLevel 
+      }
       saveProgress(updated)
       return updated
     })

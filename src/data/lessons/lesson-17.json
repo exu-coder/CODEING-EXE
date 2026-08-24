@@ -1,0 +1,175 @@
+{
+  "level": 17,
+  "level_name": "Level 17",
+  "level_name_id": "Level 17",
+  "difficulty": "intermediate",
+  "required_score": 70,
+  "total_exercises": 10,
+  "exercises": [
+    {
+      "id": "L17-E1",
+      "type": "code",
+      "category": "bash",
+      "instruction": "Write a script that accepts flags: -n for name, -a for age",
+      "instruction_id": "Tulis script yang menerima flag: -n untuk nama, -a untuk umur",
+      "shadow_text": "#!/bin/bash\nwhile getopts 'n:a:' opt; do\n  case $opt in\n    n) name=$OPTARG ;;\n    a) age=$OPTARG ;;\n  esac\ndone\necho \"$name is $age years old\"",
+      "expected_output": [
+        "Alice is 25 years old"
+      ],
+      "hint": "getopts parses command-line options",
+      "hint_id": "getopts parse opsi baris perintah",
+      "time_limit": 40,
+      "xp": 35,
+      "penalty_per_error": 5
+    },
+    {
+      "id": "L17-E2",
+      "type": "code",
+      "category": "bash",
+      "instruction": "Write a script that processes all .txt files in a directory",
+      "instruction_id": "Tulis script yang proses semua file .txt di direktori",
+      "shadow_text": "#!/bin/bash\nfor file in *.txt; do\n  echo \"Processing: $file\"\n  wc -l \"$file\"\ndone",
+      "expected_output": [
+        "Processing: file1.txt",
+        "10 file1.txt"
+      ],
+      "hint": "*.txt is a glob pattern matching all .txt files",
+      "hint_id": "*.txt adalah glob pattern yang cocok semua file .txt",
+      "time_limit": 30,
+      "xp": 30,
+      "penalty_per_error": 4
+    },
+    {
+      "id": "L17-E3",
+      "type": "code",
+      "category": "bash",
+      "instruction": "Write a script that uses sed to replace 'old' with 'new' in file",
+      "instruction_id": "Tulis script yang gunakan sed untuk ganti 'old' dengan 'new' di file",
+      "shadow_text": "#!/bin/bash\nsed -i 's/old/new/g' file.txt\necho 'Replacement done!'",
+      "expected_output": [
+        "Replacement done!"
+      ],
+      "hint": "sed is a stream editor for text transformations",
+      "hint_id": "sed adalah stream editor untuk transformasi teks",
+      "time_limit": 25,
+      "xp": 30,
+      "penalty_per_error": 4
+    },
+    {
+      "id": "L17-E4",
+      "type": "code",
+      "category": "bash",
+      "instruction": "Write a script that uses awk to print first column of CSV",
+      "instruction_id": "Tulis script yang gunakan awk untuk print kolom pertama CSV",
+      "shadow_text": "#!/bin/bash\nawk -F',' '{print $1}' data.csv",
+      "expected_output": [
+        "Name",
+        "Alice",
+        "Bob"
+      ],
+      "hint": "awk is a text processing tool, -F sets delimiter",
+      "hint_id": "awk adalah tool pemrosesan teks, -F set delimiter",
+      "time_limit": 25,
+      "xp": 30,
+      "penalty_per_error": 4
+    },
+    {
+      "id": "L17-E5",
+      "type": "code",
+      "category": "bash",
+      "instruction": "Write a script that finds files modified in last 24 hours",
+      "instruction_id": "Tulis script yang cari file dimodifikasi dalam 24 jam terakhir",
+      "shadow_text": "#!/bin/bash\nfind . -type f -mtime -1 -exec ls -lh {} \\;",
+      "expected_output": [
+        "-rw-r--r-- 1 u0_a241 u0_a241 1.2K Jul 12 10:20 recent.txt"
+      ],
+      "hint": "-mtime -1 = modified less than 1 day ago",
+      "hint_id": "-mtime -1 = dimodifikasi kurang dari 1 hari lalu",
+      "time_limit": 30,
+      "xp": 35,
+      "penalty_per_error": 5
+    },
+    {
+      "id": "L17-E6",
+      "type": "code",
+      "category": "bash",
+      "instruction": "Write a script that compresses a directory to tar.gz",
+      "instruction_id": "Tulis script yang kompres direktori ke tar.gz",
+      "shadow_text": "#!/bin/bash\ntar -czf backup.tar.gz project/\necho 'Backup created: backup.tar.gz'",
+      "expected_output": [
+        "Backup created: backup.tar.gz"
+      ],
+      "hint": "-c = create, -z = gzip, -f = filename",
+      "hint_id": "-c = buat, -z = gzip, -f = nama file",
+      "time_limit": 25,
+      "xp": 30,
+      "penalty_per_error": 4
+    },
+    {
+      "id": "L17-E7",
+      "type": "code",
+      "category": "bash",
+      "instruction": "Write a script that extracts a tar.gz archive",
+      "instruction_id": "Tulis script yang ekstrak arsip tar.gz",
+      "shadow_text": "#!/bin/bash\ntar -xzf backup.tar.gz\necho 'Extracted successfully!'",
+      "expected_output": [
+        "Extracted successfully!"
+      ],
+      "hint": "-x = extract, -z = gzip, -f = filename",
+      "hint_id": "-x = ekstrak, -z = gzip, -f = nama file",
+      "time_limit": 22,
+      "xp": 25,
+      "penalty_per_error": 3
+    },
+    {
+      "id": "L17-E8",
+      "type": "code",
+      "category": "bash",
+      "instruction": "Write a cron job that runs a script every day at midnight",
+      "instruction_id": "Tulis cron job yang jalankan script setiap hari tengah malam",
+      "shadow_text": "0 0 * * * /data/data/com.termux/files/home/backup.sh",
+      "expected_output": [
+        "Cron job scheduled."
+      ],
+      "hint": "Format: minute hour day month weekday command",
+      "hint_id": "Format: menit jam hari bulan hari-minggu perintah",
+      "time_limit": 30,
+      "xp": 35,
+      "penalty_per_error": 5
+    },
+    {
+      "id": "L17-E9",
+      "type": "code",
+      "category": "bash",
+      "instruction": "Write a script that monitors disk usage and alerts if > 80%",
+      "instruction_id": "Tulis script yang monitor penggunaan disk dan alert jika > 80%",
+      "shadow_text": "#!/bin/bash\nusage=$(df / | awk 'NR==2 {print $5}' | sed 's/%//')\nif [ \"$usage\" -gt 80 ]; then\n  echo 'WARNING: Disk usage is ${usage}%'\nfi",
+      "expected_output": [
+        "WARNING: Disk usage is 85%"
+      ],
+      "hint": "df shows disk free space, awk extracts columns",
+      "hint_id": "df menunjukkan ruang disk kosong, awk ekstrak kolom",
+      "time_limit": 40,
+      "xp": 40,
+      "penalty_per_error": 5
+    },
+    {
+      "id": "L17-E10",
+      "type": "code",
+      "category": "bash",
+      "instruction": "Write a script that creates a menu with select statement",
+      "instruction_id": "Tulis script yang buat menu dengan statement select",
+      "shadow_text": "#!/bin/bash\nPS3='Choose an option: '\nselect opt in 'Start' 'Stop' 'Restart' 'Quit'; do\n  case $opt in\n    Start) echo 'Starting...'; break ;;\n    Quit) echo 'Bye!'; break ;;\n  esac\ndone",
+      "expected_output": [
+        "1) Start",
+        "2) Stop",
+        "Choose an option: Starting..."
+      ],
+      "hint": "select creates numbered menus automatically",
+      "hint_id": "select membuat menu bernomor secara otomatis",
+      "time_limit": 40,
+      "xp": 40,
+      "penalty_per_error": 5
+    }
+  ]
+}

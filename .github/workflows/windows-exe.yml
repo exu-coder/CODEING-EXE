@@ -33,12 +33,10 @@ jobs:
       - name: Build Windows installer
         run: npx electron-builder --win --publish never
 
-      - name: Upload Windows EXE
+      - name: Upload Windows installer
         uses: actions/upload-artifact@v4
         with:
           name: CodeTyper-Windows
-          path: |
-            release/*.exe
-            dist/*.exe
+          path: dist-electron/*.exe
           if-no-files-found: error
           retention-days: 30

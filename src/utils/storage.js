@@ -1,5 +1,19 @@
 import localforage from 'localforage'
 
+// Lessons are bundled by Vite at build time. This is important for Electron
+// because the packaged renderer runs from a local file and cannot rely on
+// fetch('/src/...') resolving to the source tree.
+const lessonModules = import.meta.glob('../data/lessons/lesson-*.json', {
+  eager: true,
+  import: 'default'
+})
+
+const lessonFor = (levelNum) => {
+  const filename = `lesson-${String(levelNum).padStart(2, '0')}.json`
+  const key = `../data/lessons/${filename}`
+  return lessonModules[key] || null
+}
+
 localforage.config({
   name: 'TermuxCodingLearn',
   storeName: 'progress',
@@ -39,27 +53,16 @@ export const saveSettings = async (settings) => {
 }
 
 export const loadLessonFile = async (levelNum) => {
-  try {
-    const response = await fetch(`/src/data/lessons/lesson-${String(levelNum).padStart(2, '0')}.json`)
-    if (!response.ok) throw new Error('File not found')
-    return await response.json()
-  } catch (e) {
-    // Fallback: try dynamic import for bundled builds
-    try {
-      const mod = await import(`../data/lessons/lesson-${String(levelNum).padStart(2, '0')}.json`)
-      return mod.default || mod
-    } catch (e2) {
-      console.error('Failed to load lesson:', e2)
-      return null
-    }
-  }
+  const lesson = lessonFor(levelNum)
+  if (lesson) return lesson
+
+  console.error(`Lesson ${levelNum} is missing from the bundled lesson data.`)
+  return null
 }
 
 export const getAllLessonFiles = async () => {
-  const files = []
-  for (let i = 1; i <= 40; i++) {
-    const lesson = await loadLessonFile(i)
-    if (lesson) files.push(lesson)
-  }
-  return files
+  return Object.entries(lessonModules)
+    .sort(([a], [b]) => a.localeCompare(b, undefined, { numeric: true }))
+    .map(([, lesson]) => lesson)
+    .filter(Boolean)
 }

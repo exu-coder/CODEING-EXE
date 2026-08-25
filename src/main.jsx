@@ -1,10 +1,10 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import { BrowserRouter } from 'react-router-dom'
+import { HashRouter } from 'react-router-dom'
 import App from './App.jsx'
 import './index.css'
 
-// Remove loading screen
+// Remove the static loading screen after the React app has had time to mount.
 const loadingScreen = document.getElementById('loading-screen')
 if (loadingScreen) {
   setTimeout(() => {
@@ -14,10 +14,12 @@ if (loadingScreen) {
   }, 1500)
 }
 
+// HashRouter is required for the packaged Electron file:// build.
+// BrowserRouter expects an HTTP server to resolve routes such as /lesson/1.
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <BrowserRouter>
+    <HashRouter>
       <App />
-    </BrowserRouter>
+    </HashRouter>
   </React.StrictMode>
 )

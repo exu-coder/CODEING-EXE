@@ -2,71 +2,67 @@ import React, { createContext, useContext, useState, useEffect, useCallback } fr
 import { getProgress, saveProgress } from './storage.js'
 
 const ProgressContext = createContext(null)
+const MAX_LEVEL = 60
+
+const normalizeProgress = (p) => {
+  const unlocked = Array.isArray(p?.unlocked) && p.unlocked.length ? p.unlocked : [1]
+  return {
+    xp: Number(p?.xp) || 0,
+    completed: Array.isArray(p?.completed) ? p.completed : [],
+    unlocked: [...new Set(unlocked.filter(n => Number.isInteger(n) && n >= 1 && n <= MAX_LEVEL))],
+    current: Math.min(MAX_LEVEL, Math.max(1, Number(p?.current) || 1)),
+    settings: { language: 'en', sound: true, theme: 'dark', ...(p?.settings || {}) }
+  }
+}
 
 export function ProgressProvider({ children }) {
-  const [progress, setProgress] = useState({
-    xp: 0, completed: [], unlocked: [1], current: 1, settings: { language: 'en', sound: true, theme: 'dark' }
-  })
+  const [progress, setProgress] = useState(normalizeProgress(null))
   const [loaded, setLoaded] = useState(false)
 
   useEffect(() => {
+    let mounted = true
     getProgress().then(p => {
-      if (p) {
-        // Ensure unlocked always has at least level 1
-        const unlocked = p.unlocked?.length > 0 ? p.unlocked : [1]
-        setProgress({ ...p, unlocked: [...new Set(unlocked)] })
+      if (mounted) {
+        setProgress(normalizeProgress(p))
+        setLoaded(true)
       }
-      setLoaded(true)
+    }).catch(err => {
+      console.error('Progress load failed:', err)
+      if (mounted) setLoaded(true)
     })
+    return () => { mounted = false }
+  }, [])
+
+  const persist = useCallback((updated) => {
+    saveProgress(updated).catch(err => console.error('Progress save failed:', err))
+    return updated
   }, [])
 
   const addXP = useCallback((amount) => {
-    setProgress(prev => {
-      const updated = { ...prev, xp: (prev.xp || 0) + amount }
-      saveProgress(updated)
-      return updated
-    })
-  }, [])
+    setProgress(prev => persist({ ...prev, xp: Math.max(0, (prev.xp || 0) + (Number(amount) || 0)) }))
+  }, [persist])
 
   const completeExercise = useCallback((exerciseId, levelNum, accuracy) => {
     setProgress(prev => {
+      const level = Number(levelNum)
       const completed = [...new Set([...(prev.completed || []), exerciseId])]
-      const unlocked = [...(prev.unlocked || [1])]
-
-      // Unlock next level if accuracy is good enough (70%+)
-      if (accuracy >= 70 && !unlocked.includes(levelNum + 1) && levelNum < 40) {
-        unlocked.push(levelNum + 1)
-      }
-
-      // Update current to the level just played (or next if completed)
-      const nextLevel = unlocked.includes(levelNum + 1) ? levelNum + 1 : levelNum
-
-      const updated = { 
-        ...prev, 
-        completed, 
-        unlocked: [...new Set(unlocked)], 
-        current: nextLevel 
-      }
-      saveProgress(updated)
-      return updated
+      const unlocked = [...new Set(prev.unlocked || [1])]
+      if (Number(accuracy) >= 70 && level >= 1 && level < MAX_LEVEL) unlocked.push(level + 1)
+      const nextLevel = unlocked.includes(level + 1) ? level + 1 : level
+      return persist({ ...prev, completed, unlocked: unlocked.filter(n => n <= MAX_LEVEL), current: Math.min(MAX_LEVEL, nextLevel) })
     })
-  }, [])
+  }, [persist])
 
   const updateSettings = useCallback((newSettings) => {
     setProgress(prev => {
       const updated = { ...prev, settings: { ...prev.settings, ...newSettings } }
-      saveProgress(updated)
+      saveProgress(updated).catch(err => console.error('Settings save failed:', err))
       return updated
     })
   }, [])
 
   if (!loaded) return null
-
-  return (
-    <ProgressContext.Provider value={{ progress, addXP, completeExercise, updateSettings }}>
-      {children}
-    </ProgressContext.Provider>
-  )
+  return <ProgressContext.Provider value={{ progress, addXP, completeExercise, updateSettings }}>{children}</ProgressContext.Provider>
 }
 
 export const useProgress = () => useContext(ProgressContext)

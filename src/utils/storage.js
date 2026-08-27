@@ -1,24 +1,10 @@
 import localforage from 'localforage'
 
-// Lessons are bundled by Vite at build time. This is important for Electron
-// because the packaged renderer runs from a local file and cannot rely on
-// fetch('/src/...') resolving to the source tree.
-const lessonModules = import.meta.glob('../data/lessons/lesson-*.json', {
-  eager: true,
-  import: 'default'
-})
+const lessonModules = import.meta.glob('../data/lessons/lesson-*.json', { eager: true, import: 'default' })
 
-const lessonFor = (levelNum) => {
-  const filename = `lesson-${String(levelNum).padStart(2, '0')}.json`
-  const key = `../data/lessons/${filename}`
-  return lessonModules[key] || null
-}
+const lessonFor = (levelNum) => lessonModules[`../data/lessons/lesson-${String(levelNum).padStart(2, '0')}.json`] || null
 
-localforage.config({
-  name: 'TermuxCodingLearn',
-  storeName: 'progress',
-  description: 'Offline progress storage for Termux Coding Learn'
-})
+localforage.config({ name: 'TermuxCodingLearn', storeName: 'progress', description: 'Offline progress storage for Termux Coding Learn' })
 
 export const initStorage = async () => {
   await localforage.ready()
@@ -42,27 +28,23 @@ export const getProgress = async () => ({
 })
 
 export const saveProgress = async (data) => {
-  await localforage.setItem('userXP', data.xp)
-  await localforage.setItem('completedLessons', data.completed)
-  await localforage.setItem('unlockedLevels', data.unlocked)
-  await localforage.setItem('currentLevel', data.current)
+  await Promise.all([
+    localforage.setItem('userXP', data.xp),
+    localforage.setItem('completedLessons', data.completed),
+    localforage.setItem('unlockedLevels', data.unlocked),
+    localforage.setItem('currentLevel', data.current),
+    localforage.setItem('settings', data.settings || { language: 'en', sound: true, theme: 'dark' })
+  ])
 }
 
-export const saveSettings = async (settings) => {
-  await localforage.setItem('settings', settings)
-}
+export const saveSettings = async (settings) => localforage.setItem('settings', settings)
 
 export const loadLessonFile = async (levelNum) => {
   const lesson = lessonFor(levelNum)
-  if (lesson) return lesson
-
-  console.error(`Lesson ${levelNum} is missing from the bundled lesson data.`)
-  return null
+  if (!lesson) console.error(`Lesson ${levelNum} is missing from the bundled lesson data.`)
+  return lesson
 }
 
-export const getAllLessonFiles = async () => {
-  return Object.entries(lessonModules)
-    .sort(([a], [b]) => a.localeCompare(b, undefined, { numeric: true }))
-    .map(([, lesson]) => lesson)
-    .filter(Boolean)
-}
+export const getAllLessonFiles = async () => Object.entries(lessonModules)
+  .sort(([a], [b]) => a.localeCompare(b, undefined, { numeric: true }))
+  .map(([, lesson]) => lesson).filter(Boolean)

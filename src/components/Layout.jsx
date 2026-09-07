@@ -1,11 +1,12 @@
 import React, { useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { motion, AnimatePresence } from 'framer-motion'
-import { 
-  Home, BookOpen, Terminal, Code, User, Settings, 
-  Menu, X, Trophy, Zap 
+import {
+  Home, BookOpen, Terminal, Code, User, Settings,
+  Menu, X, Trophy, Zap
 } from 'lucide-react'
 import { useProgress } from '../utils/ProgressContext.jsx'
+import logo from '../assets/icons/logo.png'
 
 const navItems = [
   { path: '/', icon: Home, label: 'Home', label_id: 'Beranda' },
@@ -27,13 +28,15 @@ export default function Layout({ children }) {
       <header className="sticky top-0 z-50 glass-card border-b border-termux-border/50">
         <div className="max-w-4xl mx-auto px-4 h-14 flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <Link to="/" className="flex items-center gap-2">
-              <svg width="28" height="28" viewBox="0 0 100 100" fill="none">
-                <path d="M20 80 Q30 50 50 45 Q70 40 80 20 Q75 35 60 50 Q50 60 55 75 Q60 85 75 90 Q55 85 45 75 Q35 65 20 80Z" stroke="#20c20e" strokeWidth="3" fill="none"/>
-                <circle cx="85" cy="19" r="2" fill="#ff0000"/>
-              </svg>
-              <span className="font-display font-bold text-kali-green text-sm tracking-wider hidden sm:block">
-                TERMUX LEARN
+            <Link to="/" className="flex items-center gap-2 group">
+              <img
+                src={logo}
+                alt="TermuxLearn"
+                className="w-8 h-8 rounded-xl object-cover shadow-[0_0_12px_rgba(32,194,14,0.35)] group-hover:shadow-[0_0_16px_rgba(32,194,14,0.5)] transition-shadow"
+              />
+              <span className="font-display font-bold text-sm tracking-tight hidden sm:block">
+                <span className="text-white">Termux</span>
+                <span className="text-[#20c20e]">Learn</span>
               </span>
             </Link>
           </div>
